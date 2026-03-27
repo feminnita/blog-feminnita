@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Comunidade Feminnita — histórias reais de revendedoras, lojistas e clientes. Escreva para o blog e inspire outras pessoas." />
+  <title>Comunidade — Blog Feminnita</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Menu principal">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Blog Feminnita — Início">
+        Feminn<span>ita</span>
+        <span style="font-size:0.6em;font-weight:300;display:block;margin-top:-4px;letter-spacing:0.12em;color:rgba(255,255,255,0.6);">BLOG</span>
+      </a>
+      <ul class="navbar__menu" id="navMenu" role="list">
+        <li><a href="index.html"         class="navbar__link">Início</a></li>
+        <li><a href="index.html#artigos"  class="navbar__link">Artigos</a></li>
+        <li><a href="treinamento.html"   class="navbar__link">Treinamento</a></li>
+        <li><a href="comunidade.html"    class="navbar__link ativo">Comunidade</a></li>
+        <li><a href="sobre.html"         class="navbar__link">Sobre</a></li>
+        <li>
+          <a href="https://www.feminnita.com.br" target="_blank" rel="noopener"
+             class="navbar__cta">Comprar no Atacado &rarr;</a>
+        </li>
+      </ul>
+      <button class="navbar__hamburger" id="hamburger"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════
+       PAGE HEADER
+  ══════════════════════════════════════════════════ -->
+  <header class="page-header" aria-label="Comunidade Feminnita">
+    <div class="container">
+      <p class="label" style="color:var(--champagne);margin-bottom:0.75rem;letter-spacing:0.12em;">
+        ✦ Escritas por quem vive a Feminnita
+      </p>
+      <h1>Histórias da Comunidade Feminnita</h1>
+      <p>
+        Revendedoras, lojistas e clientes que compartilham suas experiências,
+        conquistas e aprendizados. Histórias reais que inspiram de verdade.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════
+       GRID DE HISTÓRIAS
+  ══════════════════════════════════════════════════ -->
+  <section style="background:var(--creme);padding:var(--espacamento-lg) 0;"
+           aria-label="Histórias da comunidade">
+    <div class="container">
+
+      <div class="secao-titulo">
+        <h2 class="texto-borgonha">Histórias em destaque</h2>
+        <span class="linha-dourada linha-dourada--centro"></span>
+        <p class="editorial" style="color:#666;">
+          Cada história é uma prova de que é possível — com determinação e um bom produto.
+        </p>
+      </div>
+
+      <!-- História em destaque (full width) -->
+      <div style="background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--sombra-card);margin-bottom:var(--espacamento-md);display:grid;grid-template-columns:1fr 1.4fr;"
+           class="historia-destaque">
+
+        <div style="background:linear-gradient(135deg,#e8d5f0,#c8a8e0);display:flex;align-items:center;justify-content:center;font-size:6rem;min-height:280px;"
+             aria-hidden="true">
+          💜
+        </div>
+
+        <div style="padding:2.5rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <span class="card-artigo__tag tag--comunidade">💜 Comunidade</span>
+            <span style="background:var(--champagne);color:var(--borgonha-escuro);font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:999px;text-transform:uppercase;letter-spacing:0.05em;">
+              ✦ História do mês
+            </span>
+          </div>
+
+          <h2 style="color:var(--borgonha);margin-bottom:0.75rem;line-height:1.2;">
+            Da cozinha para o WhatsApp: como Márcia começou a revender e mudou sua renda
+          </h2>
+
+          <p class="editorial" style="color:#666;margin-bottom:1.25rem;">
+            "Eu tinha medo de vender. Achava que não era para mim. Mas a necessidade bateu
+            na porta e eu precisei fazer algo — e a Feminnita foi o começo de tudo."
+          </p>
+
+          <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:1.25rem;">
+            <div class="avatar avatar--grande" aria-hidden="true">M</div>
+            <div>
+              <div style="font-weight:700;color:var(--preto-quente);">Márcia Oliveira</div>
+              <div class="label" style="color:#888;">Belo Horizonte, MG · Revendedora autônoma</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <a href="artigo.html" class="btn btn-primario">
+              Ler a história completa
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <span class="tempo-leitura">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              9 min de leitura
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Grid de outras histórias -->
+      <div class="grid-comunidade">
+
+        <!-- História 2 -->
+        <article class="card-comunidade">
+          <div style="background:linear-gradient(135deg,#e0f0e8,#b8dfc8);height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;"
+               aria-hidden="true">🏪</div>
+          <div class="card-comunidade__corpo">
+            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <div class="card-comunidade__autor">
+              <div class="avatar" aria-hidden="true">P</div>
+              <div>
+                <div class="card-comunidade__nome">Patrícia Rocha</div>
+                <div class="card-comunidade__cidade">Goiânia, GO · Lojista</div>
+              </div>
+            </div>
+            <h3>Como abri minha loja de pijamas aos 45 anos sem experiência no varejo</h3>
+            <p>Aposentei meu marido, criei os filhos e então perguntei: e agora? A resposta veio em forma de loja.</p>
+            <a href="artigo.html" class="card-artigo__ler-mais" style="margin-top:1rem;display:inline-flex;">
+              Ler história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- História 3 -->
+        <article class="card-comunidade">
+          <div style="background:linear-gradient(135deg,#fde8e0,#f8c8b8);height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;"
+               aria-hidden="true">👨‍👩‍👧</div>
+          <div class="card-comunidade__corpo">
+            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <div class="card-comunidade__autor">
+              <div class="avatar" aria-hidden="true">R</div>
+              <div>
+                <div class="card-comunidade__nome">Renata Alves</div>
+                <div class="card-comunidade__cidade">Recife, PE · Grupo de compra</div>
+              </div>
+            </div>
+            <h3>Organizei um grupo de compra com a família e economizamos muito</h3>
+            <p>Éramos 6 famílias. Nos unimos, atingimos o pedido mínimo e todo mundo saiu com pijama novo e dinheiro no bolso.</p>
+            <a href="artigo.html" class="card-artigo__ler-mais" style="margin-top:1rem;display:inline-flex;">
+              Ler história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- História 4 -->
+        <article class="card-comunidade">
+          <div style="background:linear-gradient(135deg,#fff0e8,#ffd0a8);height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;"
+               aria-hidden="true">📱</div>
+          <div class="card-comunidade__corpo">
+            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <div class="card-comunidade__autor">
+              <div class="avatar" aria-hidden="true">J</div>
+              <div>
+                <div class="card-comunidade__nome">Juliana Ferreira</div>
+                <div class="card-comunidade__cidade">Fortaleza, CE · Revendedora digital</div>
+              </div>
+            </div>
+            <h3>Vendo pelo Instagram sem mostrar o rosto e faturei R$&nbsp;4.200 em março</h3>
+            <p>Sou tímida, tenho vergonha de aparecer. Mas aprendi que o produto vende sozinho quando a foto é boa.</p>
+            <a href="artigo.html" class="card-artigo__ler-mais" style="margin-top:1rem;display:inline-flex;">
+              Ler história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- História 5 -->
+        <article class="card-comunidade">
+          <div style="background:linear-gradient(135deg,#e8e8f8,#c0c0e8);height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;"
+               aria-hidden="true">🌱</div>
+          <div class="card-comunidade__corpo">
+            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <div class="card-comunidade__autor">
+              <div class="avatar" aria-hidden="true">C</div>
+              <div>
+                <div class="card-comunidade__nome">Cristiane Melo</div>
+                <div class="card-comunidade__cidade">Porto Alegre, RS · Revendedora</div>
+              </div>
+            </div>
+            <h3>Comecei com R$&nbsp;199 e hoje tenho uma carteira de 120 clientes</h3>
+            <p>O primeiro pedido coube numa sacola. Hoje preciso de caixas. Não parei de crescer desde o primeiro mês.</p>
+            <a href="artigo.html" class="card-artigo__ler-mais" style="margin-top:1rem;display:inline-flex;">
+              Ler história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- História 6 -->
+        <article class="card-comunidade">
+          <div style="background:linear-gradient(135deg,#f8f0e0,#f0d8a0);height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;"
+               aria-hidden="true">🎁</div>
+          <div class="card-comunidade__corpo">
+            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <div class="card-comunidade__autor">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="card-comunidade__nome">Amanda Barbosa</div>
+                <div class="card-comunidade__cidade">Curitiba, PR · Revendedora sazonal</div>
+              </div>
+            </div>
+            <h3>Só vendo no Natal e no Dia das Mães — e já valeu muito a pena</h3>
+            <p>Trabalho CLT, não tenho tempo para vender o ano inteiro. Mas duas datas bastam para turbinar minha renda.</p>
+            <a href="artigo.html" class="card-artigo__ler-mais" style="margin-top:1rem;display:inline-flex;">
+              Ler história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /grid-comunidade -->
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       DEPOIMENTOS
+  ══════════════════════════════════════════════════ -->
+  <section class="secao-depoimentos" aria-label="O que dizem as autoras">
+    <div class="container">
+
+      <div class="secao-titulo">
+        <h2 class="texto-borgonha">O que dizem quem já escreveu para o blog</h2>
+        <span class="linha-dourada linha-dourada--centro"></span>
+      </div>
+
+      <div class="grid-depoimentos">
+
+        <div class="card-depoimento">
+          <p class="card-depoimento__frase">
+            Escrever para o blog foi uma das experiências mais gratificantes que tive.
+            Minha história inspirou outras revendedoras a começar. Vale cada minuto.
+          </p>
+          <div class="avatar" style="margin:0 auto 0.5rem;" aria-hidden="true">M</div>
+          <div class="card-depoimento__nome">Márcia Oliveira</div>
+          <div class="card-depoimento__cidade">Belo Horizonte, MG</div>
+        </div>
+
+        <div class="card-depoimento">
+          <p class="card-depoimento__frase">
+            Nunca achei que teria algo importante a dizer. Mas quando contei minha história,
+            recebi mensagens de pessoas que se identificaram. Isso não tem preço.
+          </p>
+          <div class="avatar" style="margin:0 auto 0.5rem;" aria-hidden="true">P</div>
+          <div class="card-depoimento__nome">Patrícia Rocha</div>
+          <div class="card-depoimento__cidade">Goiânia, GO</div>
+        </div>
+
+        <div class="card-depoimento">
+          <p class="card-depoimento__frase">
+            O processo foi simples, a equipe me ajudou a organizar as ideias
+            e o resultado ficou lindo. Me sinto parte de algo maior agora.
+          </p>
+          <div class="avatar" style="margin:0 auto 0.5rem;" aria-hidden="true">C</div>
+          <div class="card-depoimento__nome">Cristiane Melo</div>
+          <div class="card-depoimento__cidade">Porto Alegre, RS</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FORMULÁRIO — ESCREVA PARA O BLOG
+  ══════════════════════════════════════════════════ -->
+  <section class="secao-escreva" id="escreva" aria-label="Escreva para o blog">
+    <div class="container">
+
+      <div class="secao-titulo">
+        <h2 class="texto-borgonha">A sua história merece ser contada</h2>
+        <span class="linha-dourada linha-dourada--centro"></span>
+        <p class="editorial" style="color:#666;max-width:580px;margin:0 auto;">
+          O Blog Feminnita é feito por pessoas reais. Se você tem uma história de revenda,
+          de mudança de vida ou de como os pijamas Feminnita fizeram diferença para você —
+          queremos publicar.
+        </p>
+      </div>
+
+      <!-- Como funciona -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--espacamento-md);margin-bottom:var(--espacamento-lg);"
+           class="como-funciona-grid">
+        <div style="text-align:center;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">✍️</div>
+          <h4 style="color:var(--borgonha);margin-bottom:0.5rem;">1. Envie sua proposta</h4>
+          <p style="font-size:0.875rem;color:#666;">Preencha o formulário com o tema e um resumo da sua história. Não precisa estar escrito ainda.</p>
+        </div>
+        <div style="text-align:center;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">💬</div>
+          <h4 style="color:var(--borgonha);margin-bottom:0.5rem;">2. A gente entra em contato</h4>
+          <p style="font-size:0.875rem;color:#666;">Nossa equipe retorna em até 5 dias úteis para alinhar detalhes e ajudar você a estruturar o texto.</p>
+        </div>
+        <div style="text-align:center;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">🌟</div>
+          <h4 style="color:var(--borgonha);margin-bottom:0.5rem;">3. Sua história no blog</h4>
+          <p style="font-size:0.875rem;color:#666;">Publicamos com seu nome, foto e cidade. Você vira referência para outras revendedoras do Brasil.</p>
+        </div>
+      </div>
+
+      <!-- Card do formulário -->
+      <div class="escreva-card">
+
+        <!-- Formulário -->
+        <div id="formWrapper">
+          <h2>Quero escrever para o blog</h2>
+          <p class="editorial">
+            Conta pra gente um pouco sobre você e o que quer compartilhar.
+          </p>
+
+          <form id="formComunidade"
+                onsubmit="submeterFormComunidade(event)"
+                aria-label="Formulário de proposta de autoria">
+
+            <div class="form-2col">
+              <div class="form-grupo">
+                <label for="comNome">Nome completo *</label>
+                <input type="text" id="comNome" placeholder="Maria da Silva" required />
+              </div>
+              <div class="form-grupo">
+                <label for="comEmail">E-mail *</label>
+                <input type="email" id="comEmail" placeholder="maria@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-2col">
+              <div class="form-grupo">
+                <label for="comCidade">Cidade e Estado *</label>
+                <input type="text" id="comCidade" placeholder="Ex: São Paulo, SP" required />
+              </div>
+              <div class="form-grupo">
+                <label for="comProfissao">Como você se relaciona com a Feminnita?</label>
+                <select id="comProfissao">
+                  <option value="" disabled selected>Selecione...</option>
+                  <option value="revendedora">Revendedora autônoma</option>
+                  <option value="lojista">Lojista / Varejista</option>
+                  <option value="grupo">Compra em grupo</option>
+                  <option value="cliente">Cliente para uso próprio</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grupo">
+              <label for="comTema">Qual tema / título você imagina para o seu artigo? *</label>
+              <input type="text" id="comTema"
+                     placeholder="Ex: Como eu triplicou minha renda revendendo pijamas no interior" required />
+            </div>
+
+            <div class="form-grupo">
+              <label for="comMensagem">Conte um pouco da sua história (à vontade!) *</label>
+              <textarea id="comMensagem" rows="5"
+                        placeholder="De onde você veio, o que te motivou, o que mudou na sua vida... Pode ser bem informal, a gente ajuda a organizar depois."
+                        required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primario btn-lg w-full">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Enviar minha proposta
+            </button>
+
+            <p style="font-size:0.8rem;color:#aaa;text-align:center;margin-top:0.875rem;">
+              Ao enviar, você concorda que sua história poderá ser publicada no Blog Feminnita
+              com seu nome e cidade. Você poderá revisar o texto antes da publicação.
+            </p>
+
+          </form>
+        </div>
+
+        <!-- Mensagem de sucesso (oculta) -->
+        <div class="mensagem-sucesso" id="sucessoComunidade">
+          <div class="mensagem-sucesso__icone">🌟</div>
+          <h3>Proposta recebida com sucesso!</h3>
+          <p>
+            Obrigada por querer fazer parte da Comunidade Feminnita.<br>
+            Nossa equipe vai entrar em contato em até <strong>5 dias úteis</strong>.
+          </p>
+          <p style="color:#aaa;font-size:0.875rem;margin-top:0.75rem;">
+            Fique de olho no seu e-mail — incluindo a pasta de spam.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       BANNER CTA
+  ══════════════════════════════════════════════════ -->
+  <section class="banner-revendedor" aria-label="Compre na Feminnita">
+    <div class="container">
+      <div class="banner-revendedor__conteudo">
+        <p class="label" style="color:var(--champagne);margin-bottom:0.75rem;letter-spacing:0.1em;">
+          ✦ Preço direto de fábrica
+        </p>
+        <h2>Pronta para fazer parte da história Feminnita?</h2>
+        <p>
+          Comece com R$&nbsp;199 e veja o quanto é possível crescer.
+          Fabricação própria em Nova Friburgo — qualidade que você sente na primeira peça.
+        </p>
+        <a href="https://www.feminnita.com.br" target="_blank" rel="noopener"
+           class="btn btn-dourado btn-lg">
+          <i class="fa-solid fa-store" aria-hidden="true"></i>
+          Conhecer a Feminnita
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       NEWSLETTER
+  ══════════════════════════════════════════════════ -->
+  <section class="newsletter" aria-label="Assinar newsletter">
+    <div class="container">
+      <h2>Receba novas histórias toda semana</h2>
+      <p>Inspire-se com quem já está fazendo acontecer. Sem spam.</p>
+      <form class="newsletter__form" id="formNewsletter" onsubmit="submeterNewsletter(event)">
+        <input type="email" class="newsletter__input"
+               placeholder="Seu melhor e-mail" required
+               aria-label="E-mail para newsletter" />
+        <button type="submit" class="btn btn-dourado">Quero receber</button>
+      </form>
+      <p id="msgNewsletter"
+         style="display:none;margin-top:1rem;color:var(--champagne);font-weight:600;">
+        ✓ Perfeito! Você está na lista.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Feminn<span>ita</span>
+            <span style="font-size:0.5em;font-weight:300;display:block;letter-spacing:0.15em;color:rgba(255,255,255,0.45);">BLOG</span>
+          </div>
+          <p class="footer__descricao">Conteúdo sobre bem-estar, tecidos, vendas e comunidade. Produzido em Nova Friburgo, RJ.</p>
+          <div class="footer__sociais">
+            <a href="https://www.instagram.com/feminnita/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__social-link" aria-label="Site"><i class="fa-solid fa-globe" aria-hidden="true"></i></a>
+            <a href="https://wa.me/5522999999999" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__titulo-coluna">Blog</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Início</a></li>
+            <li><a href="index.html#artigos" class="footer__link">Artigos</a></li>
+            <li><a href="treinamento.html" class="footer__link">Treinamento</a></li>
+            <li><a href="comunidade.html" class="footer__link">Comunidade</a></li>
+            <li><a href="sobre.html" class="footer__link">Sobre o Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__titulo-coluna">Feminnita</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Comprar no Atacado</a></li>
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Ver Catálogo</a></li>
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Quero ser Revendedor(a)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Feminnita &middot; Nova Friburgo, RJ &middot; <a href="https://www.feminnita.com.br" target="_blank" rel="noopener">www.feminnita.com.br</a></p>
+        <p class="footer__copy">fabricação própria desde sempre</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+  <!-- Script específico desta página -->
+  <script>
+    function submeterFormComunidade(event) {
+      event.preventDefault();
+
+      const dados = {
+        nome:      document.getElementById('comNome')?.value,
+        email:     document.getElementById('comEmail')?.value,
+        cidade:    document.getElementById('comCidade')?.value,
+        profissao: document.getElementById('comProfissao')?.value,
+        tema:      document.getElementById('comTema')?.value,
+        mensagem:  document.getElementById('comMensagem')?.value,
+      };
+
+      console.log('Proposta de autoria recebida:', dados);
+
+      const wrapper = document.getElementById('formWrapper');
+      const sucesso = document.getElementById('sucessoComunidade');
+
+      if (wrapper) wrapper.style.display = 'none';
+      if (sucesso) {
+        sucesso.classList.add('visivel');
+        sucesso.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    /* Responsivo: grid "como funciona" vira 1 coluna no mobile */
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.como-funciona-grid');
+      const historiaDestaque = document.querySelector('.historia-destaque');
+
+      function ajustar() {
+        if (grid) {
+          grid.style.gridTemplateColumns = window.innerWidth < 640 ? '1fr' : 'repeat(3,1fr)';
+        }
+        if (historiaDestaque) {
+          historiaDestaque.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1.4fr';
+        }
+      }
+      ajustar();
+      window.addEventListener('resize', ajustar);
+    });
+  </script>
+
+</body>
+</html>

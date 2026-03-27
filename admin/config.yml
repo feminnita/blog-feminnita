@@ -1,0 +1,87 @@
+# ─────────────────────────────────────────────────────────
+#  Decap CMS — Blog Feminnita
+#  Backend: Netlify Identity + Git Gateway (GitHub)
+# ─────────────────────────────────────────────────────────
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Pasta onde as imagens enviadas pelo CMS são salvas
+media_folder: "assets/imagens"
+public_folder: "/assets/imagens"
+
+# Interface em português
+locale: pt
+
+collections:
+
+  # ── Artigos do Blog ─────────────────────────────────────
+  - name: "artigos"
+    label: "Artigos"
+    label_singular: "Artigo"
+    folder: "artigos"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    preview_path: "artigos/{{slug}}/"
+    summary: "{{title}} ({{fields.categoria}}) — {{date}}"
+    fields:
+
+      - label: "Título"
+        name: "title"
+        widget: "string"
+        hint: "Título principal do artigo (aparece na homepage e na página do artigo)"
+
+      - label: "Data de publicação"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        default: ""
+
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        options:
+          - { label: "🌙 Bem-Estar", value: "bem-estar" }
+          - { label: "🧵 Tecidos",   value: "tecidos" }
+          - { label: "📈 Treinamento", value: "treinamento" }
+          - { label: "💜 Comunidade", value: "comunidade" }
+          - { label: "🎁 Datas Especiais", value: "datas" }
+
+      - label: "Autor"
+        name: "autor"
+        widget: "string"
+        default: "Equipe Feminnita"
+
+      - label: "Bio do autor"
+        name: "autorBio"
+        widget: "string"
+        default: "Equipe de conteúdo da Feminnita · Nova Friburgo, RJ"
+        hint: "Ex: Especialista em bem-estar · Feminnita"
+
+      - label: "Tempo de leitura (min)"
+        name: "tempoLeitura"
+        widget: "number"
+        default: 5
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Resumo"
+        name: "resumo"
+        widget: "text"
+        hint: "Aparece nos cards da homepage e abaixo do título do artigo (máx. 160 caracteres)"
+
+      - label: "Imagem de capa"
+        name: "imagem"
+        widget: "image"
+        hint: "Proporção ideal: 16:9 ou 3:2 · Tamanho: até 2 MB"
+        allow_multiple: false
+
+      - label: "Conteúdo do artigo"
+        name: "body"
+        widget: "markdown"
+        hint: "Escreva o conteúdo completo aqui. Use # para título, ## para subtítulo, **negrito**, *itálico*."

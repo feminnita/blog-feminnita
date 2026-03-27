@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ resumo }} — Blog Feminnita" />
+  <title>{{ title }} — Blog Feminnita</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  {% include "navbar.njk" %}
+
+  <!-- Breadcrumb -->
+  <div style="background:#fff;border-bottom:1px solid rgba(212,169,86,0.15);margin-top:68px;">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Caminho da página">
+        <a href="/">Início</a>
+        <span aria-hidden="true">›</span>
+        <a href="/#artigos">{{ categoria | catLabel }}</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">{{ title }}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Layout do artigo -->
+  <main class="artigo-layout">
+    <div class="container">
+      <div class="artigo-layout__inner">
+
+        <!-- ── Coluna principal (70%) ──────────────────── -->
+        <article>
+
+          <header class="artigo-conteudo__header">
+            <span class="card-artigo__tag tag--{{ categoria }}" style="margin-bottom:1rem;">
+              <i class="fa-solid {{ categoria | catIcon }}" aria-hidden="true"></i>
+              {{ categoria | catLabel }}
+            </span>
+
+            <h1 style="color:var(--borgonha);margin-bottom:1rem;line-height:1.2;">
+              {{ title }}
+            </h1>
+
+            <p class="editorial" style="color:#666;margin-bottom:1.5rem;">
+              {{ resumo }}
+            </p>
+
+            <span class="linha-dourada"></span>
+
+            <div class="artigo-conteudo__meta">
+              <div class="avatar" aria-hidden="true">{{ autor | truncate(1, "") }}</div>
+              <div>
+                <strong style="font-size:0.9rem;color:var(--preto-quente);">{{ autor }}</strong>
+                <span class="label" style="display:block;color:#aaa;">{{ autorBio }}</span>
+              </div>
+              <span style="color:#ddd;margin:0 0.25rem;">|</span>
+              <span style="font-size:0.8125rem;color:#888;">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                {{ date | dataFormatada }}
+              </span>
+              <span style="color:#ddd;margin:0 0.25rem;">|</span>
+              <span class="tempo-leitura" aria-label="Tempo de leitura">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                {{ tempoLeitura }} min de leitura
+              </span>
+            </div>
+          </header>
+
+          <!-- Imagem de capa -->
+          {% if imagem %}
+          <div class="artigo-conteudo__imagem-capa" style="border-radius:var(--radius-md);overflow:hidden;margin-bottom:2.5rem;">
+            <img src="{{ imagem }}"
+                 alt="{{ title }}"
+                 style="width:100%;height:420px;object-fit:cover;display:block;"
+                 loading="eager" />
+          </div>
+          {% endif %}
+
+          <!-- Corpo do artigo (renderizado do Markdown) -->
+          <div class="artigo-body">
+            {{ content | safe }}
+          </div>
+
+          <!-- CTA final -->
+          <div class="artigo-banner-cta" role="complementary" style="margin-top:3rem;">
+            <h3>Gostou do conteúdo? Conheça os pijamas Feminnita.</h3>
+            <p>Feitos com tecido suede de alta qualidade, direto da fábrica em Nova Friburgo, RJ.</p>
+            <a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="btn btn-dourado">
+              <i class="fa-solid fa-store" aria-hidden="true"></i>
+              Ver catálogo Feminnita
+            </a>
+          </div>
+
+        </article>
+
+        <!-- ── Sidebar (30%) ───────────────────────────── -->
+        <aside class="artigo-sidebar">
+
+          <!-- Autor -->
+          <div class="sidebar-card">
+            <h4 class="sidebar-card__titulo">
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i> Sobre a autora
+            </h4>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div class="avatar" style="flex-shrink:0;width:3rem;height:3rem;font-size:1.25rem;" aria-hidden="true">
+                {{ autor | truncate(1, "") }}
+              </div>
+              <div>
+                <strong style="display:block;color:var(--preto-quente);">{{ autor }}</strong>
+                <span style="font-size:0.8125rem;color:#888;">{{ autorBio }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download PDF -->
+          <div class="sidebar-card sidebar-card--destaque">
+            <h4 class="sidebar-card__titulo">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Material gratuito
+            </h4>
+            <p style="font-size:0.875rem;color:#666;margin-bottom:1rem;">
+              Baixe nossos PDFs exclusivos para revendedoras: calendário de datas, mensagens WhatsApp e planilha de precificação.
+            </p>
+            <button class="btn btn-primario btn-sm w-full"
+                    onclick="abrirModal('Material gratuito Feminnita')">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Baixar grátis
+            </button>
+          </div>
+
+          <!-- Artigos relacionados -->
+          {% set relacionados = collections.artigos | selectattr("data.categoria", "equalto", categoria) %}
+          {% if relacionados | length > 1 %}
+          <div class="sidebar-card">
+            <h4 class="sidebar-card__titulo">
+              <i class="fa-solid fa-bookmark" aria-hidden="true"></i> Leia também
+            </h4>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.875rem;">
+              {% for rel in relacionados %}
+                {% if rel.url !== page.url %}
+                <li>
+                  <a href="{{ rel.url }}" style="color:var(--borgonha);font-size:0.875rem;font-weight:600;line-height:1.35;text-decoration:none;">
+                    {{ rel.data.title }}
+                  </a>
+                  <span style="display:block;font-size:0.75rem;color:#aaa;margin-top:0.2rem;">
+                    <i class="fa-regular fa-clock" aria-hidden="true"></i> {{ rel.data.tempoLeitura }} min
+                  </span>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <!-- CTA atacado -->
+          <div class="sidebar-card" style="background:var(--borgonha);color:#fff;text-align:center;">
+            <p style="font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--champagne);margin-bottom:0.5rem;">✦ Atacado direto</p>
+            <p style="font-weight:700;font-size:1rem;margin-bottom:0.5rem;">Pedido mínimo R$&nbsp;199</p>
+            <p style="font-size:0.8125rem;opacity:0.8;margin-bottom:1rem;">Sem taxa de adesão. Compre, revenda e lucre.</p>
+            <a href="https://www.feminnita.com.br" target="_blank" rel="noopener"
+               class="btn btn-dourado btn-sm w-full">Quero ser revendedor(a)</a>
+          </div>
+
+        </aside>
+
+      </div><!-- /artigo-layout__inner -->
+    </div>
+  </main>
+
+  <!-- Newsletter -->
+  <section class="newsletter" aria-label="Newsletter">
+    <div class="container">
+      <h2>Receba dicas, materiais gratuitos<br>e novidades da Feminnita</h2>
+      <p>Toda semana no seu e-mail. Sem spam, só conteúdo que vale o seu tempo.</p>
+      <form class="newsletter__form" id="formNewsletter" onsubmit="submeterNewsletter(event)">
+        <input type="email" class="newsletter__input"
+               placeholder="Seu melhor e-mail" required aria-label="E-mail para newsletter" />
+        <button type="submit" class="btn btn-dourado">Quero receber</button>
+      </form>
+      <p id="msgNewsletter" style="display:none;margin-top:1rem;color:var(--champagne);font-weight:600;">
+        ✓ Perfeito! Você está na lista. Fique de olho na caixa de entrada.
+      </p>
+    </div>
+  </section>
+
+  {% include "footer.njk" %}
+  {% include "modal-captura.njk" %}
+
+  <script src="/script.js"></script>
+
+  <!-- Redireciona para o admin após login -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
