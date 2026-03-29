@@ -181,17 +181,17 @@ p:last-child { margin-bottom: 0; }
   box-shadow: var(--sombra-hover);
 }
 
-/* Dourado */
+/* Creme — botão claro para fundos escuros borgonha */
 .btn-dourado {
-  background: var(--champagne);
-  color: var(--borgonha-escuro);
-  border-color: var(--champagne);
+  background: var(--creme);
+  color: var(--borgonha);
+  border-color: var(--creme);
 }
 .btn-dourado:hover {
-  background: #c49840;
-  border-color: #c49840;
+  background: #fff;
+  border-color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(212, 169, 86, 0.35);
+  box-shadow: 0 6px 24px rgba(140, 47, 57, 0.25);
 }
 
 /* Outline branco */
@@ -2879,7 +2879,7 @@ p:last-child { margin-bottom: 0; }
   padding: 2rem 1.5rem 1.75rem;
   text-align: center;
   box-shadow: var(--sombra-card);
-  border-top: 3px solid var(--champagne);
+  border-top: 3px solid var(--borgonha);
   position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -2910,14 +2910,14 @@ p:last-child { margin-bottom: 0; }
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--champagne), #b87b20);
+  background: linear-gradient(135deg, var(--borgonha), var(--borgonha-escuro));
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.25rem;
   font-size: 1.375rem;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(212,169,86,0.35);
+  box-shadow: 0 4px 12px rgba(140,47,57,0.30);
 }
 
 .passo h4 {
