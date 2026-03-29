@@ -1,0 +1,41 @@
+name: Publicar Artigo Agendado
+
+on:
+  schedule:
+    # Terças-feiras às 09:00 BRT (12:00 UTC)
+    - cron: '0 12 * * 2'
+    # Sextas-feiras às 09:00 BRT (12:00 UTC)
+    - cron: '0 12 * * 5'
+  # Permite rodar manualmente pelo GitHub Actions
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Publicar artigo do dia
+        run: python scripts/publish.py
+
+      - name: Commit e push se houve mudanças
+        run: |
+          git config user.name "Feminnita Bot"
+          git config user.email "bot@feminnita.com.br"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Nenhuma mudança para commitar."
+          else
+            DATE=$(TZ='America/Sao_Paulo' date '+%d/%m/%Y')
+            git commit -m "Publica artigo agendado — $DATE"
+            git push
+          fi
