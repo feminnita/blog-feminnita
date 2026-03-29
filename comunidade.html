@@ -57,52 +57,49 @@
   <!-- ══════════════════════════════════════════════════
        GRID DE HISTÓRIAS
   ══════════════════════════════════════════════════ -->
-  <section style="background:var(--creme);padding:var(--espacamento-lg) 0;"
-           aria-label="Histórias da comunidade">
+  <section class="secao-comunidade" aria-label="Histórias da comunidade">
     <div class="container">
 
       <div class="secao-titulo">
-        <h2 class="texto-borgonha">Histórias em destaque</h2>
+        <h2>Histórias em destaque</h2>
         <span class="linha-dourada linha-dourada--centro"></span>
-        <p class="editorial" style="color:#666;">
-          Cada história é uma prova de que é possível — com determinação e um bom produto.
-        </p>
+        <p class="editorial">Cada história é uma prova de que é possível — com determinação e um bom produto.</p>
       </div>
 
       <!-- História em destaque (full width) -->
-      <div style="background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--sombra-card);margin-bottom:var(--espacamento-md);display:grid;grid-template-columns:1fr 1.4fr;"
-           class="historia-destaque">
+      <div class="historia-destaque">
 
-        <img src="imagens/prontas/marcia-comunidade.jpg"
+        <img class="historia-destaque__imagem"
+             src="imagens/prontas/marcia-comunidade.jpg"
              alt="Márcia Oliveira segurando caixa Feminnita"
-             style="width:100%;min-height:280px;object-fit:cover;object-position:center 20%;display:block;" />
+             loading="lazy" />
 
-        <div style="padding:2.5rem;">
-          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-            <span class="card-artigo__tag tag--comunidade">💜 Comunidade</span>
-            <span style="background:var(--champagne);color:var(--borgonha-escuro);font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:999px;text-transform:uppercase;letter-spacing:0.05em;">
-              ✦ História do mês
+        <div class="historia-destaque__corpo">
+          <div class="historia-destaque__badges">
+            <span class="card-artigo__tag tag--comunidade">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+            </span>
+            <span class="historia-destaque__badge-mes">
+              <i class="fa-solid fa-star" aria-hidden="true"></i> História do mês
             </span>
           </div>
 
-          <h2 style="color:var(--borgonha);margin-bottom:0.75rem;line-height:1.2;">
-            Da cozinha para o WhatsApp: como Márcia começou a revender e mudou sua renda
-          </h2>
+          <h2>Da cozinha para o WhatsApp: como Márcia começou a revender e mudou sua renda</h2>
 
-          <p class="editorial" style="color:#666;margin-bottom:1.25rem;">
+          <p class="editorial">
             "Eu tinha medo de vender. Achava que não era para mim. Mas a necessidade bateu
             na porta e eu precisei fazer algo — e a Feminnita foi o começo de tudo."
           </p>
 
-          <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:1.25rem;">
+          <div class="historia-destaque__autor">
             <div class="avatar avatar--grande" aria-hidden="true">M</div>
             <div>
-              <div style="font-weight:700;color:var(--preto-quente);">Márcia Oliveira</div>
-              <div class="label" style="color:#888;">Belo Horizonte, MG · Revendedora autônoma</div>
+              <div class="historia-destaque__autor-nome">Márcia Oliveira</div>
+              <div class="historia-destaque__autor-cidade">Belo Horizonte, MG · Revendedora autônoma</div>
             </div>
           </div>
 
-          <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+          <div class="historia-destaque__acoes">
             <a href="artigo-marcia.html" class="btn btn-primario">
               Ler a história completa
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
@@ -119,11 +116,19 @@
       <!-- Grid de outras histórias -->
       <div class="grid-comunidade">
 
-        <!-- História 2 -->
+        <!-- Patrícia -->
         <article class="card-comunidade">
-          <img src="imagens/prontas/card-patricia2.jpg" alt="Patrícia Rocha — lojista Feminnita em Goiânia" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;" />
+          <div class="card-comunidade__imagem-wrapper">
+            <img class="card-comunidade__imagem-real"
+                 src="imagens/prontas/card-patricia2.jpg"
+                 alt="Patrícia Rocha — lojista Feminnita em Goiânia"
+                 style="object-position:center 20%;"
+                 loading="lazy" />
+          </div>
           <div class="card-comunidade__corpo">
-            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <span class="card-artigo__tag tag--comunidade">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+            </span>
             <div class="card-comunidade__autor">
               <div class="avatar" aria-hidden="true">P</div>
               <div>
@@ -133,17 +138,25 @@
             </div>
             <h3>Como abri minha loja de pijamas aos 45 anos sem experiência no varejo</h3>
             <p>Aposentei meu marido, criei os filhos e então perguntei: e agora? A resposta veio em forma de loja.</p>
-            <a href="artigo-patricia.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.875rem;font-weight:700;color:var(--borgonha);text-decoration:none;">
-              Ler a história completa <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a href="artigo-patricia.html" class="card-comunidade__ler">
+              Ler a história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </article>
 
-        <!-- História 3 -->
+        <!-- Renata -->
         <article class="card-comunidade">
-          <img src="imagens/prontas/card-renata2.jpg" alt="Renata Alves" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;" />
+          <div class="card-comunidade__imagem-wrapper">
+            <img class="card-comunidade__imagem-real"
+                 src="imagens/prontas/card-renata2.jpg"
+                 alt="Renata Alves — grupo de compra Feminnita"
+                 style="object-position:center 20%;"
+                 loading="lazy" />
+          </div>
           <div class="card-comunidade__corpo">
-            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <span class="card-artigo__tag tag--comunidade">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+            </span>
             <div class="card-comunidade__autor">
               <div class="avatar" aria-hidden="true">R</div>
               <div>
@@ -153,17 +166,25 @@
             </div>
             <h3>Organizei um grupo de compra com a família e economizamos muito</h3>
             <p>Éramos 6 famílias. Nos unimos, atingimos o pedido mínimo e todo mundo saiu com pijama novo e dinheiro no bolso.</p>
-            <a href="artigo-renata.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.875rem;font-weight:700;color:var(--borgonha);text-decoration:none;">
-              Ler a história completa <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a href="artigo-renata.html" class="card-comunidade__ler">
+              Ler a história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </article>
 
-        <!-- História 4 -->
+        <!-- Juliana -->
         <article class="card-comunidade">
-          <img src="imagens/prontas/card-juliana.jpg" alt="Juliana Ferreira" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;" />
+          <div class="card-comunidade__imagem-wrapper">
+            <img class="card-comunidade__imagem-real"
+                 src="imagens/prontas/card-juliana.jpg"
+                 alt="Juliana Ferreira — revendedora digital Feminnita"
+                 style="object-position:center 20%;"
+                 loading="lazy" />
+          </div>
           <div class="card-comunidade__corpo">
-            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <span class="card-artigo__tag tag--comunidade">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+            </span>
             <div class="card-comunidade__autor">
               <div class="avatar" aria-hidden="true">J</div>
               <div>
@@ -173,17 +194,25 @@
             </div>
             <h3>Vendo pelo Instagram sem mostrar o rosto e faturei R$&nbsp;4.200 em março</h3>
             <p>Sou tímida, tenho vergonha de aparecer. Mas aprendi que o produto vende sozinho quando a foto é boa.</p>
-            <a href="artigo-juliana.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.875rem;font-weight:700;color:var(--borgonha);text-decoration:none;">
-              Ler a história completa <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a href="artigo-juliana.html" class="card-comunidade__ler">
+              Ler a história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </article>
 
-        <!-- História 5 -->
+        <!-- Cristiane -->
         <article class="card-comunidade">
-          <img src="imagens/prontas/card-cristiane.jpg" alt="Cristiane Melo" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;" />
+          <div class="card-comunidade__imagem-wrapper">
+            <img class="card-comunidade__imagem-real"
+                 src="imagens/prontas/card-cristiane.jpg"
+                 alt="Cristiane Melo — revendedora Feminnita"
+                 style="object-position:center 20%;"
+                 loading="lazy" />
+          </div>
           <div class="card-comunidade__corpo">
-            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <span class="card-artigo__tag tag--comunidade">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+            </span>
             <div class="card-comunidade__autor">
               <div class="avatar" aria-hidden="true">C</div>
               <div>
@@ -193,17 +222,25 @@
             </div>
             <h3>Comecei com R$&nbsp;199 e hoje tenho uma carteira de 120 clientes</h3>
             <p>O primeiro pedido coube numa sacola. Hoje preciso de caixas. Não parei de crescer desde o primeiro mês.</p>
-            <a href="artigo-cristiane.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.875rem;font-weight:700;color:var(--borgonha);text-decoration:none;">
-              Ler a história completa <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a href="artigo-cristiane.html" class="card-comunidade__ler">
+              Ler a história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </article>
 
-        <!-- História 6 -->
+        <!-- Amanda -->
         <article class="card-comunidade">
-          <img src="imagens/prontas/card-amanda.jpg" alt="Amanda Barbosa" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;" />
+          <div class="card-comunidade__imagem-wrapper">
+            <img class="card-comunidade__imagem-real"
+                 src="imagens/prontas/card-amanda.jpg"
+                 alt="Amanda Barbosa — revendedora sazonal Feminnita"
+                 style="object-position:center 20%;"
+                 loading="lazy" />
+          </div>
           <div class="card-comunidade__corpo">
-            <span class="card-artigo__tag tag--comunidade" style="margin-bottom:0.875rem;">💜 Comunidade</span>
+            <span class="card-artigo__tag tag--comunidade">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+            </span>
             <div class="card-comunidade__autor">
               <div class="avatar" aria-hidden="true">A</div>
               <div>
@@ -213,8 +250,8 @@
             </div>
             <h3>Só vendo no Natal e no Dia das Mães — e já valeu muito a pena</h3>
             <p>Trabalho CLT, não tenho tempo para vender o ano inteiro. Mas duas datas bastam para turbinar minha renda.</p>
-            <a href="artigo-amanda.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.875rem;font-weight:700;color:var(--borgonha);text-decoration:none;">
-              Ler a história completa <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a href="artigo-amanda.html" class="card-comunidade__ler">
+              Ler a história <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </article>
