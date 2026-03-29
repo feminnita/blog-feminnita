@@ -1833,6 +1833,7 @@ p:last-child { margin-bottom: 0; }
 .card-perfil__icone {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--borgonha);
 }
 
 .card-perfil h3 {
@@ -2712,6 +2713,7 @@ p:last-child { margin-bottom: 0; }
   justify-content: center;
   margin: 0 auto 0.5rem;
   font-size: 1.25rem;
+  color: #fff;
 }
 
 .pilar__label {
@@ -2744,6 +2746,11 @@ p:last-child { margin-bottom: 0; }
 .card-produto__icone {
   font-size: 2rem;
   margin-bottom: 0.75rem;
+  color: var(--borgonha);
+}
+
+.card-produto--destaque .card-produto__icone {
+  color: rgba(255,255,255,0.9);
 }
 
 .card-produto h4 {
@@ -2779,12 +2786,12 @@ p:last-child { margin-bottom: 0; }
   border-top: 1px solid rgba(212,169,86,0.25);
 }
 
-.card-perfil__lista-header {
+.card-perfil .card-perfil__lista-header {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--borgonha);
+  color: var(--borgonha) !important;
   margin-bottom: 0.625rem;
 }
 
