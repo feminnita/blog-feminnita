@@ -253,6 +253,57 @@ p:last-child { margin-bottom: 0; }
   color: var(--champagne);
 }
 
+.navbar__logo-sub {
+  font-size: 0.6em;
+  font-weight: 300;
+  display: block;
+  margin-top: -4px;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.page-header__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+/* Linha decorativa automática antes e depois do texto */
+.page-header__eyebrow::before,
+.page-header__eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--champagne);
+  opacity: 0.6;
+}
+
+/* Eyebrow para seções no corpo da página (fundo claro) */
+.secao-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--borgonha);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Eyebrow em fundo escuro (banner, newsletter) */
+.secao-eyebrow--claro {
+  color: var(--champagne);
+}
+
 .navbar__menu {
   display: flex;
   align-items: center;
@@ -427,7 +478,12 @@ p:last-child { margin-bottom: 0; }
 }
 
 .secao-titulo h2 {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
   color: var(--borgonha);
+  letter-spacing: -0.01em;
 }
 
 .grid-artigos {
@@ -582,8 +638,13 @@ p:last-child { margin-bottom: 0; }
 }
 
 .banner-revendedor h2 {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
   color: #fff;
   margin-bottom: var(--espacamento-sm);
+  letter-spacing: -0.01em;
 }
 
 .banner-revendedor p {
@@ -756,8 +817,13 @@ p:last-child { margin-bottom: 0; }
 }
 
 .newsletter h2 {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
   color: #fff;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
 .newsletter p {
@@ -905,8 +971,13 @@ p:last-child { margin-bottom: 0; }
 }
 
 .page-header h1 {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
   color: #fff;
   margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
 }
 
 .page-header p {
@@ -953,6 +1024,17 @@ p:last-child { margin-bottom: 0; }
 /* Conteúdo principal */
 .artigo-conteudo__header {
   margin-bottom: var(--espacamento-md);
+}
+
+.artigo-conteudo__header h1 {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--borgonha);
+  margin-bottom: 1rem;
 }
 
 .artigo-conteudo__meta {

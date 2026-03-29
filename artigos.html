@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Todos os artigos do Blog Feminnita — dicas de vendas, bem-estar, tecidos, datas especiais e histórias da comunidade de revendedores de pijamas." />
+  <title>Artigos — Blog Feminnita</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Menu principal">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Blog Feminnita — Início">
+        Feminn<span>ita</span>
+        <span class="navbar__logo-sub">BLOG</span>
+      </a>
+      <ul class="navbar__menu" id="navMenu" role="list">
+        <li><a href="index.html"       class="navbar__link">Início</a></li>
+        <li><a href="artigos.html"     class="navbar__link ativo">Artigos</a></li>
+        <li><a href="treinamento.html" class="navbar__link">Treinamento</a></li>
+        <li><a href="comunidade.html"  class="navbar__link">Comunidade</a></li>
+        <li><a href="sobre.html"       class="navbar__link">Sobre</a></li>
+        <li>
+          <a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="navbar__cta">
+            Comprar no Atacado &rarr;
+          </a>
+        </li>
+      </ul>
+      <button class="navbar__hamburger" id="hamburger"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════
+       PAGE HEADER
+  ══════════════════════════════════════════════════ -->
+  <header class="page-header" aria-label="Todos os artigos">
+    <div class="container">
+      <p class="page-header__eyebrow">
+        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+        Conteúdo para quem vende, dorme e vive melhor
+      </p>
+      <h1>Todos os Artigos</h1>
+      <p>Bem-estar, tecidos, vendas, datas especiais e histórias reais da comunidade Feminnita.</p>
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FILTROS
+  ══════════════════════════════════════════════════ -->
+  <div class="filtros-editorial" id="filtrosEd" aria-label="Filtrar artigos por categoria">
+    <div class="container">
+      <div class="filtros-editorial__inner" role="list">
+        <button class="filtro-ed ativo" data-cat="todos"        aria-pressed="true"  role="listitem">Todos os artigos</button>
+        <button class="filtro-ed"        data-cat="bem-estar"   aria-pressed="false" role="listitem">Bem-Estar</button>
+        <button class="filtro-ed"        data-cat="tecidos"     aria-pressed="false" role="listitem">Tecidos</button>
+        <button class="filtro-ed"        data-cat="treinamento" aria-pressed="false" role="listitem">Treinamento</button>
+        <button class="filtro-ed"        data-cat="comunidade"  aria-pressed="false" role="listitem">Comunidade</button>
+        <button class="filtro-ed"        data-cat="datas"       aria-pressed="false" role="listitem">Datas Especiais</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       GRID COMPLETO DE ARTIGOS
+  ══════════════════════════════════════════════════ -->
+  <div class="editorial-wrapper" id="artigos">
+
+    <div class="editorial-sep">
+      <span class="editorial-sep__linha"></span>
+      <span class="editorial-sep__label">11 artigos publicados</span>
+      <span class="editorial-sep__linha"></span>
+    </div>
+
+    <div class="editorial-grid" id="gridArtigos" role="list" aria-label="Todos os artigos">
+
+      <!-- ── Bem-Estar ─── -->
+      <article class="editorial-card" data-cat="bem-estar" role="listitem">
+        <img src="imagens/prontas/card-sono.jpg"
+             alt="Mulher descansando em cama confortável"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--bem-estar">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i> Bem-Estar
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo.html" style="color:inherit;text-decoration:none;">
+              5 hábitos noturnos que vão transformar a sua qualidade de sono
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Pequenas mudanças na rotina antes de dormir podem fazer uma diferença enorme. Descubra hábitos simples que realmente funcionam.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Ana Carolina</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>12 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 min</span>
+          </div>
+          <a href="artigo.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Tecidos ─── -->
+      <article class="editorial-card" data-cat="tecidos" role="listitem">
+        <img src="imagens/prontas/card-lilas-flatlay.jpg"
+             alt="Conjunto pijama lilás — estampa exclusiva Feminnita"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--tecidos">
+            <i class="fa-solid fa-scissors" aria-hidden="true"></i> Tecidos
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-tecidos.html" style="color:inherit;text-decoration:none;">
+              Tudo sobre o suede: o tecido que a Feminnita escolheu para os seus pijamas
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Macio, quente e com caimento elegante — entenda por que o suede é o tecido ideal para pijamas de qualidade.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Fernanda Lima</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>18 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 7 min</span>
+          </div>
+          <a href="artigo-tecidos.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Comunidade: Cristiane ─── -->
+      <article class="editorial-card" data-cat="comunidade" role="listitem">
+        <img src="imagens/prontas/card-cristiane.jpg"
+             alt="Cristiane, revendedora Feminnita"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--comunidade">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-cristiane.html" style="color:inherit;text-decoration:none;">
+              Comecei com R$&nbsp;199 e hoje tenho uma carteira de 120 clientes
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Cristiane não tinha experiência com vendas. Investiu o mínimo e construiu algo que nem ela mesma acreditava que era possível.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Cristiane Santos</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>15 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min</span>
+          </div>
+          <a href="artigo-cristiane.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Comunidade: Patrícia ─── -->
+      <article class="editorial-card" data-cat="comunidade" role="listitem">
+        <img src="imagens/prontas/card-patricia2.jpg"
+             alt="Patrícia Rocha, lojista Feminnita em Goiânia"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--comunidade">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-patricia.html" style="color:inherit;text-decoration:none;">
+              Como abri minha loja de pijamas aos 45 anos sem experiência no varejo
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Nunca imaginei ter minha própria loja. A Feminnita foi o ponto de partida. Hoje sou referência na cidade.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Patrícia Rocha</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>18 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min</span>
+          </div>
+          <a href="artigo-patricia.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Treinamento: Dia das Mães ─── -->
+      <article class="editorial-card" data-cat="treinamento" role="listitem">
+        <img src="imagens/prontas/card-dia-das-maes.jpg"
+             alt="Mulher segurando pijamas para vender no Dia das Mães"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--treinamento">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i> Treinamento
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-dia-das-maes.html" style="color:inherit;text-decoration:none;">
+              Como vender pijamas no Dia das Mães e faturar mais em maio
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Maio é o mês mais importante para quem vende pijamas. Veja como se preparar, montar kits e vender pelo WhatsApp.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Julia Mendes</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>20 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min</span>
+          </div>
+          <a href="artigo-dia-das-maes.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Comunidade: Renata ─── -->
+      <article class="editorial-card" data-cat="comunidade" role="listitem">
+        <img src="imagens/prontas/card-renata2.jpg"
+             alt="Renata Alves, grupo de compra Feminnita"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--comunidade">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-renata.html" style="color:inherit;text-decoration:none;">
+              Organizei um grupo de compra com a família e economizamos muito
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Nos reunimos, atingimos o mínimo juntas e todo mundo vestiu pijamas incríveis por preço de fábrica.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Renata Alves</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>20 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min</span>
+          </div>
+          <a href="artigo-renata.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Comunidade: Márcia ─── -->
+      <article class="editorial-card" data-cat="comunidade" role="listitem">
+        <img src="imagens/prontas/card-marcia-novo.jpg"
+             alt="Márcia Oliveira, revendedora Feminnita"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--comunidade">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-marcia.html" style="color:inherit;text-decoration:none;">
+              Da cozinha para o WhatsApp: como Márcia mudou sua renda revendendo
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Márcia tinha medo de vender. Começou com 3 clientes da vizinhança e hoje fatura mais de R$&nbsp;3.000 por mês sem sair de casa.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Márcia Oliveira</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>22 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 9 min</span>
+          </div>
+          <a href="artigo-marcia.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Comunidade: Juliana ─── -->
+      <article class="editorial-card" data-cat="comunidade" role="listitem">
+        <img src="imagens/prontas/card-juliana.jpg"
+             alt="Juliana, revendedora Feminnita pelo Instagram"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--comunidade">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-juliana.html" style="color:inherit;text-decoration:none;">
+              Vendo pelo Instagram sem mostrar o rosto e faturei R$&nbsp;4.200 em março
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Juliana é tímida, introvertida e não gosta de aparecer. Descobriu que dá pra vender muito sem mostrar o rosto — e provou isso.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Juliana Ferreira</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>24 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min</span>
+          </div>
+          <a href="artigo-juliana.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Datas Especiais ─── -->
+      <article class="editorial-card" data-cat="datas" role="listitem">
+        <img src="imagens/prontas/card-kits-maes.jpg"
+             alt="Kit presenteável Dia das Mães — pijama suede Feminnita"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--datas">
+            <i class="fa-solid fa-gift" aria-hidden="true"></i> Datas Especiais
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-kits-maes.html" style="color:inherit;text-decoration:none;">
+              Como montar kits presenteáveis para o Dia das Mães que vendem sozinhos
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Kits bem montados são os produtos mais vendidos no Dia das Mães. Veja como combinar peças suede, precificar e criar embalagens que encantam.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Carolina Souza</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>24 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 min</span>
+          </div>
+          <a href="artigo-kits-maes.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Treinamento: Fotos ─── -->
+      <article class="editorial-card" data-cat="treinamento" role="listitem">
+        <img src="imagens/prontas/card-fotos-celular.jpg"
+             alt="Pessoa fotografando produto com celular"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--treinamento">
+            <i class="fa-solid fa-camera" aria-hidden="true"></i> Treinamento
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-fotos.html" style="color:inherit;text-decoration:none;">
+              Como tirar fotos de pijamas com o celular que realmente vendem
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            A foto é o primeiro contato do cliente com o produto. Aprenda técnicas simples de iluminação, ângulo e edição para qualquer celular.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Renata Costa</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>26 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 7 min</span>
+          </div>
+          <a href="artigo-fotos.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- ── Comunidade: Amanda ─── -->
+      <article class="editorial-card" data-cat="comunidade" role="listitem">
+        <img src="imagens/prontas/card-amanda.jpg"
+             alt="Amanda Barbosa, revendedora sazonal Feminnita"
+             loading="lazy"
+             onerror="this.style.display='none'" />
+        <div class="editorial-card__ov"></div>
+        <div class="editorial-card__body">
+          <span class="editorial-card__tag tag--comunidade">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Comunidade
+          </span>
+          <h3 class="editorial-card__titulo">
+            <a href="artigo-amanda.html" style="color:inherit;text-decoration:none;">
+              Só vendo no Natal e no Dia das Mães — e já valeu muito a pena
+            </a>
+          </h3>
+          <p class="editorial-card__resumo">
+            Amanda trabalha em período integral e vende pijamas apenas nas datas especiais. Descobriu que duas temporadas por ano podem mudar o orçamento familiar.
+          </p>
+          <div class="editorial-card__meta">
+            <span>Amanda Barbosa</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span>26 mar 2026</span>
+            <span class="editorial-card__meta-sep">·</span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min</span>
+          </div>
+          <a href="artigo-amanda.html" class="editorial-card__ler">
+            Ler artigo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /editorial-grid -->
+
+    <div id="nenhumArtigo" style="display:none;text-align:center;padding:4rem 2rem;color:rgba(255,255,255,0.4);">
+      <p style="font-size:2rem;margin-bottom:0.75rem;"><i class="fa-solid fa-magnifying-glass"></i></p>
+      <p>Nenhum artigo encontrado nesta categoria ainda.</p>
+    </div>
+
+  </div><!-- /editorial-wrapper -->
+
+
+  <!-- ══════════════════════════════════════════════════
+       NEWSLETTER
+  ══════════════════════════════════════════════════ -->
+  <section class="newsletter" aria-label="Newsletter">
+    <div class="container">
+      <h2>Receba dicas, materiais gratuitos<br>e novidades da Feminnita</h2>
+      <p>Toda semana no seu e-mail. Sem spam, só conteúdo que vale o seu tempo.</p>
+      <form class="newsletter__form" id="formNewsletter" onsubmit="submeterNewsletter(event)">
+        <input type="email" class="newsletter__input"
+               placeholder="Seu melhor e-mail" required aria-label="E-mail para newsletter" />
+        <button type="submit" class="btn btn-dourado">Quero receber</button>
+      </form>
+      <p id="msgNewsletter" style="display:none;margin-top:1rem;color:var(--champagne);font-weight:600;">
+        <i class="fa-solid fa-circle-check"></i> Perfeito! Você está na lista. Fique de olho na caixa de entrada.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Feminn<span>ita</span>
+            <span class="navbar__logo-sub">BLOG</span>
+          </div>
+          <p class="footer__descricao">
+            Conteúdo sobre bem-estar, tecidos, vendas e comunidade para quem vive e respira moda íntima.
+            Produzido pela equipe Feminnita em Nova Friburgo, RJ.
+          </p>
+          <div class="footer__sociais">
+            <a href="https://www.instagram.com/feminnita/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__social-link" aria-label="Site"><i class="fa-solid fa-globe" aria-hidden="true"></i></a>
+            <a href="https://wa.me/5522992810707" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__titulo-coluna">Blog</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"       class="footer__link">Início</a></li>
+            <li><a href="artigos.html"     class="footer__link">Artigos</a></li>
+            <li><a href="treinamento.html" class="footer__link">Treinamento</a></li>
+            <li><a href="comunidade.html"  class="footer__link">Comunidade</a></li>
+            <li><a href="sobre.html"       class="footer__link">Sobre o Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__titulo-coluna">Feminnita</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Comprar no Atacado</a></li>
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Ver Catálogo</a></li>
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Quero ser Revendedor(a)</a></li>
+            <li><a href="https://www.feminnita.com.br" target="_blank" rel="noopener" class="footer__link">Peça seu Catálogo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Feminnita &middot; Nova Friburgo, RJ &middot; fabricação própria desde sempre &middot;
+          <a href="https://www.feminnita.com.br" target="_blank" rel="noopener">www.feminnita.com.br</a>
+        </p>
+        <p class="footer__copy">Blog produzido com carinho para revendedoras, lojistas e amantes de pijamas</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
