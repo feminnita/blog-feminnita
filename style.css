@@ -360,8 +360,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .navbar__cta {
-  background: var(--champagne);
-  color: var(--borgonha-escuro);
+  background: var(--creme);
+  color: var(--borgonha);
   padding: 0.5rem 1.25rem;
   border-radius: var(--radius-sm);
   font-size: 0.8125rem;
@@ -371,7 +371,7 @@ p:last-child { margin-bottom: 0; }
   transition: all 0.25s;
 }
 .navbar__cta:hover {
-  background: #c49840;
+  background: #fff;
   transform: translateY(-1px);
 }
 
@@ -929,8 +929,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .historia-destaque__badge-mes {
-  background: var(--champagne);
-  color: var(--borgonha-escuro);
+  background: var(--borgonha);
+  color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
   padding: 0.2rem 0.6rem;
@@ -1091,8 +1091,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .footer__social-link:hover {
-  background: var(--champagne);
-  color: var(--borgonha-escuro);
+  background: var(--creme);
+  color: var(--borgonha);
   transform: translateY(-2px);
 }
 
