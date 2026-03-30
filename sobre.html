@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -18,11 +18,11 @@
     <div class="container navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="Blog Feminnita — Início">
         Feminn<span>ita</span>
-        <span style="font-size:0.6em;font-weight:300;display:block;margin-top:-4px;letter-spacing:0.12em;color:rgba(255,255,255,0.6);">BLOG</span>
+        <span class="navbar__logo-sub">BLOG</span>
       </a>
       <ul class="navbar__menu" id="navMenu" role="list">
         <li><a href="index.html"         class="navbar__link">Início</a></li>
-        <li><a href="index.html#artigos"  class="navbar__link">Artigos</a></li>
+        <li><a href="artigos.html"  class="navbar__link">Artigos</a></li>
         <li><a href="treinamento.html"   class="navbar__link">Treinamento</a></li>
         <li><a href="comunidade.html"    class="navbar__link">Comunidade</a></li>
         <li><a href="sobre.html"         class="navbar__link ativo">Sobre</a></li>
@@ -44,9 +44,7 @@
   ══════════════════════════════════════════════════ -->
   <header class="page-header" aria-label="Sobre o Blog Feminnita">
     <div class="container">
-      <p class="label" style="color:var(--champagne);margin-bottom:0.75rem;letter-spacing:0.12em;">
-        ✦ Fabricação própria · Nova Friburgo, RJ
-      </p>
+      <p class="page-header__eyebrow">Fabricação própria · Nova Friburgo, RJ</p>
       <h1>Sobre o Blog Feminnita</h1>
       <p>
         Conteúdo criado para quem vende pijamas, para quem quer dormir melhor
@@ -59,17 +57,14 @@
   <!-- ══════════════════════════════════════════════════
        HISTÓRIA DA FEMINNITA
   ══════════════════════════════════════════════════ -->
-  <section style="background:var(--creme);padding:var(--espacamento-lg) 0;"
-           aria-label="História da Feminnita">
+  <section class="secao-historia" aria-label="História da Feminnita">
     <div class="container">
       <div class="sobre-grid">
 
         <!-- Texto -->
         <div>
-          <p class="label" style="color:var(--champagne);letter-spacing:0.1em;margin-bottom:0.75rem;">
-            ✦ Nossa história
-          </p>
-          <h2 style="color:var(--borgonha);margin-bottom:0.5rem;">
+          <p class="secao-eyebrow">Nossa história</p>
+          <h2 class="texto-borgonha mb-sm">
             Nascida em Nova Friburgo, com design 100% próprio
           </h2>
           <span class="linha-dourada"></span>
@@ -101,40 +96,39 @@
 
           <a href="https://www.feminnita.com.br"
              target="_blank" rel="noopener"
-             class="btn btn-primario"
-             style="margin-top:0.5rem;">
+             class="btn btn-primario mt-md">
             <i class="fa-solid fa-store" aria-hidden="true"></i>
             Conhecer a Feminnita
           </a>
         </div>
 
         <!-- Visual decorativo -->
-        <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="sobre-decorativo">
 
-          <div style="background:linear-gradient(135deg,var(--borgonha),var(--borgonha-escuro));border-radius:var(--radius-lg);padding:2.5rem;color:#fff;text-align:center;">
-            <div style="font-size:3rem;margin-bottom:1rem;" aria-hidden="true">✏️</div>
-            <h3 style="color:#fff;margin-bottom:0.5rem;">Coleções 100% exclusivas</h3>
-            <p style="color:rgba(255,255,255,0.8);font-size:0.9375rem;">
-              Cores, modelos e estampas desenvolvidos internamente — do esboço à peça finalizada.
-            </p>
+          <div class="sobre-destaque-box">
+            <div class="sobre-destaque-box__icone" aria-hidden="true">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3>Coleções 100% exclusivas</h3>
+            <p>Cores, modelos e estampas desenvolvidos internamente — do esboço à peça finalizada.</p>
           </div>
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-            <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);border-top:3px solid var(--champagne);">
-              <div style="font-size:1.75rem;font-weight:700;color:var(--borgonha);">Design</div>
-              <div class="label" style="color:#888;margin-top:0.25rem;">próprio da marca</div>
+          <div class="sobre-stats">
+            <div class="sobre-stat-card">
+              <div class="sobre-stat-card__num">Design</div>
+              <div class="sobre-stat-card__label">próprio da marca</div>
             </div>
-            <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);border-top:3px solid var(--champagne);">
-              <div style="font-size:1.75rem;font-weight:700;color:var(--borgonha);">Nova Friburgo</div>
-              <div class="label" style="color:#888;margin-top:0.25rem;">polo têxtil, RJ</div>
+            <div class="sobre-stat-card">
+              <div class="sobre-stat-card__num">Nova Friburgo</div>
+              <div class="sobre-stat-card__label">polo têxtil, RJ</div>
             </div>
-            <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);border-top:3px solid var(--champagne);">
-              <div style="font-size:1.75rem;font-weight:700;color:var(--borgonha);">100%</div>
-              <div class="label" style="color:#888;margin-top:0.25rem;">fabricação própria</div>
+            <div class="sobre-stat-card">
+              <div class="sobre-stat-card__num">100%</div>
+              <div class="sobre-stat-card__label">fabricação própria</div>
             </div>
-            <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);border-top:3px solid var(--champagne);">
-              <div style="font-size:1.75rem;font-weight:700;color:var(--borgonha);">R$&nbsp;199</div>
-              <div class="label" style="color:#888;margin-top:0.25rem;">pedido mínimo atacado</div>
+            <div class="sobre-stat-card">
+              <div class="sobre-stat-card__num">R$&nbsp;199</div>
+              <div class="sobre-stat-card__label">pedido mínimo atacado</div>
             </div>
           </div>
 
@@ -148,24 +142,21 @@
   <!-- ══════════════════════════════════════════════════
        MISSÃO DO BLOG
   ══════════════════════════════════════════════════ -->
-  <section style="background:#fff;padding:var(--espacamento-lg) 0;border-top:var(--linha-dourada);border-bottom:var(--linha-dourada);"
-           aria-label="Missão do blog">
+  <section class="secao-missao" aria-label="Missão do blog">
     <div class="container">
-      <div style="max-width:720px;margin:0 auto;text-align:center;">
+      <div class="secao-missao__inner">
 
-        <p class="label" style="color:var(--champagne);letter-spacing:0.1em;margin-bottom:0.75rem;">
-          ✦ Por que este blog existe
-        </p>
-        <h2 style="color:var(--borgonha);margin-bottom:0.5rem;">A missão do Blog Feminnita</h2>
+        <p class="secao-eyebrow">Por que este blog existe</p>
+        <h2 class="texto-borgonha mb-sm">A missão do Blog Feminnita</h2>
         <span class="linha-dourada linha-dourada--centro"></span>
 
-        <p class="editorial" style="font-size:1.375rem;color:var(--borgonha-escuro);margin-bottom:1.5rem;">
+        <p class="editorial">
           "Queremos que cada pessoa que compra da Feminnita tenha as ferramentas,
           o conhecimento e a confiança para crescer — seja vendendo, seja simplesmente
           dormindo melhor."
         </p>
 
-        <p style="color:#555;">
+        <p>
           O Blog Feminnita foi criado para ser um recurso gratuito e acessível para
           revendedores, lojistas, clientes e qualquer pessoa que queira aprender mais
           sobre bem-estar, tecidos e moda íntima. Todo o conteúdo é desenvolvido pela
@@ -173,44 +164,48 @@
           experiências.
         </p>
 
-        <p style="color:#555;">
+        <p>
           Não vendemos curso. Não cobramos por PDFs. Não exigimos cadastro para ler
           os artigos. Acreditamos que informação de qualidade deve ser livre — e que
           quando você cresce, a Feminnita cresce junto.
         </p>
 
         <!-- Pilares do blog -->
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:var(--espacamento-md);"
-             class="pilares-grid" role="list">
+        <div class="pilares-grid" role="list">
 
-          <div style="text-align:center;" role="listitem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--cat-bem-estar);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:1.25rem;"
-                 aria-hidden="true">🌙</div>
-            <div style="font-size:0.75rem;font-weight:700;color:var(--preto-quente);">Bem-Estar</div>
+          <div class="pilar" role="listitem">
+            <div class="pilar__icone" style="background:var(--cat-bem-estar);" aria-hidden="true">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="pilar__label">Bem-Estar</div>
           </div>
 
-          <div style="text-align:center;" role="listitem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--cat-tecidos);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:1.25rem;"
-                 aria-hidden="true">🧵</div>
-            <div style="font-size:0.75rem;font-weight:700;color:var(--preto-quente);">Tecidos</div>
+          <div class="pilar" role="listitem">
+            <div class="pilar__icone" style="background:var(--cat-tecidos);" aria-hidden="true">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div class="pilar__label">Tecidos</div>
           </div>
 
-          <div style="text-align:center;" role="listitem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--cat-treinamento);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:1.25rem;"
-                 aria-hidden="true">📈</div>
-            <div style="font-size:0.75rem;font-weight:700;color:var(--preto-quente);">Vendas</div>
+          <div class="pilar" role="listitem">
+            <div class="pilar__icone" style="background:var(--cat-treinamento);" aria-hidden="true">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="pilar__label">Vendas</div>
           </div>
 
-          <div style="text-align:center;" role="listitem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--cat-comunidade);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:1.25rem;"
-                 aria-hidden="true">💜</div>
-            <div style="font-size:0.75rem;font-weight:700;color:var(--preto-quente);">Comunidade</div>
+          <div class="pilar" role="listitem">
+            <div class="pilar__icone" style="background:var(--cat-comunidade);" aria-hidden="true">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="pilar__label">Comunidade</div>
           </div>
 
-          <div style="text-align:center;" role="listitem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--cat-datas);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:1.25rem;"
-                 aria-hidden="true">🎁</div>
-            <div style="font-size:0.75rem;font-weight:700;color:var(--preto-quente);">Datas</div>
+          <div class="pilar" role="listitem">
+            <div class="pilar__icone" style="background:var(--cat-datas);" aria-hidden="true">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="pilar__label">Datas</div>
           </div>
 
         </div>
@@ -227,110 +222,106 @@
     <div class="container">
 
       <div class="secao-titulo">
-        <p class="label" style="color:var(--borgonha);letter-spacing:0.1em;margin-bottom:0.75rem;">
-          ✦ Para quem é este blog?
-        </p>
-        <h2 style="color:var(--borgonha);">O blog foi feito para você</h2>
+        <p class="secao-eyebrow">Para quem é este blog?</p>
+        <h2>O blog foi feito para você</h2>
         <span class="linha-dourada linha-dourada--centro"></span>
-        <p class="editorial" style="color:#7a5c4a;">
-          Três perfis diferentes, um objetivo em comum: crescer.
-        </p>
+        <p class="editorial">Três perfis diferentes, um objetivo em comum: crescer.</p>
       </div>
 
       <div class="grid-perfis">
 
         <!-- Perfil 1 -->
         <div class="card-perfil">
-          <div class="card-perfil__icone" aria-hidden="true">📱</div>
+          <div class="card-perfil__icone" aria-hidden="true"><i class="fa-solid fa-mobile-screen-button"></i></div>
           <h3>Revendedor(a) Autônomo(a)</h3>
-          <span class="linha-dourada linha-dourada--centro" style="width:36px;"></span>
+          <span class="linha-dourada linha-dourada--centro"></span>
           <p>
             Você quer uma renda extra revendendo pelo WhatsApp, Instagram ou para
             conhecidos. Precisa aprender a vender, precificar e aproveitar datas sazonais
             sem precisar sair de casa.
           </p>
-          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(212,169,86,0.25);">
-            <p class="label" style="color:var(--borgonha);margin-bottom:0.625rem;">Conteúdo recomendado:</p>
-            <ul style="text-align:left;display:flex;flex-direction:column;gap:0.375rem;">
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+          <div class="card-perfil__recomendacoes">
+            <p class="card-perfil__lista-header">Conteúdo recomendado:</p>
+            <ul class="card-perfil__lista">
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Treinamento de Vendas
               </li>
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Datas Especiais
               </li>
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Materiais gratuitos
               </li>
             </ul>
           </div>
-          <a href="treinamento.html" class="btn btn-outline-borgonha btn-sm" style="margin-top:1.25rem;">
+          <a href="treinamento.html" class="btn btn-outline-borgonha btn-sm">
             Ver treinamentos
           </a>
         </div>
 
         <!-- Perfil 2 -->
         <div class="card-perfil">
-          <div class="card-perfil__icone" aria-hidden="true">🏪</div>
+          <div class="card-perfil__icone" aria-hidden="true"><i class="fa-solid fa-store"></i></div>
           <h3>Lojista / Varejista</h3>
-          <span class="linha-dourada linha-dourada--centro" style="width:36px;"></span>
+          <span class="linha-dourada linha-dourada--centro"></span>
           <p>
             Você tem uma loja física ou e-commerce e busca um fornecedor de pijamas
             de qualidade com bom preço de atacado. Quer entender tecidos, tendências
             e como montar uma boa vitrine de moda íntima.
           </p>
-          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(212,169,86,0.25);">
-            <p class="label" style="color:var(--borgonha);margin-bottom:0.625rem;">Conteúdo recomendado:</p>
-            <ul style="text-align:left;display:flex;flex-direction:column;gap:0.375rem;">
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+          <div class="card-perfil__recomendacoes">
+            <p class="card-perfil__lista-header">Conteúdo recomendado:</p>
+            <ul class="card-perfil__lista">
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Tecidos &amp; Produtos
               </li>
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Precificação e Lucro
               </li>
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Montagem de Kits
               </li>
             </ul>
           </div>
-          <a href="index.html#artigos" class="btn btn-outline-borgonha btn-sm" style="margin-top:1.25rem;">
+          <a href="artigos.html" class="btn btn-outline-borgonha btn-sm">
             Ver artigos
           </a>
         </div>
 
         <!-- Perfil 3 -->
         <div class="card-perfil">
-          <div class="card-perfil__icone" aria-hidden="true">👨‍👩‍👧</div>
+          <div class="card-perfil__icone" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
           <h3>Comprador(a) em Grupo</h3>
-          <span class="linha-dourada linha-dourada--centro" style="width:36px;"></span>
+          <span class="linha-dourada linha-dourada--centro"></span>
           <p>
             Você se junta com família ou amigos para atingir o pedido mínimo e comprar
             com preço de fábrica para uso próprio. Quer escolher bem os tecidos e
             entender o que combina com cada pessoa.
           </p>
-          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(212,169,86,0.25);">
-            <p class="label" style="color:var(--borgonha);margin-bottom:0.625rem;">Conteúdo recomendado:</p>
-            <ul style="text-align:left;display:flex;flex-direction:column;gap:0.375rem;">
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+          <div class="card-perfil__recomendacoes">
+            <p class="card-perfil__lista-header">Conteúdo recomendado:</p>
+            <ul class="card-perfil__lista">
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Bem-Estar &amp; Sono
               </li>
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Tecidos por estação
               </li>
-              <li style="font-size:0.8125rem;color:#555;">
-                <i class="fa-solid fa-arrow-right" style="color:var(--champagne);margin-right:0.375rem;" aria-hidden="true"></i>
+              <li>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Histórias da Comunidade
               </li>
             </ul>
           </div>
-          <a href="comunidade.html" class="btn btn-outline-borgonha btn-sm" style="margin-top:1.25rem;">
+          <a href="comunidade.html" class="btn btn-outline-borgonha btn-sm">
             Ver comunidade
           </a>
         </div>
@@ -343,55 +334,51 @@
   <!-- ══════════════════════════════════════════════════
        PRODUTOS FEMINNITA
   ══════════════════════════════════════════════════ -->
-  <section style="background:var(--creme);padding:var(--espacamento-lg) 0;"
-           aria-label="Produtos Feminnita">
+  <section class="secao-produtos" aria-label="Produtos Feminnita">
     <div class="container">
 
       <div class="secao-titulo">
-        <p class="label" style="color:var(--champagne);letter-spacing:0.1em;margin-bottom:0.75rem;">
-          ✦ O que fabricamos
-        </p>
-        <h2 style="color:var(--borgonha);">Nossa linha de produtos</h2>
+        <p class="secao-eyebrow">O que fabricamos</p>
+        <h2>Nossa linha de produtos</h2>
         <span class="linha-dourada linha-dourada--centro"></span>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;"
-           class="produtos-grid" role="list">
+      <div class="produtos-grid" role="list">
 
-        <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);transition:all 0.3s;" class="card-animado" role="listitem">
-          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">😴</div>
-          <h4 style="font-size:0.9375rem;color:var(--borgonha);margin-bottom:0.375rem;">Pijamas</h4>
-          <p style="font-size:0.8125rem;color:#666;">Conjuntos femininos, masculinos e infantis em vários tecidos e modelos.</p>
+        <div class="card-produto" role="listitem">
+          <div class="card-produto__icone" aria-hidden="true"><i class="fa-solid fa-bed"></i></div>
+          <h4>Pijamas</h4>
+          <p>Conjuntos femininos, masculinos e infantis em vários tecidos e modelos.</p>
         </div>
 
-        <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);transition:all 0.3s;" class="card-animado" role="listitem">
-          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">🌸</div>
-          <h4 style="font-size:0.9375rem;color:var(--borgonha);margin-bottom:0.375rem;">Camisolas</h4>
-          <p style="font-size:0.8125rem;color:#666;">Camisolas longas e curtas, baby dolls e regatas em tecidos leves e confortáveis.</p>
+        <div class="card-produto" role="listitem">
+          <div class="card-produto__icone" aria-hidden="true"><i class="fa-solid fa-shirt"></i></div>
+          <h4>Camisolas</h4>
+          <p>Camisolas longas e curtas, baby dolls e regatas em tecidos leves e confortáveis.</p>
         </div>
 
-        <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);transition:all 0.3s;" class="card-animado" role="listitem">
-          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">🧥</div>
-          <h4 style="font-size:0.9375rem;color:var(--borgonha);margin-bottom:0.375rem;">Robes</h4>
-          <p style="font-size:0.8125rem;color:#666;">Robes e roupões para o período pós-banho, em malha e plush macio.</p>
+        <div class="card-produto" role="listitem">
+          <div class="card-produto__icone" aria-hidden="true"><i class="fa-solid fa-person-dress"></i></div>
+          <h4>Robes</h4>
+          <p>Robes e roupões para o período pós-banho, em malha e plush macio.</p>
         </div>
 
-        <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);transition:all 0.3s;" class="card-animado" role="listitem">
-          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">🎁</div>
-          <h4 style="font-size:0.9375rem;color:var(--borgonha);margin-bottom:0.375rem;">Kits</h4>
-          <p style="font-size:0.8125rem;color:#666;">Kits presenteáveis com camisola, robe e combinações especiais para presentear.</p>
+        <div class="card-produto" role="listitem">
+          <div class="card-produto__icone" aria-hidden="true"><i class="fa-solid fa-gift"></i></div>
+          <h4>Kits</h4>
+          <p>Kits presenteáveis com camisola, robe e combinações especiais para presentear.</p>
         </div>
 
-        <div style="background:#fff;border-radius:var(--radius-md);padding:1.5rem;text-align:center;box-shadow:var(--sombra-card);transition:all 0.3s;" class="card-animado" role="listitem">
-          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">🎨</div>
-          <h4 style="font-size:0.9375rem;color:var(--borgonha);margin-bottom:0.375rem;">Estampas Exclusivas</h4>
-          <p style="font-size:0.8125rem;color:#666;">Cores, modelos e estampas desenvolvidos pela Feminnita — você não encontra igual em nenhum outro lugar.</p>
+        <div class="card-produto" role="listitem">
+          <div class="card-produto__icone" aria-hidden="true"><i class="fa-solid fa-palette"></i></div>
+          <h4>Estampas Exclusivas</h4>
+          <p>Cores, modelos e estampas desenvolvidos pela Feminnita — você não encontra igual em nenhum outro lugar.</p>
         </div>
 
-        <div style="background:linear-gradient(135deg,var(--borgonha),var(--borgonha-escuro));border-radius:var(--radius-md);padding:1.5rem;text-align:center;transition:all 0.3s;" class="card-animado" role="listitem">
-          <div style="font-size:2rem;margin-bottom:0.75rem;" aria-hidden="true">🛍️</div>
-          <h4 style="font-size:0.9375rem;color:#fff;margin-bottom:0.375rem;">Ver catálogo completo</h4>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.8);margin-bottom:1rem;">Todos os modelos disponíveis no site oficial.</p>
+        <div class="card-produto card-produto--destaque" role="listitem">
+          <div class="card-produto__icone" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></div>
+          <h4>Ver catálogo completo</h4>
+          <p>Todos os modelos disponíveis no site oficial.</p>
           <a href="https://www.feminnita.com.br" target="_blank" rel="noopener"
              class="btn btn-dourado btn-sm">
             Acessar catálogo
@@ -409,15 +396,13 @@
   <section class="banner-revendedor" aria-label="Acesse o site Feminnita">
     <div class="container">
       <div class="banner-revendedor__conteudo">
-        <p class="label" style="color:var(--champagne);margin-bottom:0.75rem;letter-spacing:0.1em;">
-          ✦ Do blog para a fábrica
-        </p>
+        <p class="secao-eyebrow secao-eyebrow--claro">Do blog para a fábrica</p>
         <h2>Gostou do conteúdo? Conheça os produtos.</h2>
         <p>
           O blog é o ponto de partida. A Feminnita.com.br é onde você
           encontra o catálogo completo, faz seu pedido e começa a crescer.
         </p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <div class="banner-revendedor__acoes">
           <a href="https://www.feminnita.com.br" target="_blank" rel="noopener"
              class="btn btn-dourado btn-lg">
             <i class="fa-solid fa-store" aria-hidden="true"></i>
@@ -437,17 +422,16 @@
   <!-- ══════════════════════════════════════════════════
        CONTATO RÁPIDO
   ══════════════════════════════════════════════════ -->
-  <section style="background:#fff;padding:var(--espacamento-lg) 0;border-top:var(--linha-dourada);"
-           aria-label="Contato">
+  <section class="secao-contato" aria-label="Contato">
     <div class="container">
-      <div style="max-width:600px;margin:0 auto;text-align:center;">
-        <h2 style="color:var(--borgonha);margin-bottom:0.5rem;">Fale com a Feminnita</h2>
+      <div class="secao-contato__inner">
+        <h2>Fale com a Feminnita</h2>
         <span class="linha-dourada linha-dourada--centro"></span>
-        <p style="color:#555;margin-bottom:var(--espacamento-md);">
+        <p>
           Tem dúvidas sobre o blog, quer sugerir um tema ou tem interesse em
           comprar no atacado? Entre em contato pelo WhatsApp ou Instagram.
         </p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <div class="acoes-flex">
           <a href="https://wa.me/5522992810707" target="_blank" rel="noopener"
              class="btn btn-primario btn-lg">
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -493,7 +477,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__logo">Feminn<span>ita</span>
-            <span style="font-size:0.5em;font-weight:300;display:block;letter-spacing:0.15em;color:rgba(255,255,255,0.45);">BLOG</span>
+            <span class="navbar__logo-sub">BLOG</span>
           </div>
           <p class="footer__descricao">Conteúdo sobre bem-estar, tecidos, vendas e comunidade. Produzido em Nova Friburgo, RJ.</p>
           <div class="footer__sociais">
@@ -506,7 +490,7 @@
           <h4 class="footer__titulo-coluna">Blog</h4>
           <ul class="footer__links" role="list">
             <li><a href="index.html" class="footer__link">Início</a></li>
-            <li><a href="index.html#artigos" class="footer__link">Artigos</a></li>
+            <li><a href="artigos.html" class="footer__link">Artigos</a></li>
             <li><a href="treinamento.html" class="footer__link">Treinamento</a></li>
             <li><a href="comunidade.html" class="footer__link">Comunidade</a></li>
             <li><a href="sobre.html" class="footer__link">Sobre o Blog</a></li>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -18,11 +18,11 @@
     <div class="container navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="Blog Feminnita — Início">
         Feminn<span>ita</span>
-        <span style="font-size:0.6em;font-weight:300;display:block;margin-top:-4px;letter-spacing:0.12em;color:rgba(255,255,255,0.6);">BLOG</span>
+        <span class="navbar__logo-sub">BLOG</span>
       </a>
       <ul class="navbar__menu" id="navMenu" role="list">
         <li><a href="index.html"         class="navbar__link">Início</a></li>
-        <li><a href="index.html#artigos"  class="navbar__link">Artigos</a></li>
+        <li><a href="artigos.html"  class="navbar__link">Artigos</a></li>
         <li><a href="treinamento.html"   class="navbar__link ativo">Treinamento</a></li>
         <li><a href="comunidade.html"    class="navbar__link">Comunidade</a></li>
         <li><a href="sobre.html"         class="navbar__link">Sobre</a></li>
@@ -44,27 +44,24 @@
   ══════════════════════════════════════════════════ -->
   <header class="page-header" aria-label="Centro de Treinamento Feminnita">
     <div class="container">
-      <p class="label" style="color:var(--champagne);margin-bottom:0.75rem;letter-spacing:0.12em;">
-        ✦ Conteúdo exclusivo para revendedores
-      </p>
+      <p class="page-header__eyebrow">Conteúdo exclusivo para revendedores</p>
       <h1>Centro de Treinamento Feminnita</h1>
       <p>Materiais gratuitos para você vender mais e melhor — PDFs práticos, direto ao ponto.</p>
 
-      <!-- Números de destaque -->
-      <div style="display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
-        <div style="text-align:center;">
-          <div style="font-size:1.875rem;font-weight:700;color:var(--champagne);">12+</div>
-          <div class="label" style="color:rgba(255,255,255,0.65);">Materiais gratuitos</div>
+      <div class="page-header__stats">
+        <div class="page-header__stat">
+          <div class="page-header__stat-num">12+</div>
+          <div class="page-header__stat-label">Materiais gratuitos</div>
         </div>
-        <div style="color:rgba(255,255,255,0.25);font-size:1.5rem;align-self:center;">|</div>
-        <div style="text-align:center;">
-          <div style="font-size:1.875rem;font-weight:700;color:var(--champagne);">5</div>
-          <div class="label" style="color:rgba(255,255,255,0.65);">Categorias</div>
+        <div class="page-header__stat-sep" aria-hidden="true">|</div>
+        <div class="page-header__stat">
+          <div class="page-header__stat-num">5</div>
+          <div class="page-header__stat-label">Categorias</div>
         </div>
-        <div style="color:rgba(255,255,255,0.25);font-size:1.5rem;align-self:center;">|</div>
-        <div style="text-align:center;">
-          <div style="font-size:1.875rem;font-weight:700;color:var(--champagne);">100%</div>
-          <div class="label" style="color:rgba(255,255,255,0.65);">Gratuito</div>
+        <div class="page-header__stat-sep" aria-hidden="true">|</div>
+        <div class="page-header__stat">
+          <div class="page-header__stat-num">100%</div>
+          <div class="page-header__stat-label">Gratuito</div>
         </div>
       </div>
     </div>
@@ -80,37 +77,37 @@
         <li>
           <button class="filtro-pill filtro-pill-treinamento ativo"
                   data-cat="todos" aria-pressed="true">
-            ✦ Todos os materiais
+            Todos os materiais
           </button>
         </li>
         <li>
           <button class="filtro-pill filtro-pill-treinamento"
                   data-cat="datas" aria-pressed="false">
-            🎁 Datas Especiais
+            <i class="fa-solid fa-gift" aria-hidden="true"></i> Datas Especiais
           </button>
         </li>
         <li>
           <button class="filtro-pill filtro-pill-treinamento"
                   data-cat="whatsapp" aria-pressed="false">
-            💬 Vendas no WhatsApp
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Vendas no WhatsApp
           </button>
         </li>
         <li>
           <button class="filtro-pill filtro-pill-treinamento"
                   data-cat="precificacao" aria-pressed="false">
-            💰 Precificação e Lucro
+            <i class="fa-solid fa-calculator" aria-hidden="true"></i> Precificação e Lucro
           </button>
         </li>
         <li>
           <button class="filtro-pill filtro-pill-treinamento"
                   data-cat="kits" aria-pressed="false">
-            🎀 Montagem de Kits
+            <i class="fa-solid fa-box-open" aria-hidden="true"></i> Montagem de Kits
           </button>
         </li>
         <li>
           <button class="filtro-pill filtro-pill-treinamento"
                   data-cat="captacao" aria-pressed="false">
-            🤝 Captação de Clientes
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i> Captação de Clientes
           </button>
         </li>
       </ul>
@@ -121,28 +118,25 @@
   <!-- ══════════════════════════════════════════════════
        DESTAQUE — MATERIAL DO MÊS
   ══════════════════════════════════════════════════ -->
-  <section style="background:var(--pessego);padding:var(--espacamento-lg) 0;border-bottom:var(--linha-dourada);"
-           aria-label="Material em destaque">
+  <section class="secao-destaque" aria-label="Material em destaque">
     <div class="container">
-      <div style="background:#fff;border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--sombra-card);border:2px solid var(--champagne);display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;"
-           class="destaque-material">
+      <div class="destaque-material">
 
-        <div style="width:120px;height:120px;background:linear-gradient(135deg,var(--borgonha),var(--borgonha-escuro));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:3.5rem;flex-shrink:0;"
-             aria-hidden="true">
-          🗓️
+        <div class="destaque-material__icone" aria-hidden="true">
+          <i class="fa-solid fa-calendar-days"></i>
         </div>
 
         <div>
-          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
-            <span class="card-artigo__tag tag--datas">🎁 Datas Especiais</span>
-            <span style="background:var(--champagne);color:var(--borgonha-escuro);font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:999px;text-transform:uppercase;letter-spacing:0.05em;">
-              ✦ Destaque do mês
+          <div class="destaque-material__badges">
+            <span class="card-artigo__tag tag--datas">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i> Datas Especiais
+            </span>
+            <span class="historia-destaque__badge-mes">
+              <i class="fa-solid fa-star" aria-hidden="true"></i> Destaque do mês
             </span>
           </div>
-          <h2 style="color:var(--borgonha);margin-bottom:0.5rem;">
-            Calendário Completo de Datas Sazonais 2026
-          </h2>
-          <p style="color:#555;margin-bottom:1.25rem;font-size:1rem;">
+          <h2>Calendário Completo de Datas Sazonais 2026</h2>
+          <p>
             Todas as datas que movem as vendas de pijamas e moda íntima ao longo do ano —
             com dicas de antecedência, sugestões de kits e mensagens prontas para cada data.
             O planejamento que toda revendedora precisa ter.
@@ -163,29 +157,24 @@
   <!-- ══════════════════════════════════════════════════
        GRID DE MATERIAIS
   ══════════════════════════════════════════════════ -->
-  <section style="background:var(--creme);padding:var(--espacamento-lg) 0;"
-           aria-label="Todos os materiais">
+  <section class="secao-materiais" aria-label="Todos os materiais">
     <div class="container">
 
       <div class="secao-titulo">
-        <h2 class="texto-borgonha">Todos os materiais</h2>
+        <h2>Todos os materiais</h2>
         <span class="linha-dourada linha-dourada--centro"></span>
-        <p class="editorial" style="color:#666;">
-          Clique em "Baixar grátis" e receba o PDF direto no seu e-mail.
-        </p>
+        <p class="editorial">Clique em "Baixar grátis" e receba o PDF direto no seu e-mail.</p>
       </div>
 
       <div class="grid-materiais" id="gridMateriais">
 
         <!-- ── Material 1 ─── Datas ──────────────────── -->
         <div class="card-material" data-cat="datas">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#fbe8e4,#e8a090);"
-               aria-hidden="true">
-            🎁
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-heart"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">🎁 Datas Especiais</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-gift" aria-hidden="true"></i> Datas Especiais</div>
             <h3>Guia completo do Dia das Mães</h3>
             <p>Como se preparar com 30 dias de antecedência, montar kits irresistíveis e atingir seu melhor resultado em maio.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -199,13 +188,11 @@
 
         <!-- ── Material 2 ─── WhatsApp ───────────────── -->
         <div class="card-material" data-cat="whatsapp">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#dcf8dc,#a8e8a8);"
-               aria-hidden="true">
-            💬
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-brands fa-whatsapp"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">💬 Vendas no WhatsApp</div>
+            <div class="card-material__categoria"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Vendas no WhatsApp</div>
             <h3>50 mensagens prontas para WhatsApp</h3>
             <p>Scripts de abordagem, follow-up, retomada de interesse e fechamento — testados e aprovados por revendedoras reais.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -219,13 +206,11 @@
 
         <!-- ── Material 3 ─── Precificação ───────────── -->
         <div class="card-material" data-cat="precificacao">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#fdf5e0,#f5d878);"
-               aria-hidden="true">
-            💰
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-chart-line"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">💰 Precificação e Lucro</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Precificação e Lucro</div>
             <h3>Planilha de precificação e margem</h3>
             <p>Calcule o preço de venda ideal levando em conta custo, frete, imposto e margem de lucro. Simples e direto.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -239,13 +224,11 @@
 
         <!-- ── Material 4 ─── Kits ────────────────────── -->
         <div class="card-material" data-cat="kits">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#f5e8f8,#d8a8e8);"
-               aria-hidden="true">
-            🎀
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-gift"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">🎀 Montagem de Kits</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-box-open" aria-hidden="true"></i> Montagem de Kits</div>
             <h3>Manual de montagem de kits presenteáveis</h3>
             <p>Como combinar peças, escolher embalagens, definir preço de kit e fotografar para vender mais no WhatsApp e Instagram.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -259,13 +242,11 @@
 
         <!-- ── Material 5 ─── Captação ────────────────── -->
         <div class="card-material" data-cat="captacao">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#e8f0fc,#a8c0f0);"
-               aria-hidden="true">
-            🤝
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-users"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">🤝 Captação de Clientes</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Captação de Clientes</div>
             <h3>Como encontrar seus primeiros 10 clientes</h3>
             <p>Estratégias práticas para quem está começando: onde buscar clientes, como abordar e como transformar conhecidos em compradores fiéis.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -279,13 +260,11 @@
 
         <!-- ── Material 6 ─── Datas ───────────────────── -->
         <div class="card-material" data-cat="datas">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#fff0e0,#ffca80);"
-               aria-hidden="true">
-            🎄
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-star"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">🎁 Datas Especiais</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-gift" aria-hidden="true"></i> Datas Especiais</div>
             <h3>Guia de vendas para o Natal e Black Friday</h3>
             <p>Planejamento completo para os dois maiores momentos do ano: estocar, precificar, divulgar e vender com antecedência.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -299,13 +278,11 @@
 
         <!-- ── Material 7 ─── WhatsApp ───────────────── -->
         <div class="card-material" data-cat="whatsapp">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#e0f8e8,#88d8a0);"
-               aria-hidden="true">
-            📱
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">💬 Vendas no WhatsApp</div>
+            <div class="card-material__categoria"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Vendas no WhatsApp</div>
             <h3>Como usar o Status do WhatsApp para vender todo dia</h3>
             <p>Roteiro semanal de stories, tipos de conteúdo que geram curiosidade e como transformar visualizações em pedidos.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -319,13 +296,11 @@
 
         <!-- ── Material 8 ─── Precificação ───────────── -->
         <div class="card-material" data-cat="precificacao">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#fffbe0,#ffe066);"
-               aria-hidden="true">
-            📊
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-chart-line"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">💰 Precificação e Lucro</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Precificação e Lucro</div>
             <h3>Quanto lucro dá para tirar revendendo pijamas?</h3>
             <p>Simulações reais de lucratividade para diferentes volumes de compra, com exemplos de revendedoras que estão faturando hoje.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -339,13 +314,11 @@
 
         <!-- ── Material 9 ─── Captação ────────────────── -->
         <div class="card-material" data-cat="captacao">
-          <div class="card-material__capa"
-               style="background:linear-gradient(135deg,#e8ecfc,#c0ccf8);"
-               aria-hidden="true">
-            📸
+          <div class="card-material__capa" aria-hidden="true">
+            <div class="card-material__capa-icon"><i class="fa-solid fa-camera"></i></div>
           </div>
           <div class="card-material__corpo">
-            <div class="card-material__categoria">🤝 Captação de Clientes</div>
+            <div class="card-material__categoria"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Captação de Clientes</div>
             <h3>Checklist: fotos de pijamas que vendem no celular</h3>
             <p>Iluminação, ângulo, fundo, edição básica e legenda. Tudo que você precisa para tirar fotos profissionais sem câmera cara.</p>
             <button class="btn btn-primario btn-sm w-full"
@@ -360,9 +333,8 @@
       </div><!-- /grid-materiais -->
 
       <!-- Nenhum resultado -->
-      <div id="nenhumMaterial"
-           style="display:none;text-align:center;padding:3rem 0;color:#999;">
-        <p style="font-size:2rem;margin-bottom:0.75rem;">🔍</p>
+      <div id="nenhumMaterial" class="sem-resultados" style="display:none;">
+        <i class="fa-solid fa-magnifying-glass fa-2x" aria-hidden="true"></i>
         <p>Nenhum material encontrado nesta categoria. Novidades em breve!</p>
       </div>
 
@@ -376,15 +348,13 @@
   <section class="banner-revendedor" aria-label="Compre no atacado Feminnita">
     <div class="container">
       <div class="banner-revendedor__conteudo">
-        <p class="label" style="color:var(--champagne);margin-bottom:0.75rem;letter-spacing:0.1em;">
-          ✦ Está pronta para começar?
-        </p>
+        <p class="secao-eyebrow secao-eyebrow--claro">Está pronta para começar?</p>
         <h2>Agora que você sabe como vender, falta só o produto certo.</h2>
         <p>
           Pijamas de qualidade, preço de fábrica, pedido mínimo de R$&nbsp;199.
           A Feminnita é a fornecedora que a sua revenda precisa.
         </p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <div class="banner-revendedor__acoes">
           <a href="https://www.feminnita.com.br" target="_blank" rel="noopener"
              class="btn btn-dourado btn-lg">
             <i class="fa-solid fa-store" aria-hidden="true"></i>
@@ -430,7 +400,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__logo">Feminn<span>ita</span>
-            <span style="font-size:0.5em;font-weight:300;display:block;letter-spacing:0.15em;color:rgba(255,255,255,0.45);">BLOG</span>
+            <span class="navbar__logo-sub">BLOG</span>
           </div>
           <p class="footer__descricao">Conteúdo sobre bem-estar, tecidos, vendas e comunidade. Produzido em Nova Friburgo, RJ.</p>
           <div class="footer__sociais">
@@ -443,7 +413,7 @@
           <h4 class="footer__titulo-coluna">Blog</h4>
           <ul class="footer__links" role="list">
             <li><a href="index.html" class="footer__link">Início</a></li>
-            <li><a href="index.html#artigos" class="footer__link">Artigos</a></li>
+            <li><a href="artigos.html" class="footer__link">Artigos</a></li>
             <li><a href="treinamento.html" class="footer__link">Treinamento</a></li>
             <li><a href="comunidade.html" class="footer__link">Comunidade</a></li>
             <li><a href="sobre.html" class="footer__link">Sobre o Blog</a></li>
@@ -497,7 +467,7 @@
       </form>
       <div class="mensagem-sucesso" id="mensagemSucessoModal">
         <div class="mensagem-sucesso__icone">✅</div>
-        <h3 style="color:var(--cat-bem-estar)">Material enviado!</h3>
+        <h3 class="texto-bem-estar">Material enviado!</h3>
         <p>Verifique sua caixa de entrada.</p>
       </div>
       <p class="modal__aviso">Você também receberá dicas exclusivas. Pode cancelar quando quiser.</p>
