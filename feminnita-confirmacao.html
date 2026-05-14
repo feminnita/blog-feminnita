@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Pedido Confirmado — Feminnita</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1167582397593975');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1167582397593975&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+:root {
+  --borgonha: #8C2F39;
+  --champagne: #C9965A;
+  --creme: #F7F4F1;
+  --preto: #1A1A1A;
+  --cinza: #6B6B6B;
+  --cinza-lt: #A8A8A8;
+  --borda: #E6E2DE;
+  --branco: #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif; background: var(--creme); color: var(--preto); font-size: 13px; }
+
+/* LOADER */
+#loader {
+  position: fixed; inset: 0; background: var(--branco);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999; transition: opacity 0.4s;
+}
+#loader span {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 2.2rem;
+  color: var(--borgonha); letter-spacing: 4px;
+}
+
+/* HEADER */
+header {
+  background: var(--branco); border-bottom: 1px solid var(--borda);
+  padding: 16px 40px; display: flex; align-items: center;
+  justify-content: space-between; position: sticky; top: 0; z-index: 100;
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 1.7rem; color: var(--borgonha); letter-spacing: 3px;
+  text-decoration: none;
+}
+.seguro {
+  font-size: 11px; font-weight: 600; color: var(--cinza);
+  letter-spacing: 1px; display: flex; align-items: center; gap: 5px;
+}
+
+/* MAIN */
+main { max-width: 1000px; margin: 0 auto; padding: 40px 20px 60px; }
+
+/* CONFIRMAÇÃO HEADER */
+.confirma-header { text-align: center; margin-bottom: 40px; }
+.check-circle {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: #2e7d32; margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; color: #fff;
+}
+.confirma-titulo {
+  font-size: 22px; font-weight: 700; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--preto); margin-bottom: 10px;
+}
+.confirma-sub {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 18px; color: var(--cinza); margin-bottom: 14px;
+}
+.confirma-texto { font-size: 13px; color: var(--cinza); line-height: 1.7; max-width: 520px; margin: 0 auto; }
+.confirma-texto strong { color: var(--preto); }
+.pix-instrucoes {
+  background: #e8f5e9; border: 1px solid #a5d6a7;
+  border-radius: 8px; padding: 16px 20px; margin: 20px auto 0;
+  max-width: 540px; font-size: 13px; line-height: 1.7;
+  color: #2e7d32;
+}
+.pix-instrucoes strong { color: #1b5e20; }
+
+/* GRID PRINCIPAL */
+.main-grid { display: grid; grid-template-columns: 1fr 320px; gap: 24px; margin-bottom: 32px; }
+
+/* DETALHES DO PEDIDO */
+.card {
+  background: var(--branco); border: 1px solid var(--borda);
+  border-radius: 8px; padding: 24px; margin-bottom: 20px;
+}
+.card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  color: var(--preto); margin-bottom: 18px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--borda); text-transform: uppercase;
+}
+
+.info-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0; border: 1px solid var(--borda); border-radius: 6px;
+  overflow: hidden; margin-bottom: 20px;
+}
+.info-cell {
+  padding: 14px 16px; border-right: 1px solid var(--borda);
+}
+.info-cell:last-child { border-right: none; }
+.info-cell-label { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; color: var(--cinza-lt); text-transform: uppercase; margin-bottom: 6px; }
+.info-cell-val { font-size: 13px; font-weight: 600; color: var(--preto); }
+.badge-aguardando {
+  display: inline-block; background: #fff8e1; color: #f57f17;
+  border: 1px solid #ffe082; border-radius: 20px;
+  padding: 3px 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+}
+
+.info-grid-2 {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+  border: 1px solid var(--borda); border-radius: 6px; overflow: hidden;
+  margin-bottom: 20px;
+}
+.info-cell-2 {
+  padding: 14px 16px; border-right: 1px solid var(--borda);
+}
+.info-cell-2:last-child { border-right: none; }
+
+/* TABELA PRODUTOS */
+.produtos-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.produtos-table th {
+  background: #f4f3f1; padding: 10px 12px; text-align: left;
+  font-size: 10px; letter-spacing: 1px; font-weight: 700;
+  color: var(--cinza); text-transform: uppercase;
+  border-bottom: 1px solid var(--borda);
+}
+.produtos-table td { padding: 12px; border-bottom: 1px solid var(--borda); color: var(--preto); }
+.produtos-table tr:last-child td { border-bottom: none; }
+.produto-nome { font-weight: 600; }
+.produto-sub { font-size: 11px; color: var(--cinza); margin-top: 2px; }
+.td-right { text-align: right; font-weight: 700; }
+
+/* RESUMO LATERAL */
+.resumo-linha { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--borda); font-size: 12px; }
+.resumo-linha:last-child { border-bottom: none; }
+.resumo-linha.total { font-weight: 700; font-size: 14px; padding-top: 12px; }
+.resumo-box { background: #f4f3f1; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+.resumo-desconto { color: #2e7d32; }
+
+/* PIX QR */
+.qr-wrap { text-align: center; }
+.qr-box {
+  width: 200px; height: 200px; background: #f0eeeb;
+  border: 2px dashed var(--borda); border-radius: 8px;
+  margin: 0 auto 14px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; color: var(--cinza-lt);
+  font-size: 11px; letter-spacing: 1px; font-weight: 600;
+}
+.qr-box svg { margin-bottom: 8px; opacity: 0.4; }
+.pix-codigo-wrap { position: relative; margin-bottom: 12px; }
+.pix-codigo {
+  width: 100%; padding: 10px 44px 10px 12px;
+  font-size: 10px; font-family: monospace; color: var(--cinza);
+  border: 1px solid var(--borda); border-radius: 6px;
+  background: #f9f8f7; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-copiar {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  background: var(--preto); color: var(--branco); border: none;
+  border-radius: 4px; padding: 5px 10px; font-size: 10px;
+  font-family: 'Montserrat', sans-serif; font-weight: 700;
+  cursor: pointer; transition: background 0.2s; white-space: nowrap;
+}
+.btn-copiar:hover { background: var(--borgonha); }
+.pix-aviso { font-size: 10px; color: var(--cinza); text-align: center; line-height: 1.6; }
+.pix-aviso strong { color: var(--borgonha); }
+
+/* BOTÕES */
+.btn { display: block; width: 100%; padding: 12px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; cursor: pointer; border-radius: 4px; text-align: center; transition: all 0.2s; text-decoration: none; }
+.btn-black { background: var(--preto); border: none; color: var(--branco); }
+.btn-black:hover { background: var(--borgonha); }
+.btn-outline { background: transparent; border: 1.5px solid var(--preto); color: var(--preto); margin-top: 10px; }
+.btn-outline:hover { background: var(--preto); color: var(--branco); }
+.btn-enviar { background: var(--preto); border: none; color: var(--branco); padding: 12px 32px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; cursor: pointer; border-radius: 4px; transition: all 0.2s; }
+.btn-enviar:hover { background: var(--borgonha); }
+
+/* AVALIAÇÃO */
+.avaliacao-section { text-align: center; background: var(--branco); border: 1px solid var(--borda); border-radius: 8px; padding: 36px; margin-bottom: 20px; }
+.avaliacao-titulo {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 26px; color: var(--borgonha); margin-bottom: 12px;
+}
+.avaliacao-texto { font-size: 13px; color: var(--cinza); margin-bottom: 24px; line-height: 1.7; }
+.estrelas { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+.estrela {
+  font-size: 32px; color: var(--borda); cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+  user-select: none;
+}
+.estrela:hover, .estrela.ativa { color: #FFB800; transform: scale(1.15); }
+.feedback-textarea {
+  width: 100%; max-width: 520px; padding: 12px; min-height: 90px;
+  border: 1px solid var(--borda); border-radius: 6px;
+  font-family: 'Montserrat', sans-serif; font-size: 12px;
+  color: var(--preto); resize: vertical; margin-bottom: 16px;
+  display: block; margin-left: auto; margin-right: auto;
+}
+.feedback-textarea:focus { outline: none; border-color: var(--borgonha); }
+.feedback-ok {
+  display: none; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 18px; color: #2e7d32; margin-top: 12px;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+  background: var(--borgonha); border-radius: 8px;
+  padding: 32px; text-align: center; margin-bottom: 20px;
+}
+.newsletter-titulo {
+  font-size: 13px; font-weight: 700; letter-spacing: 3px;
+  color: var(--branco); text-transform: uppercase; margin-bottom: 8px;
+}
+.newsletter-sub {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 20px;
+}
+.newsletter-form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.newsletter-input {
+  padding: 10px 16px; border: none; border-radius: 4px;
+  font-family: 'Montserrat', sans-serif; font-size: 12px;
+  width: 200px; color: var(--preto);
+}
+.newsletter-input:focus { outline: none; }
+.newsletter-btn {
+  padding: 10px 20px; background: var(--champagne); border: none;
+  border-radius: 4px; color: var(--branco); font-family: 'Montserrat', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  cursor: pointer; transition: background 0.2s;
+}
+.newsletter-btn:hover { background: #b07a3a; }
+
+/* RODAPÉ */
+footer {
+  background: var(--branco); border-top: 1px solid var(--borda);
+  padding: 24px 40px; margin-top: 20px;
+}
+.footer-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.footer-grupo label { font-size: 9px; font-weight: 700; letter-spacing: 2px; color: var(--cinza-lt); text-transform: uppercase; display: block; margin-bottom: 8px; }
+.footer-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.footer-tag { border: 1px solid var(--borda); border-radius: 4px; padding: 4px 8px; font-size: 10px; font-weight: 600; color: var(--cinza); letter-spacing: 0.5px; }
+.footer-bottom { text-align: center; font-size: 10px; color: var(--cinza-lt); margin-top: 16px; border-top: 1px solid var(--borda); padding-top: 14px; letter-spacing: 0.5px; }
+
+@media (max-width: 768px) {
+  .main-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr 1fr; }
+  .info-grid-2 { grid-template-columns: 1fr; }
+  .info-cell, .info-cell-2 { border-right: none; border-bottom: 1px solid var(--borda); }
+  header { padding: 14px 20px; }
+  footer { padding: 20px; }
+  .newsletter-input { width: 100%; }
+  .newsletter-form { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<div id="loader"><span>Feminnita</span></div>
+
+<header>
+  <a class="logo" href="feminnita-home.html">Feminnita</a>
+  <div class="seguro"><span>🔒</span> COMPRA 100% SEGURA</div>
+</header>
+
+<main>
+
+  <!-- CONFIRMAÇÃO -->
+  <div class="confirma-header">
+    <div class="check-circle">✓</div>
+    <div class="confirma-titulo">Pedido Confirmado</div>
+    <div class="confirma-sub">Seu pedido foi processado com sucesso</div>
+    <div class="confirma-texto">
+      Um e-mail de confirmação foi enviado a você em <strong>feminnita@gmail.com</strong> com todos os detalhes do pedido.
+    </div>
+    <div class="pix-instrucoes">
+      Valor total para pagamento via Pix: <strong>R$ 164,90</strong>.<br>
+      O pagamento deve ser realizado em até <strong>24 horas</strong>. Após isso, o pedido será cancelado automaticamente.
+    </div>
+  </div>
+
+  <!-- GRID: DETALHES + PIX -->
+  <div class="main-grid">
+
+    <!-- COLUNA ESQUERDA -->
+    <div>
+      <div class="card">
+        <div class="card-title">📋 Detalhes do Pedido</div>
+
+        <!-- Linha 1: nº pedido, data, total, status -->
+        <div class="info-grid">
+          <div class="info-cell">
+            <div class="info-cell-label">Número do Pedido</div>
+            <div class="info-cell-val">#FNT10042</div>
+          </div>
+          <div class="info-cell">
+            <div class="info-cell-label">Data do Pedido</div>
+            <div class="info-cell-val">09/05/2026</div>
+          </div>
+          <div class="info-cell">
+            <div class="info-cell-label">Total</div>
+            <div class="info-cell-val" style="color:var(--borgonha)">R$ 164,90</div>
+          </div>
+          <div class="info-cell">
+            <div class="info-cell-label">Status</div>
+            <div class="info-cell-val"><span class="badge-aguardando">Aguardando Pagamento</span></div>
+          </div>
+        </div>
+
+        <!-- Linha 2: endereço, pagamento, resumo -->
+        <div class="info-grid-2">
+          <div class="info-cell-2">
+            <div class="info-cell-label">Endereço de Entrega</div>
+            <div style="font-size:12px;color:var(--preto);line-height:1.7;margin-top:6px">
+              Cristiane Souza<br>
+              Rua das Hortênsias, 142 — Apt. 3B<br>
+              Centro — Nova Friburgo / RJ<br>
+              CEP 28610-320
+            </div>
+          </div>
+          <div class="info-cell-2">
+            <div class="info-cell-label">Forma de Pagamento</div>
+            <div style="font-size:12px;color:var(--preto);margin-top:6px">
+              <div style="font-weight:700;color:#2e7d32;margin-bottom:4px">✓ PIX</div>
+              <div style="font-size:11px;color:var(--cinza)">Aguardando confirmação.<br>Válido por 24 horas.</div>
+            </div>
+          </div>
+          <div class="info-cell-2">
+            <div class="info-cell-label">Resumo de Valores</div>
+            <div style="margin-top:6px">
+              <div class="resumo-linha" style="font-size:12px;padding:5px 0">
+                <span>Produtos</span><span>R$ 149,90</span>
+              </div>
+              <div class="resumo-linha" style="font-size:12px;padding:5px 0">
+                <span>Frete (SEDEX)</span><span>R$ 22,50</span>
+              </div>
+              <div class="resumo-linha" style="font-size:12px;padding:5px 0;color:#2e7d32">
+                <span>Desconto Pix</span><span>−R$ 7,50</span>
+              </div>
+              <div class="resumo-linha" style="font-size:13px;font-weight:700;padding:8px 0;border-bottom:none">
+                <span>Total</span><span style="color:var(--borgonha)">R$ 164,90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha 3: tabela de produtos -->
+        <div class="card-title" style="margin-top:4px">Produtos</div>
+        <table class="produtos-table">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Tamanho</th>
+              <th style="text-align:center">Qtd.</th>
+              <th style="text-align:right">Valor Unit.</th>
+              <th style="text-align:right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="produto-nome">Pijama Viscose Dreams</div>
+                <div class="produto-sub">Cor: Rosa — Ref. FNT-PJM-001</div>
+              </td>
+              <td>M</td>
+              <td style="text-align:center">1</td>
+              <td class="td-right">R$ 149,90</td>
+              <td class="td-right" style="color:var(--borgonha)">R$ 149,90</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- COLUNA DIREITA: PIX -->
+    <div>
+      <div class="card qr-wrap">
+        <div class="card-title">PIX — Pagamento</div>
+
+        <!-- QR simulado -->
+        <div class="qr-box">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <rect x="5" y="5" width="25" height="25" rx="2" fill="#1A1A1A"/>
+            <rect x="9" y="9" width="17" height="17" rx="1" fill="#F7F4F1"/>
+            <rect x="12" y="12" width="11" height="11" fill="#1A1A1A"/>
+            <rect x="50" y="5" width="25" height="25" rx="2" fill="#1A1A1A"/>
+            <rect x="54" y="9" width="17" height="17" rx="1" fill="#F7F4F1"/>
+            <rect x="57" y="12" width="11" height="11" fill="#1A1A1A"/>
+            <rect x="5" y="50" width="25" height="25" rx="2" fill="#1A1A1A"/>
+            <rect x="9" y="54" width="17" height="17" rx="1" fill="#F7F4F1"/>
+            <rect x="12" y="57" width="11" height="11" fill="#1A1A1A"/>
+            <rect x="35" y="5" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="42" y="5" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="35" y="12" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="42" y="12" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="35" y="35" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="42" y="35" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="35" y="42" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="50" y="35" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="57" y="35" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="64" y="35" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="71" y="35" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="50" y="42" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="64" y="42" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="57" y="50" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="50" y="57" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="64" y="57" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="57" y="64" width="5" height="5" fill="#1A1A1A"/>
+            <rect x="71" y="64" width="5" height="5" fill="#1A1A1A"/>
+          </svg>
+          QR CODE PIX
+        </div>
+
+        <div style="font-size:11px;color:var(--cinza);margin-bottom:10px;text-align:center">ou copie o código abaixo</div>
+
+        <div class="pix-codigo-wrap">
+          <div class="pix-codigo" id="pix-code">00020126580014br.gov.bcb.pix0136a629532e-7693-4846-b028-f142fb3a0bf0520400005303986540516499580216302706030009FEMINNITA6009NOVAFRIBO62070503***6304B14F</div>
+          <button class="btn-copiar" onclick="copiarPix()">📋 COPIAR</button>
+        </div>
+
+        <p class="pix-aviso">
+          Válido por <strong>24 horas</strong>. Após o pagamento, seu pedido será processado automaticamente.
+        </p>
+
+        <div style="margin-top:16px;padding:10px;background:#f4f3f1;border-radius:6px;font-size:11px;color:var(--cinza);text-align:center">
+          <div style="font-weight:700;color:var(--preto);margin-bottom:4px">Banco: Feminnita Ltda</div>
+          <div>Chave: feminnita@gmail.com</div>
+          <div>Valor: R$ 164,90</div>
+        </div>
+
+        <div id="copia-ok" style="display:none;text-align:center;color:#2e7d32;font-size:12px;font-weight:700;margin-top:10px">✓ Código copiado!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVALIAÇÃO -->
+  <div class="avaliacao-section">
+    <div class="avaliacao-titulo">Queremos ouvir você!</div>
+    <p class="avaliacao-texto">Sua opinião é muito importante para nós! Faça uma avaliação de como foi sua experiência em nosso site.</p>
+
+    <div class="estrelas" id="estrelas">
+      <span class="estrela" data-val="1">★</span>
+      <span class="estrela" data-val="2">★</span>
+      <span class="estrela" data-val="3">★</span>
+      <span class="estrela" data-val="4">★</span>
+      <span class="estrela" data-val="5">★</span>
+    </div>
+
+    <div id="feedback-form">
+      <textarea class="feedback-textarea" id="comentario" placeholder="Insira seu comentário sobre o site..."></textarea>
+      <button class="btn-enviar" onclick="enviarFeedback()">ENVIAR</button>
+    </div>
+    <div class="feedback-ok" id="feedback-ok">Obrigada pelo seu feedback! ❤️</div>
+
+    <a href="feminnita-home.html" class="btn btn-outline" style="max-width:280px;margin:20px auto 0;display:block">RETORNAR AO SITE</a>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-section">
+    <div class="newsletter-titulo">Cadastre-se para receber todas as novidades</div>
+    <div class="newsletter-sub">Coleções exclusivas, promoções e muito mais</div>
+    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+      <input class="newsletter-input" type="text" placeholder="Seu nome" required>
+      <input class="newsletter-input" type="email" placeholder="Seu e-mail" required>
+      <button class="newsletter-btn" type="submit">→</button>
+    </form>
+    <div id="newsletter-ok" style="display:none;color:rgba(255,255,255,0.9);font-size:12px;margin-top:12px;font-style:italic">
+      Inscrição realizada! Obrigada ✓
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grupo">
+      <label>Formas de Pagamento</label>
+      <div class="footer-tags">
+        <span class="footer-tag">PIX</span>
+        <span class="footer-tag">VISA</span>
+        <span class="footer-tag">MASTERCARD</span>
+        <span class="footer-tag">AMEX</span>
+        <span class="footer-tag">ELO</span>
+        <span class="footer-tag">BOLETO</span>
+        <span class="footer-tag">DINERS</span>
+      </div>
+    </div>
+    <div class="footer-grupo">
+      <label>Segurança</label>
+      <div class="footer-tags">
+        <span class="footer-tag">🔒 GOOGLE SAFE BROWSING</span>
+        <span class="footer-tag">SSL</span>
+      </div>
+    </div>
+    <div class="footer-grupo">
+      <label>Envio via Melhor Envio</label>
+      <div class="footer-tags">
+        <span class="footer-tag">PAC</span>
+        <span class="footer-tag">SEDEX</span>
+        <span class="footer-tag">JADLOG</span>
+        <span class="footer-tag">LOGGI</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Feminnita — Nova Friburgo, RJ &nbsp;|&nbsp; Pijamas com alma serrana</div>
+</footer>
+
+<script>
+// Loader
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  loader.style.opacity = '0';
+  setTimeout(() => loader.remove(), 400);
+});
+
+// Estrelas
+let ratingAtual = 0;
+const estrelas = document.querySelectorAll('.estrela');
+estrelas.forEach(e => {
+  e.addEventListener('mouseover', function() {
+    const val = parseInt(this.dataset.val);
+    estrelas.forEach((s, i) => {
+      s.style.color = i < val ? '#FFB800' : 'var(--borda)';
+    });
+  });
+  e.addEventListener('mouseout', function() {
+    estrelas.forEach((s, i) => {
+      s.style.color = i < ratingAtual ? '#FFB800' : 'var(--borda)';
+    });
+  });
+  e.addEventListener('click', function() {
+    ratingAtual = parseInt(this.dataset.val);
+    estrelas.forEach((s, i) => {
+      if (i < ratingAtual) {
+        s.classList.add('ativa');
+        s.style.color = '#FFB800';
+      } else {
+        s.classList.remove('ativa');
+        s.style.color = 'var(--borda)';
+      }
+    });
+  });
+});
+
+// Copiar Pix
+function copiarPix() {
+  const code = document.getElementById('pix-code').textContent.trim();
+  navigator.clipboard.writeText(code).then(() => {
+    const ok = document.getElementById('copia-ok');
+    ok.style.display = 'block';
+    setTimeout(() => { ok.style.display = 'none'; }, 2500);
+    const btn = document.querySelector('.btn-copiar');
+    btn.textContent = '✓ COPIADO';
+    btn.style.background = '#2e7d32';
+    setTimeout(() => {
+      btn.textContent = '📋 COPIAR';
+      btn.style.background = 'var(--preto)';
+    }, 2500);
+  }).catch(() => {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const ok = document.getElementById('copia-ok');
+    ok.style.display = 'block';
+    setTimeout(() => { ok.style.display = 'none'; }, 2500);
+  });
+}
+
+// Feedback
+function enviarFeedback() {
+  const comentario = document.getElementById('comentario').value.trim();
+  if (ratingAtual === 0 && !comentario) return;
+  document.getElementById('feedback-form').style.display = 'none';
+  const ok = document.getElementById('feedback-ok');
+  ok.style.display = 'block';
+}
+
+// Newsletter
+function subscribeNewsletter(e) {
+  e.preventDefault();
+  e.target.style.display = 'none';
+  document.getElementById('newsletter-ok').style.display = 'block';
+}
+
+// ── META PIXEL — Purchase Event ──────────────────────────────
+(function fntPixelPurchase() {
+  if (typeof fbq === 'undefined') return;
+
+  try {
+    // Lê carrinho do FntCart (localStorage fnt_cart)
+    var raw = localStorage.getItem('fnt_cart');
+    var cart = raw ? JSON.parse(raw) : null;
+
+    var total = 0;
+    var contentIds = [];
+    var contents = [];
+    var numItems = 0;
+
+    if (cart && cart.items && cart.items.length) {
+      cart.items.forEach(function(item) {
+        var preco = parseFloat(item.preco || item.price || 0);
+        var qty   = parseInt(item.qty || item.quantidade || 1);
+        total += preco * qty;
+        numItems += qty;
+        contentIds.push(String(item.id || item.ref || ''));
+        contents.push({ id: String(item.id || item.ref || ''), quantity: qty, item_price: preco });
+      });
+    }
+
+    // Fallback: tenta ler o total exibido na página
+    if (total === 0) {
+      var totalEl = document.querySelector('[data-order-total], .resumo-total-valor, .total-final');
+      if (totalEl) {
+        total = parseFloat(totalEl.textContent.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
+      }
+    }
+
+    if (total > 0) {
+      fbq('track', 'Purchase', {
+        value:       parseFloat(total.toFixed(2)),
+        currency:    'BRL',
+        content_ids: contentIds,
+        contents:    contents,
+        num_items:   numItems || 1,
+        content_type: 'product'
+      });
+      // Limpa o carrinho após registrar a compra
+      localStorage.removeItem('fnt_cart');
+    }
+  } catch(e) {
+    console.warn('[FntPixel] Erro ao disparar Purchase:', e);
+  }
+})();
+// ── fim Meta Pixel Purchase ───────────────────────────────────
+</script>
+<script src="/feminnita-cart.js"></script>
+<script src="/feminnita-config.js"></script>
+</body>
+</html>

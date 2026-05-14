@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Finalizar Compra — Feminnita</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1167582397593975');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1167582397593975&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+:root {
+  --borgonha: #8C2F39;
+  --champagne: #C9965A;
+  --creme: #F7F4F1;
+  --borda: #E6E2DE;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--creme);
+  color: #1A1A1A;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ─── HEADER ─── */
+.checkout-header {
+  height: 75px;
+  background: #fff;
+  border-bottom: 1px solid #E6E2DE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 34px;
+  color: #1A1A1A;
+  text-decoration: none;
+}
+
+/* ─── TOPBAR ─── */
+.checkout-topbar {
+  max-width: 1421px;
+  margin: 0 auto;
+  padding: 24px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkout-topbar h1 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.checkout-topbar span {
+  font-size: 13px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* ─── LAYOUT ─── */
+.checkout-layout {
+  display: flex;
+  gap: 30px;
+  max-width: 1421px;
+  margin: 0 auto;
+  padding: 10px 50px 30px;
+  align-items: flex-start;
+}
+.col-dados    { flex: 0 0 350px; }
+.col-endereco { flex: 0 0 350px; }
+.col-resumo   { flex: 0 0 370px; }
+
+/* ─── SECTION HEADER ─── */
+.section-hdr {
+  background: #E8E8E8;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+/* ─── COL 1: DADOS PESSOAIS ─── */
+.dados-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px 24px;
+  background: #fff;
+}
+.dados-item {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+.dados-item strong { color: #1A1A1A; }
+.btn-editar {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  cursor: pointer;
+  margin-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background .2s, color .2s;
+}
+.btn-editar:hover { background: #f5f5f5; }
+
+/* ─── COL 2: ENDEREÇO ─── */
+.addr-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+.addr-info { flex: 1; }
+.addr-info p { font-size: 14px; color: #555; line-height: 1.5; }
+.btn-rm-addr {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  opacity: .6;
+  transition: opacity .2s;
+}
+.btn-rm-addr:hover { opacity: 1; }
+.btn-entregar {
+  width: 100%;
+  height: 48px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 4px;
+  transition: background .2s;
+}
+.btn-entregar:hover { background: #333; }
+
+/* ─── ENTREGA OPTIONS ─── */
+.entrega-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  height: 60px;
+  background: #fff;
+  transition: border-color .2s;
+}
+.entrega-option.selected { border-color: #8C2F39; }
+.entrega-option:hover { border-color: #ccc; }
+.entrega-option.selected:hover { border-color: #8C2F39; }
+.entrega-info { display: flex; flex-direction: column; flex: 1; }
+.entrega-nome { font-size: 14px; font-weight: 600; }
+.entrega-dias { font-size: 12px; color: #777; }
+.entrega-preco { font-size: 14px; font-weight: 700; white-space: nowrap; }
+
+/* ─── COL 3: PAGAMENTO + RESUMO ─── */
+.pag-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color .2s;
+}
+.pag-option.selected { border-color: #8C2F39; }
+.pag-option:hover { border-color: #ccc; }
+.pag-option.selected:hover { border-color: #8C2F39; }
+.pag-nome { font-size: 13px; font-weight: 600; flex: 1; }
+.pag-desc { font-size: 12px; color: #777; }
+
+.resumo-linha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+.resumo-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+/* ─── ITENS DO RESUMO (classes da tarefa) ─── */
+.resumo-item { display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--borda); }
+.resumo-item:last-child { border-bottom:none; }
+.resumo-item-img { width:60px; height:60px; object-fit:cover; border-radius:4px; flex-shrink:0; background:#eee; }
+.resumo-item-info { flex:1; font-size:12px; }
+.resumo-item-nome { font-weight:600; margin-bottom:3px; font-size:13px; }
+.resumo-item-sub { color:#888; margin-bottom:4px; }
+.resumo-item-preco { font-weight:700; color:var(--borgonha); }
+.resumo-vazio { text-align:center; padding:24px; color:#888; font-size:13px; }
+
+/* ─── ITENS DO RESUMO ─── */
+.resumo-itens { margin-top: 20px; }
+.resumo-item-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.resumo-item-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f0ece8;
+  flex-shrink: 0;
+}
+.resumo-item-img-placeholder {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  background: #f0ece8;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.resumo-item-info { flex: 1; }
+.resumo-item-nome { font-size: 13px; font-weight: 600; line-height: 1.3; }
+.resumo-item-detalhe { font-size: 12px; color: #777; margin-top: 2px; }
+.resumo-item-preco { font-size: 14px; font-weight: 700; white-space: nowrap; }
+
+/* ─── BTN FINALIZAR ─── */
+.btn-finalizar-checkout {
+  width: 100%;
+  height: 50px;
+  background: #8C2F39;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+  margin-top: 24px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background .2s;
+}
+.btn-finalizar-checkout:hover { background: #6e2029; }
+
+/* ─── FOOTER ─── */
+.checkout-footer {
+  background: #f5f5f5;
+  border-top: 1px solid #E6E2DE;
+  padding: 30px 50px;
+  margin-top: 60px;
+}
+.footer-pay-bar {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.pay-group h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.pay-icons { font-size: 12px; color: #777; }
+.checkout-copy { text-align: center; font-size: 12px; color: #777; }
+
+/* ─── INPUT RADIO RESET ─── */
+input[type="radio"] {
+  accent-color: #8C2F39;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1100px) {
+  .checkout-layout { flex-wrap: wrap; padding: 10px 24px 30px; }
+  .col-dados, .col-endereco { flex: 1 1 300px; }
+  .col-resumo { flex: 1 1 100%; }
+}
+@media (max-width: 600px) {
+  .checkout-topbar { padding: 16px 20px; flex-direction: column; gap: 8px; align-items: flex-start; }
+  .checkout-layout { padding: 10px 16px 30px; gap: 20px; }
+  .col-dados, .col-endereco, .col-resumo { flex: 1 1 100%; }
+  .footer-pay-bar { gap: 30px; }
+  .checkout-footer { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="checkout-header">
+  <a class="logo-text" href="/">Feminnita</a>
+</header>
+
+<!-- TOPBAR -->
+<div class="checkout-topbar">
+  <h1>Finalizar Compra</h1>
+  <span>🛡 Compra 100% Segura</span>
+</div>
+
+<!-- LAYOUT 3 COLUNAS -->
+<div class="checkout-layout">
+
+  <!-- COLUNA 1: DADOS PESSOAIS -->
+  <div class="col-dados">
+    <div class="section-hdr">👤 Dados Pessoais</div>
+    <div class="dados-card">
+      <p class="dados-item"><strong>E-mail:</strong> feminnita@gmail.com</p>
+      <p class="dados-item"><strong>Nome:</strong> Maria Silva</p>
+      <p class="dados-item"><strong>Telefone:</strong> (22) 99999-9999</p>
+      <button class="btn-editar">Editar Informações</button>
+    </div>
+  </div>
+
+  <!-- COLUNA 2: ENDEREÇO + ENTREGA -->
+  <div class="col-endereco">
+    <div class="section-hdr">📍 Endereço de Entrega</div>
+    <div class="addr-card">
+      <input type="radio" name="addr" checked>
+      <div class="addr-info">
+        <p>Rua das Flores, 123 — Apto 45</p>
+        <p>Nova Friburgo, RJ — 28600-000</p>
+      </div>
+      <button class="btn-rm-addr" title="Remover endereço">🗑</button>
+    </div>
+    <button class="btn-entregar">Entregar neste Endereço</button>
+
+    <div class="section-hdr" style="margin-top:24px">🚚 Forma de Entrega</div>
+
+    <div class="entrega-option selected" data-frete="18.90" onclick="selecionarEntrega(this)">
+      <input type="radio" name="entrega" checked>
+      <div class="entrega-info">
+        <span class="entrega-nome">PAC</span>
+        <span class="entrega-dias">5 a 8 dias úteis</span>
+      </div>
+      <span class="entrega-preco">R$ 18,90</span>
+    </div>
+
+    <div class="entrega-option" data-frete="32.50" onclick="selecionarEntrega(this)">
+      <input type="radio" name="entrega">
+      <div class="entrega-info">
+        <span class="entrega-nome">SEDEX</span>
+        <span class="entrega-dias">1 a 3 dias úteis</span>
+      </div>
+      <span class="entrega-preco">R$ 32,50</span>
+    </div>
+
+    <div class="entrega-option" data-frete="0" onclick="selecionarEntrega(this)">
+      <input type="radio" name="entrega">
+      <div class="entrega-info">
+        <span class="entrega-nome">Frete Grátis</span>
+        <span class="entrega-dias">7 a 12 dias úteis</span>
+      </div>
+      <span class="entrega-preco">Grátis</span>
+    </div>
+  </div>
+
+  <!-- COLUNA 3: PAGAMENTO + RESUMO -->
+  <div class="col-resumo">
+    <div class="section-hdr">💳 Pagamento</div>
+
+    <div class="pag-option selected" data-pag="pix" onclick="selecionarPagamento(this)">
+      <input type="radio" name="pag" checked>
+      <span class="pag-nome">PIX</span>
+      <span class="pag-desc">10% de desconto</span>
+    </div>
+    <div class="pag-option" data-pag="cartao" onclick="selecionarPagamento(this)">
+      <input type="radio" name="pag">
+      <span class="pag-nome">Cartão de crédito</span>
+      <span class="pag-desc">em até 3x sem juros</span>
+    </div>
+    <div class="pag-option" data-pag="boleto" onclick="selecionarPagamento(this)">
+      <input type="radio" name="pag">
+      <span class="pag-nome">Boleto bancário</span>
+      <span class="pag-desc">10% de desconto</span>
+    </div>
+
+    <hr style="border:none;border-top:1px solid #eee;margin:20px 0">
+
+    <div class="section-hdr">📦 Resumo do Pedido</div>
+
+    <div class="resumo-linha">
+      <span>Subtotal</span>
+      <span id="valSubtotal">R$ 0,00</span>
+    </div>
+    <div class="resumo-linha">
+      <span>Frete</span>
+      <span id="valFrete">R$ 18,90</span>
+    </div>
+    <div class="resumo-linha" id="linhaDesconto" style="display:none">
+      <span id="labelDesconto">Desconto PIX (10%)</span>
+      <span id="valDesconto" style="color:#2E7D32"></span>
+    </div>
+
+    <hr style="border:none;border-top:1px solid #eee;margin:12px 0">
+
+    <div class="resumo-total">
+      <span>Total</span>
+      <strong id="valTotal">R$ 0,00</strong>
+    </div>
+
+    <!-- Itens do carrinho -->
+    <div class="resumo-itens" id="resumoItens"></div>
+
+    <button class="btn-finalizar-checkout">Finalizar Pedido</button>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="checkout-footer">
+  <div class="footer-pay-bar">
+    <div class="pay-group">
+      <h4>Formas de pagamento</h4>
+      <div class="pay-icons">PIX · VISA · Mastercard · Amex · Elo · Boleto</div>
+    </div>
+    <div class="pay-group">
+      <h4>Segurança</h4>
+      <div class="pay-icons">Google Safe Browsing · ReclameAqui</div>
+    </div>
+    <div class="pay-group">
+      <h4>Envio</h4>
+      <div class="pay-icons">Correios</div>
+    </div>
+  </div>
+  <p class="checkout-copy">© 2026 Feminnita. CNPJ: Em breve. Nova Friburgo, RJ.</p>
+</footer>
+
+<script src="/feminnita-cart.js"></script>
+<script src="/feminnita-config.js"></script>
+<script>
+// ── Estado global ──────────────────────────────────────────────
+let freteAtual  = 18.90;
+let pagAtual    = 'pix';   // pix | cartao | boleto
+
+// ── Itens do carrinho — lê do FntCart (localStorage) ──────────
+function getItens() {
+  if (typeof FntCart !== 'undefined') {
+    const items = FntCart.get();
+    if (items.length) return items.map(i => ({
+      nome: i.nome,
+      variante: [i.tamanho, i.cor].filter(Boolean).join(' · '),
+      preco: i.preco,
+      qtd: i.qty || 1,
+      imagem: i.imagem || ''
+    }));
+  }
+  // Fallback estático
+  return [
+    { nome: 'Pijama Cetim Rosê', variante: 'P · Rosa', preco: 189.90, qtd: 1 },
+    { nome: 'Pijama Linho Nude',  variante: 'M · Bege', preco: 164.90, qtd: 1 },
+  ];
+}
+
+// ── Helpers ────────────────────────────────────────────────────
+function fmt(v) {
+  return 'R$ ' + v.toFixed(2).replace('.', ',');
+}
+
+function calcSubtotal() {
+  return getItens().reduce(function(acc, it) {
+    return acc + (it.preco * (it.qtd || 1));
+  }, 0);
+}
+
+function temDesconto() {
+  return pagAtual === 'pix' || pagAtual === 'boleto';
+}
+
+function calcDesconto(subtotal) {
+  return temDesconto() ? subtotal * 0.10 : 0;
+}
+
+// ── Atualizar totais ───────────────────────────────────────────
+function atualizarTotais() {
+  var subtotal  = calcSubtotal();
+  var desconto  = calcDesconto(subtotal);
+  var total     = subtotal + freteAtual - desconto;
+
+  document.getElementById('valSubtotal').textContent = fmt(subtotal);
+  document.getElementById('valFrete').textContent    = freteAtual === 0 ? 'Grátis' : fmt(freteAtual);
+  document.getElementById('valTotal').textContent    = fmt(total);
+
+  var linhaDesc = document.getElementById('linhaDesconto');
+  if (temDesconto() && desconto > 0) {
+    linhaDesc.style.display = 'flex';
+    var label = pagAtual === 'pix' ? 'Desconto PIX (10%)' : 'Desconto Boleto (10%)';
+    document.getElementById('labelDesconto').textContent = label;
+    document.getElementById('valDesconto').textContent   = '− ' + fmt(desconto);
+  } else {
+    linhaDesc.style.display = 'none';
+  }
+}
+
+// ── Renderizar itens do resumo ─────────────────────────────────
+function renderItens() {
+  var container = document.getElementById('resumoItens');
+  container.innerHTML = '';
+  getItens().forEach(function(it) {
+    var qtd   = it.qtd || 1;
+    var preco = it.preco * qtd;
+    var div   = document.createElement('div');
+    div.className = 'resumo-item-card';
+
+    var imgHtml;
+    if (it.imagem) {
+      imgHtml = '<img class="resumo-item-img" src="' + it.imagem + '" alt="' + it.nome + '">';
+    } else {
+      imgHtml = '<div class="resumo-item-img-placeholder">👗</div>';
+    }
+
+    div.innerHTML = imgHtml +
+      '<div class="resumo-item-info">' +
+        '<div class="resumo-item-nome">' + it.nome + '</div>' +
+        '<div class="resumo-item-detalhe">' +
+          (it.variante ? it.variante : '') +
+          (qtd > 1 ? ' · Qtd: ' + qtd : '') +
+        '</div>' +
+      '</div>' +
+      '<div class="resumo-item-preco">' + fmt(preco) + '</div>';
+
+    container.appendChild(div);
+  });
+}
+
+// ── Seleção de entrega ─────────────────────────────────────────
+function selecionarEntrega(el) {
+  document.querySelectorAll('.entrega-option').forEach(function(o) {
+    o.classList.remove('selected');
+    o.querySelector('input[type="radio"]').checked = false;
+  });
+  el.classList.add('selected');
+  el.querySelector('input[type="radio"]').checked = true;
+  freteAtual = parseFloat(el.dataset.frete) || 0;
+  atualizarTotais();
+}
+
+// ── Seleção de pagamento ───────────────────────────────────────
+function selecionarPagamento(el) {
+  document.querySelectorAll('.pag-option').forEach(function(o) {
+    o.classList.remove('selected');
+    o.querySelector('input[type="radio"]').checked = false;
+  });
+  el.classList.add('selected');
+  el.querySelector('input[type="radio"]').checked = true;
+  pagAtual = el.dataset.pag;
+  atualizarTotais();
+}
+
+// ── Init ───────────────────────────────────────────────────────
+renderItens();
+atualizarTotais();
+
+// ── Meta Pixel: InitiateCheckout ───────────────────────────────
+(function fntPixelCheckout() {
+  if (typeof fbq === 'undefined') return;
+  try {
+    var raw = localStorage.getItem('fnt_cart');
+    var cart = raw ? JSON.parse(raw) : null;
+    if (!cart || !cart.items || !cart.items.length) return;
+    var total = 0, numItems = 0, contentIds = [];
+    cart.items.forEach(function(item) {
+      var preco = parseFloat(item.preco || item.price || 0);
+      var qty = parseInt(item.qty || item.quantidade || 1);
+      total += preco * qty;
+      numItems += qty;
+      contentIds.push(String(item.id || ''));
+    });
+    fbq('track', 'InitiateCheckout', {
+      value: parseFloat(total.toFixed(2)),
+      currency: 'BRL',
+      content_ids: contentIds,
+      num_items: numItems,
+      content_type: 'product'
+    });
+  } catch(e) { console.warn('[FntPixel] InitiateCheckout:', e); }
+})();
+</script>
+</body>
+</html>

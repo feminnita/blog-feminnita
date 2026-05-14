@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://www.feminnita.com.br/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Pijamas femininos em suede, plush e viscolycra. Conforto e elegância para o seu sono. Loja online com entrega para todo o Brasil." />
+  <title>Feminnita — Pijamas e Moda Íntima | Nova Friburgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET & BASE ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --borgonha: #8C2F39;
+      --champagne: #C9965A;
+      --creme: #F7F4F1;
+      --borda: #E6E2DE;
+      --preto: #1A1A1A;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: var(--preto);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ── ANNOUNCE BAR (first-header vantagens-header) ──────── */
+    .first-header.vantagens-header {
+      height: 30px;
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #727272;
+      letter-spacing: .03em;
+    }
+    .first-header.vantagens-header .announce {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .first-header.vantagens-header .announce svg { flex-shrink: 0; }
+    .announce-sep { color: #ccc; }
+
+    /* ── HEADER ────────────────────────────────────────────── */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #fff;
+      border-bottom: 1px solid var(--borda);
+      height: 75px;
+      transition: box-shadow .3s;
+    }
+    .header__inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    /* Nav esquerda */
+    .header__nav {
+      display: flex;
+      gap: 32px;
+      flex: 1;
+    }
+    .header__nav a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      transition: color .2s;
+    }
+    .header__nav a:hover { color: var(--preto); }
+    /* Logo centro */
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 34px;
+      font-weight: 400;
+      color: var(--preto);
+      letter-spacing: .02em;
+      flex: 0 0 auto;
+      text-align: center;
+    }
+    /* Icons direita */
+    .header__right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .header__search {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .header__search input {
+      width: 220px;
+      height: 34px;
+      border-radius: 30px;
+      border: 1px solid var(--borda);
+      padding: 0 14px 0 34px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #414141;
+      outline: none;
+      background: #fafafa;
+      transition: border-color .2s;
+    }
+    .header__search input:focus { border-color: #aaa; }
+    .header__search input::placeholder { color: #aaa; }
+    .header__search svg {
+      position: absolute;
+      left: 10px;
+      color: #aaa;
+      pointer-events: none;
+    }
+    .header__icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header__icons a {
+      display: flex;
+      align-items: center;
+      color: #777;
+      transition: color .2s;
+      position: relative;
+    }
+    .header__icons a:hover { color: var(--preto); }
+    #cartBadge {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--borgonha);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .header__hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--preto);
+      border-radius: 2px;
+    }
+
+    /* ── CONTEUDO (full-width 15px padding) ────────────────── */
+    .conteudo {
+      padding: 0 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* ── HERO SLIDER (slideshow-index) ─────────────────────── */
+    .slideshow-index {
+      width: 100%;
+      height: calc(100vh - 105px);
+      min-height: 500px;
+      max-height: 820px;
+      overflow: hidden;
+      position: relative;
+    }
+    #heroWrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    #heroTrack {
+      display: flex;
+      height: 100%;
+      transition: transform .7s cubic-bezier(.4,0,.2,1);
+      will-change: transform;
+    }
+    .hero-slide {
+      flex: 0 0 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .hero-slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.52) 0%, rgba(0,0,0,.16) 60%, rgba(0,0,0,.04) 100%);
+    }
+    .hero-slide__content {
+      position: absolute;
+      bottom: 80px;
+      left: 80px;
+      z-index: 2;
+    }
+    .hero-slide__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 72px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 14px rgba(0,0,0,.25);
+    }
+    .hero-slide__sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 18px;
+      letter-spacing: .04em;
+      text-shadow: 0 1px 6px rgba(0,0,0,.3);
+    }
+    .hero-slide__cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,.6);
+      padding-bottom: 2px;
+      transition: border-color .2s;
+    }
+    .hero-slide__cta:hover { border-color: #fff; }
+    /* Setas hero */
+    .hero-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+      border: none;
+      box-shadow: 0 2px 12px rgba(0,0,0,.18);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow .2s, background .2s;
+      color: var(--preto);
+    }
+    .hero-arrow:hover { box-shadow: 0 4px 18px rgba(0,0,0,.25); background: #fff; }
+    .hero-arrow--prev { left: 24px; }
+    .hero-arrow--next { right: 24px; }
+    /* Dots hero */
+    #heroDots {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    .hdot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1.5px solid var(--borgonha);
+      background: transparent;
+      cursor: pointer;
+      transition: background .3s;
+      padding: 0;
+    }
+    .hdot.on { background: var(--borgonha); }
+
+    /* ── PRODUTOS — LISTA (lista-produtos) ─────────────────── */
+    .lista-produtos {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lista-produtos::-webkit-scrollbar { display: none; }
+
+    /* Card do produto — 290px fixo igual Angè */
+    li.list-product {
+      flex: 0 0 290px;
+      margin-right: 40px;
+      scroll-snap-align: start;
+      list-style: none;
+    }
+
+    /* Imagem flip */
+    .produto_imagem__wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 2/3;
+      width: 100%;
+    }
+    .mask { width: 100%; height: 100%; position: relative; overflow: hidden; }
+    .face { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+    .front { z-index: 1; transition: transform 0.35s ease; }
+    .back  { z-index: 2; transform: translateY(100%); transition: transform 0.35s ease; }
+    .list-product:hover .front { transform: translateY(-100%); }
+    .list-product:hover .back  { transform: translateY(0); }
+    .image-prod { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Overlay Comprar/Favoritar */
+    .box_hover {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 10;
+      display: flex; justify-content: center; gap: 24px; padding: 13px;
+      background: rgba(255,255,255,.92);
+      transform: translateY(100%); transition: transform 0.3s ease;
+    }
+    .list-product:hover .box_hover { transform: translateY(0); }
+    .box_hover_espiar label, .box_hover_favorito label {
+      font-size: 12px; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--preto); cursor: pointer;
+    }
+    .box_hover_espiar:hover label { color: var(--borgonha); }
+    .box_hover_favorito:hover label { color: var(--borgonha); }
+
+    /* Badge */
+    .card-badge {
+      position: absolute;
+      top: 10px; left: 10px;
+      background: var(--borgonha);
+      color: #fff;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: .08em;
+      padding: 3px 7px;
+      text-transform: uppercase;
+      border-radius: 0;
+      z-index: 3;
+    }
+
+    /* Preços */
+    .p-price { font-size: 20px; font-weight: 700; color: var(--preto); margin: 4px 0 0; }
+    .price__span { font-size: 11px; color: #666; display: block; }
+    .parcelamento { font-size: 11px; color: #666; }
+    .prod__ref { font-size: 11px; color: #888; margin-bottom: 2px; }
+    .p-name { font-size: 13px; font-weight: 500; color: var(--preto); margin-bottom: 4px; line-height: 1.3; }
+
+    /* Figcaption produto */
+    .list-product figcaption { padding: 10px 0 6px; }
+    .list-product figcaption a { display: block; }
+
+    /* ── TÍTULO DE SEÇÃO ────────────────────────────────────── */
+    h4.titulo-padrao {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700; color: var(--preto);
+      text-transform: uppercase; letter-spacing: .12em;
+      padding: 28px 0 20px;
+    }
+
+    /* ── PRODUCTS LIST UI ───────────────────────────────────── */
+    .products_list-ui { width: 100%; }
+    .products_list-ui + .products_list-ui { border-top: 1px solid var(--borda); }
+
+    /* ── LANCAMENTO (seção de lançamentos e mais vendidos) ──── */
+    section.lancamento {
+      background: var(--creme);
+      padding: 0 0 40px;
+    }
+
+    /* ── CAROUSEL SETAS ─────────────────────────────────────── */
+    .carousel-wrap { position: relative; }
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      top: 38%;
+      transform: translateY(-50%);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      border: 1px solid var(--borda);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      transition: box-shadow .2s;
+      color: #333;
+    }
+    .carousel-prev:hover, .carousel-next:hover { box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+    .carousel-prev { left: 8px; }
+    .carousel-next { right: 8px; }
+
+    /* ── BANNER SECUNDÁRIO ──────────────────────────────────── */
+    .banner-secundario { width: 100%; }
+    .banner-secundario__img {
+      width: 100%; height: 420px; overflow: hidden;
+      background: var(--creme);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .banner-secundario__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .banner-secundario__placeholder {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; color: #bbb; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+      width: 100%; height: 100%;
+    }
+    .banner-secundario__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,.45) 0%, rgba(0,0,0,.05) 60%);
+      display: flex; align-items: center; padding: 0 80px;
+    }
+    .banner-secundario__text { color: #fff; }
+    .banner-secundario__text span {
+      display: block; font-size: 11px; letter-spacing: .18em;
+      text-transform: uppercase; margin-bottom: 10px; opacity: .8;
+    }
+    .banner-secundario__text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 54px; font-weight: 400;
+      line-height: 1; margin-bottom: 18px;
+    }
+    .banner-secundario__text a {
+      font-size: 12px; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.6); padding-bottom: 2px;
+      transition: border-color .2s;
+    }
+    .banner-secundario__text a:hover { border-color: #fff; }
+
+    /* ── BANNERS TERCIÁRIO (4 colunas categorias) ───────────── */
+    .banners-terciario { width: 100%; }
+    .banners-terciario__items { display: flex; gap: 0; }
+    .banners-terciario__img {
+      flex: 1; aspect-ratio: 1/1.5; overflow: hidden;
+      position: relative;
+    }
+    .banners-terciario__img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .4s; display: block;
+    }
+    .banners-terciario__img:hover img { transform: scale(1.04); }
+    .banners-terciario__img a {
+      display: block; width: 100%; height: 100%; position: relative;
+    }
+    .banners-terciario__bg {
+      width: 100%; height: 100%;
+      background: #D8D0C8;
+      transition: transform .4s;
+    }
+    .banners-terciario__img:hover .banners-terciario__bg { transform: scale(1.04); }
+    .banners-terciario__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.58) 0%, rgba(0,0,0,0) 55%);
+      display: flex; flex-direction: column;
+      align-items: flex-start; justify-content: flex-end;
+      padding: 22px 18px;
+    }
+    .banners-terciario__name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-style: italic; color: #fff;
+      margin-bottom: 6px; line-height: 1;
+    }
+    .banners-terciario__cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 500;
+      color: rgba(255,255,255,.8); letter-spacing: .12em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 1px;
+      transition: border-color .2s, color .2s;
+    }
+    .banners-terciario__img:hover .banners-terciario__cta {
+      color: #fff; border-color: #fff;
+    }
+
+    /* ── EDITORIAL / VIDEO COLEÇÃO ──────────────────────────── */
+    .video-colecao {
+      width: 100%; height: 540px;
+      background: #1a1a1a;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .home_video__wrap {
+      width: 100%; height: 100%;
+      position: relative; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .home_video_fundo {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      position: absolute; inset: 0;
+      opacity: .6;
+    }
+    .video-colecao__placeholder {
+      position: absolute; inset: 0;
+      background: #2a1e22;
+    }
+    .video-colecao:hover .video-colecao__bg img { transform: scale(1.04); }
+    .video-colecao__content {
+      position: relative; z-index: 2;
+      text-align: center; padding: 40px;
+    }
+    .video-colecao__eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 500;
+      color: rgba(255,255,255,.7);
+      letter-spacing: .22em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .video-colecao__titulo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 72px; font-weight: 400;
+      color: #fff; line-height: 1; margin-bottom: 28px;
+      text-shadow: 0 2px 20px rgba(0,0,0,.3);
+    }
+    .video-colecao__cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 400; color: #fff;
+      letter-spacing: .14em; text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,.5); padding-bottom: 3px;
+      transition: border-color .2s;
+    }
+    .video-colecao__cta:hover { border-color: #fff; }
+
+    /* ── INSTAGRAM ──────────────────────────────────────────── */
+    #div-instagram {
+      padding: 60px 15px;
+      text-align: center;
+      background: var(--creme);
+    }
+
+    /* ── TEXTO APOIO (brand story 2 colunas) ───────────────── */
+    .texto-apoio { background: #fff; padding: 60px 0; }
+    .texto-apoio .conteudo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: start;
+    }
+    .texto-apoio_titulo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 36px; font-weight: 400;
+      color: var(--preto); margin-bottom: 24px;
+      grid-column: 1/-1;
+      padding: 0 20px;
+    }
+    .texto-apoio__esquerda, .texto-apoio__direita {
+      font-size: 13px; color: #555; line-height: 1.9; padding: 0 20px;
+    }
+    .texto-apoio__link {
+      display: inline-block; margin-top: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 500; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--preto);
+      border-bottom: 1px solid var(--preto); padding-bottom: 2px;
+      transition: color .2s, border-color .2s;
+    }
+    .texto-apoio__link:hover { color: var(--borgonha); border-color: var(--borgonha); }
+
+    /* ── NEWSLETTER FOOTER ──────────────────────────────────── */
+    .newsletter-footer { background: var(--creme); padding: 40px 0; }
+    .newsletter-footer .conteudo {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 40px; flex-wrap: wrap;
+    }
+    .newsletter-footer__titulo-padrao {
+      font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    }
+    #formCadastroNewsletter {
+      display: flex; gap: 12px; align-items: center;
+      flex: 1; max-width: 560px;
+    }
+    #formCadastroNewsletter input {
+      border: none; border-bottom: 1px solid #bbb;
+      background: transparent; padding: 8px 0;
+      font-family: 'Montserrat', sans-serif; font-size: 14px;
+      outline: none; flex: 1; color: var(--preto);
+    }
+    #formCadastroNewsletter input::placeholder { color: #aaa; }
+    #formCadastroNewsletter button {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1.5px solid #333; background: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, color .2s; color: #333; flex-shrink: 0;
+    }
+    #formCadastroNewsletter button:hover { background: #333; color: #fff; }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    .footer {
+      background: #f0f0f0;
+      padding: 60px 15px 0;
+    }
+    .footer__inner {
+      max-width: 1400px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer__col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700; color: #333;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 18px;
+    }
+    .footer__links {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .footer__links a {
+      font-size: 13px; color: #414141; transition: color .2s;
+    }
+    .footer__links a:hover { color: var(--preto); }
+    .footer__contact-item {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 13px; color: #414141; margin-bottom: 10px; line-height: 1.5;
+    }
+    .footer__contact-item svg { flex-shrink: 0; margin-top: 2px; }
+    .footer__social {
+      display: flex; gap: 14px; margin-top: 4px;
+    }
+    .footer__social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid #ccc; color: #414141;
+      transition: border-color .2s, color .2s;
+    }
+    .footer__social a:hover { border-color: #333; color: var(--preto); }
+    .footer__payments {
+      max-width: 1400px; margin: 40px auto 0;
+      padding: 20px 0; border-top: 1px solid #ddd;
+      display: flex; align-items: center; justify-content: center;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .pay-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: #555;
+    }
+    .footer__bottom {
+      max-width: 1400px; margin: 0 auto;
+      padding: 16px 0 30px; text-align: center;
+      font-size: 12px; color: #777;
+    }
+
+    /* ── MOBILE ─────────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .banners-terciario__items { flex-wrap: wrap; }
+      .banners-terciario__img { flex: 0 0 50%; }
+    }
+    @media (max-width: 900px) {
+      .header__nav { display: none; }
+      .header__search { display: none; }
+      .header__hamburger { display: flex; }
+      .header__inner { padding: 0 20px; }
+      .slideshow-index { height: calc(100vh - 105px); min-height: 380px; max-height: 560px; }
+      .hero-slide__title { font-size: 44px; }
+      .hero-slide__content { left: 30px; bottom: 60px; }
+      li.list-product { flex: 0 0 220px; margin-right: 20px; }
+      .banner-secundario__img { height: 280px; }
+      .banner-secundario__overlay { padding: 0 30px; }
+      .banner-secundario__text h2 { font-size: 36px; }
+      .video-colecao { height: 420px; }
+      .video-colecao__titulo { font-size: 48px; }
+      .texto-apoio .conteudo { grid-template-columns: 1fr; }
+      .texto-apoio_titulo { font-size: 28px; }
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer { padding: 40px 15px 0; }
+      .newsletter-footer .conteudo { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      li.list-product { flex: 0 0 calc(50% - 10px); margin-right: 10px; }
+      .slideshow-index { height: calc(100svh - 105px); min-height: 300px; max-height: 480px; }
+      .hero-slide__title { font-size: 32px; }
+      .hero-slide__content { left: 20px; bottom: 40px; }
+      .banners-terciario__img { flex: 0 0 50%; }
+      .video-colecao__titulo { font-size: 36px; }
+      .first-header.vantagens-header { gap: 16px; font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ① ANNOUNCE BAR -->
+  <section class="first-header vantagens-header">
+    <div class="announce">
+      <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;stroke-width:1.5;fill:none;flex-shrink:0">
+        <rect x="1" y="3" width="15" height="13" rx="1"/>
+        <path d="M16 8h4l3 3v5h-7V8z"/>
+        <circle cx="5.5" cy="18.5" r="2.5"/>
+        <circle cx="18.5" cy="18.5" r="2.5"/>
+      </svg>
+      <span><strong>FRETE GRÁTIS</strong> acima de R$199</span>
+    </div>
+    <span class="announce-sep">·</span>
+    <div class="announce">
+      <span>3X SEM JUROS</span>
+    </div>
+    <span class="announce-sep">·</span>
+    <div class="announce">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;stroke-width:1.5;fill:none;flex-shrink:0">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      <span>PAGAMENTO VIA PIX</span>
+    </div>
+  </section>
+
+  <!-- ② HEADER -->
+  <section class="header" id="siteHeader">
+    <div class="header__inner">
+      <!-- Nav esquerda -->
+      <nav>
+        <ul class="header__nav" id="hdrNav">
+          <li><a href="/colecao/novidades">Novidades</a></li>
+          <li><a href="/colecao/pijamas">Pijamas</a></li>
+          <li><a href="/colecao/conjuntos">Conjuntos</a></li>
+          <li><a href="/colecao/sale">Sale</a></li>
+        </ul>
+      </nav>
+
+      <!-- Logo centro -->
+      <a class="logo" href="/">Feminnita</a>
+
+      <!-- Icons direita -->
+      <div class="header__right">
+        <div class="header__search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="search" placeholder="O que você está procurando?" aria-label="Buscar">
+        </div>
+        <div class="header__icons">
+          <a href="/minha-conta" aria-label="Minha Conta">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </a>
+          <a href="/favoritos" aria-label="Favoritos">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </a>
+          <a href="/sacola" aria-label="Sacola" style="position:relative">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span id="cartBadge">0</span>
+          </a>
+        </div>
+        <button class="header__hamburger" aria-label="Menu" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ③ HERO SLIDER -->
+    <section class="slideshow-index">
+      <div id="heroWrap">
+        <div id="heroTrack">
+
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1521&q=80')">
+            <div class="hero-slide__content">
+              <h2 class="hero-slide__title">coleção inverno</h2>
+              <p class="hero-slide__sub">Pijamas em suede premium</p>
+              <a class="hero-slide__cta" href="/colecao/inverno">compre agora →</a>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=1521&q=80')">
+            <div class="hero-slide__content">
+              <h2 class="hero-slide__title">noites especiais</h2>
+              <p class="hero-slide__sub">Moda íntima exclusiva</p>
+              <a class="hero-slide__cta" href="/colecao/noites">compre agora →</a>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?auto=format&fit=crop&w=1521&q=80')">
+            <div class="hero-slide__content">
+              <h2 class="hero-slide__title">delicadeza</h2>
+              <p class="hero-slide__sub">Tecidos leves e confortáveis</p>
+              <a class="hero-slide__cta" href="/colecao/novidades">compre agora →</a>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1521&q=80')">
+            <div class="hero-slide__content">
+              <h2 class="hero-slide__title">bem estar</h2>
+              <p class="hero-slide__sub">Conforto que você merece</p>
+              <a class="hero-slide__cta" href="/colecao/bem-estar">compre agora →</a>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1521&q=80')">
+            <div class="hero-slide__content">
+              <h2 class="hero-slide__title">para você</h2>
+              <p class="hero-slide__sub">Presente perfeito a qualquer hora</p>
+              <a class="hero-slide__cta" href="/colecao/presentes">compre agora →</a>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1521&q=80')">
+            <div class="hero-slide__content">
+              <h2 class="hero-slide__title">momentos únicos</h2>
+              <p class="hero-slide__sub">Feminilidade em cada detalhe</p>
+              <a class="hero-slide__cta" href="/colecao/novidades">compre agora →</a>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="hero-arrow hero-arrow--prev" onclick="goHeroSlide(heroIdx - 1)" aria-label="Slide anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <button class="hero-arrow hero-arrow--next" onclick="goHeroSlide(heroIdx + 1)" aria-label="Próximo slide">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+
+        <div id="heroDots">
+          <button class="hdot on" onclick="goHeroSlide(0)" aria-label="Slide 1"></button>
+          <button class="hdot" onclick="goHeroSlide(1)" aria-label="Slide 2"></button>
+          <button class="hdot" onclick="goHeroSlide(2)" aria-label="Slide 3"></button>
+          <button class="hdot" onclick="goHeroSlide(3)" aria-label="Slide 4"></button>
+          <button class="hdot" onclick="goHeroSlide(4)" aria-label="Slide 5"></button>
+          <button class="hdot" onclick="goHeroSlide(5)" aria-label="Slide 6"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ DESTAQUES (sem título, carousel horizontal) -->
+    <section class="products_list-ui">
+      <div class="conteudo">
+        <div class="carousel-wrap" id="wrapDestaques">
+          <button class="carousel-prev" onclick="carouselScroll(this,-1)" aria-label="Anterior">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <ul class="lista-produtos" id="carouselDestaques"></ul>
+          <button class="carousel-next" onclick="carouselScroll(this,1)" aria-label="Próximo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ ÚLTIMOS LANÇAMENTOS -->
+    <section class="products_list-ui">
+      <section class="lancamento">
+        <div class="conteudo">
+          <h4 class="titulo-padrao">Últimos Lançamentos</h4>
+          <div class="carousel-wrap" id="wrapLancamentos">
+            <button class="carousel-prev" onclick="carouselScroll(this,-1)" aria-label="Anterior">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+            <ul class="lista-produtos" id="carouselLancamentos"></ul>
+            <button class="carousel-next" onclick="carouselScroll(this,1)" aria-label="Próximo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ⑥ BANNER SECUNDÁRIO -->
+    <section class="banner-secundario">
+      <a href="/produtos">
+        <div class="banner-secundario__img" id="bannerSecWrap">
+          <div class="banner-secundario__placeholder" id="bannerSecPlaceholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Adicione banner via admin</span>
+          </div>
+          <div class="banner-secundario__overlay" id="bannerSecOverlay" style="display:none">
+            <div class="banner-secundario__text">
+              <span>Nova Coleção · Inverno 2026</span>
+              <h2>coleção inverno</h2>
+              <a href="/produtos">descobrir →</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ⑦ MAIS VENDIDOS -->
+    <section class="products_list-ui">
+      <section class="lancamento">
+        <div class="conteudo">
+          <h4 class="titulo-padrao">Mais Vendidos</h4>
+          <div class="carousel-wrap" id="wrapMaisVendidos">
+            <button class="carousel-prev" onclick="carouselScroll(this,-1)" aria-label="Anterior">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+            <ul class="lista-produtos" id="carouselMaisVendidos"></ul>
+            <button class="carousel-next" onclick="carouselScroll(this,1)" aria-label="Próximo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ⑧ BANNERS TERCIÁRIO — 4 categorias -->
+    <section class="banners-terciario">
+      <div class="banners-terciario__items">
+
+        <div class="banners-terciario__img">
+          <a href="/colecao/pijamas">
+            <div class="banners-terciario__bg" style="background:#C8B4A8;"></div>
+            <div class="banners-terciario__overlay">
+              <span class="banners-terciario__name">Pijamas</span>
+              <span class="banners-terciario__cta">compre agora →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="banners-terciario__img">
+          <a href="/colecao/conjuntos">
+            <div class="banners-terciario__bg" style="background:#B8A898;"></div>
+            <div class="banners-terciario__overlay">
+              <span class="banners-terciario__name">Conjuntos</span>
+              <span class="banners-terciario__cta">compre agora →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="banners-terciario__img">
+          <a href="/colecao/novidades">
+            <div class="banners-terciario__bg" style="background:#D8C8B8;"></div>
+            <div class="banners-terciario__overlay">
+              <span class="banners-terciario__name">Novidades</span>
+              <span class="banners-terciario__cta">compre agora →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="banners-terciario__img">
+          <a href="/colecao/sale">
+            <div class="banners-terciario__bg" style="background:#A89888;"></div>
+            <div class="banners-terciario__overlay">
+              <span class="banners-terciario__name">Sale</span>
+              <span class="banners-terciario__cta">compre agora →</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ⑨ EDITORIAL / VIDEO COLEÇÃO -->
+    <section class="video-colecao" id="videoColecao">
+      <div class="home_video__wrap">
+        <div class="video-colecao__placeholder"></div>
+        <div class="video-colecao__content">
+          <p class="video-colecao__eyebrow">Nova Coleção · Inverno 2026</p>
+          <h2 class="video-colecao__titulo">coleção inverno</h2>
+          <a class="video-colecao__cta" href="/produtos">ver coleção →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑩ INSTAGRAM -->
+    <div class="products_list-ui" id="div-instagram">
+      <div class="conteudo" style="text-align:center;padding:60px 15px;">
+        <div class="header_instagram" style="margin-bottom:24px;">
+          <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:38px;font-weight:400;color:#1a1a1a;margin-bottom:6px;">nos siga no Instagram</h2>
+          <p style="font-size:13px;color:#888;letter-spacing:.08em;margin-bottom:20px;">@feminnita</p>
+          <a href="https://www.instagram.com/feminnita" target="_blank" rel="noopener noreferrer"
+             style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:#8C2F39;color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s;"
+             onmouseover="this.style.background='#6e2230'" onmouseout="this.style.background='#8C2F39'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            VER INSTAGRAM →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⑪ BRAND STORY / TEXTO APOIO -->
+    <section class="texto-apoio">
+      <div class="conteudo">
+        <h2 class="texto-apoio_titulo">Seja sua melhor versão, use Feminnita!</h2>
+        <div class="texto-apoio__esquerda">
+          <p>Nascida em Nova Friburgo, RJ — a capital brasileira da moda — a Feminnita cria pijamas e moda íntima para mulheres que acreditam que conforto e elegância caminham juntos. Cada peça é desenvolvida com fabricação própria, atenção aos detalhes e tecidos cuidadosamente selecionados para proporcionar a melhor experiência do seu dia a dia.</p>
+          <p style="margin-top:14px;">Do projeto ao acabamento, nossa equipe acompanha cada etapa para garantir peças únicas, confortáveis e com o toque especial que a Feminnita é conhecida.</p>
+          <a class="texto-apoio__link" href="/sobre">Conheça a nossa história →</a>
+        </div>
+        <div class="texto-apoio__direita">
+          <p>Nossos pijamas e conjuntos são confeccionados com matérias-primas selecionadas — suede, liganete, viscolycra e malhas premium — que garantem maciez, durabilidade e caimento perfeito. Acreditamos que o momento de descanso também merece estilo.</p>
+          <p style="margin-top:14px;">Cada coleção reflete o cuidado com o bem-estar feminino: modelagens pensadas para o corpo real, paletas de cores atemporais e detalhes que fazem você se sentir especial, mesmo em casa.</p>
+          <p style="margin-top:14px;">Fale conosco pelo WhatsApp e encontre a peça ideal para você ou para presentear quem você ama.</p>
+          <a class="texto-apoio__link" href="https://wa.me/5522996164303" target="_blank" rel="noopener noreferrer" style="margin-top:16px;color:#8C2F39;border-color:#8C2F39;">Falar no WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ⑫ NEWSLETTER FOOTER -->
+  <div class="newsletter-footer">
+    <div class="conteudo">
+      <p class="newsletter-footer__titulo-padrao">Cadastre-se e receba nossas novidades</p>
+      <form id="formCadastroNewsletter" onsubmit="return newsletterSubmit(event)">
+        <input type="email" placeholder="seu@email.com" required aria-label="E-mail">
+        <button type="submit" aria-label="Enviar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ⑬ FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <!-- Col 1: Institucional -->
+      <div class="footer__col">
+        <h4>Institucional</h4>
+        <ul class="footer__links">
+          <li><a href="/sobre">Sobre Nós</a></li>
+          <li><a href="/sustentabilidade">Sustentabilidade</a></li>
+          <li><a href="/trabalhe-conosco">Trabalhe Conosco</a></li>
+          <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
+          <li><a href="/politica-de-trocas">Trocas e Devoluções</a></li>
+          <li><a href="/faq">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Atendimento -->
+      <div class="footer__col">
+        <h4>Atendimento</h4>
+        <div class="footer__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Nova Friburgo, RJ — Brasil
+        </div>
+        <div class="footer__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          feminnita@gmail.com
+        </div>
+        <div class="footer__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          <a href="https://wa.me/5522996164303" target="_blank" rel="noopener">(22) 99616-4303</a>
+        </div>
+        <ul class="footer__links" style="margin-top:10px">
+          <li><a href="/colecao/novidades">Novidades</a></li>
+          <li><a href="/colecao/pijamas">Pijamas</a></li>
+          <li><a href="/colecao/conjuntos">Conjuntos</a></li>
+          <li><a href="/colecao/sale">Sale</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Redes Sociais -->
+      <div class="footer__col">
+        <h4>Redes Sociais</h4>
+        <div class="footer__social">
+          <a href="https://instagram.com/feminnita" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/5522996164303" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/feminnita" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+        </div>
+        <div style="margin-top:20px;">
+          <p style="font-size:13px;color:#414141;line-height:1.7;">Pijamas e moda íntima feminina com qualidade e elegância. Produzidos com carinho em Nova Friburgo, RJ.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Formas de pagamento -->
+    <div class="footer__payments">
+      <div class="pay-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2"/>
+          <line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+        <span>Visa · Master · Elo · Pix · Boleto</span>
+      </div>
+      <div class="pay-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span>Compra 100% segura</span>
+      </div>
+      <div class="pay-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="1"/>
+          <path d="M16 8h4l3 3v5h-7V8z"/>
+          <circle cx="5.5" cy="18.5" r="2.5"/>
+          <circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+        <span>Entrega via Correios · Transportadora</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      &copy; 2026 Feminnita. Todos os direitos reservados. — Nova Friburgo, RJ
+    </div>
+  </footer>
+
+  <script>
+    /* ── RENDER CARD (Angè flip style) ─────────────────────── */
+    function renderCard(p) {
+      var img1 = p.imagens && p.imagens[0] ? p.imagens[0] : '';
+      var img2 = p.imagens && p.imagens[1] ? p.imagens[1] : img1;
+      var parc = p.parcelas || 3;
+      var parcVal = 'R$ ' + (p.preco / parc).toFixed(2).replace('.', ',');
+      var precoFmt = 'R$ ' + Number(p.preco).toFixed(2).replace('.', ',');
+      var badgeHtml = p.badge ? '<span class="card-badge">' + p.badge + '</span>' : '';
+      return [
+        '<li class="list-product pid' + p.id + '">',
+          '<article class="product-shortview h-product" data-id="' + p.id + '">',
+            '<a href="/produto/' + p.id + '">',
+              '<figure>',
+                '<div class="produto_imagem__wrap">',
+                  '<div class="mask">',
+                    '<div class="face front foto-produto--frente">',
+                      '<img src="' + img1 + '" alt="' + p.nome + '" class="image-prod top" loading="lazy">',
+                    '</div>',
+                    '<div class="face back foto-produto--costas">',
+                      '<img src="' + img2 + '" alt="' + p.nome + '" class="image-prod bottom" loading="lazy">',
+                    '</div>',
+                  '</div>',
+                  '<div class="box_hover">',
+                    '<div class="box_hover_espiar"><label>Comprar</label></div>',
+                    '<div class="box_hover_favorito"><label>Favoritar</label></div>',
+                  '</div>',
+                  badgeHtml,
+                '</div>',
+              '</figure>',
+              '<figcaption>',
+                '<header>',
+                  '<p class="prod__ref">' + (p.ref || '') + '</p>',
+                  '<h2 class="p-name">' + p.nome + '</h2>',
+                '</header>',
+                '<div class="values-wrap">',
+                  '<div class="offers">',
+                    '<p class="boleto p-price">' + precoFmt + '</p>',
+                    '<span class="price__span">via PIX ou Boleto</span>',
+                    '<p class="parcelamento">(em até ' + parc + 'x de ' + parcVal + ')</p>',
+                  '</div>',
+                '</div>',
+              '</figcaption>',
+            '</a>',
+          '</article>',
+        '</li>'
+      ].join('');
+    }
+
+    /* ── CARREGA PRODUTOS ───────────────────────────────────── */
+    fetch('/api/produtos')
+      .then(function(r) { return r.json(); })
+      .then(function(produtos) {
+        var ativos = produtos.filter(function(p) { return p.ativo; });
+        var destaques = ativos.filter(function(p) { return p.destaque; });
+        var maisVendidos = ativos.filter(function(p) { return p.maisVendido; });
+        if (!destaques.length) destaques = ativos.slice(0, 10);
+        if (!maisVendidos.length) maisVendidos = ativos.slice(0, 10);
+
+        var elDest = document.getElementById('carouselDestaques');
+        var elLanc = document.getElementById('carouselLancamentos');
+        var elMV   = document.getElementById('carouselMaisVendidos');
+        if (elDest) elDest.innerHTML = destaques.map(renderCard).join('');
+        if (elLanc) elLanc.innerHTML = ativos.map(renderCard).join('');
+        if (elMV)   elMV.innerHTML   = maisVendidos.map(renderCard).join('');
+      })
+      .catch(function() { console.warn('[Feminnita] API offline — produtos não carregados.'); });
+
+    /* ── HERO SLIDER ────────────────────────────────────────── */
+    var heroIdx = 0;
+    var heroTotal = 6;
+    var heroTimer = null;
+
+    function goHeroSlide(i) {
+      if (i >= heroTotal) i = 0;
+      if (i < 0) i = heroTotal - 1;
+      heroIdx = i;
+      document.getElementById('heroTrack').style.transform = 'translateX(-' + (i * 100) + '%)';
+      document.querySelectorAll('.hdot').forEach(function(d, idx) {
+        d.classList.toggle('on', idx === i);
+      });
+    }
+
+    function heroAutoReset() {
+      clearInterval(heroTimer);
+      heroTimer = setInterval(function() { goHeroSlide(heroIdx + 1); }, 5000);
+    }
+
+    heroAutoReset();
+
+    var hw = document.getElementById('heroWrap');
+    if (hw) {
+      hw.addEventListener('mouseenter', function() { clearInterval(heroTimer); });
+      hw.addEventListener('mouseleave', heroAutoReset);
+    }
+
+    /* Touch swipe no hero */
+    (function() {
+      var startX = 0;
+      var el = document.getElementById('heroWrap');
+      if (!el) return;
+      el.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+      el.addEventListener('touchend', function(e) {
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) goHeroSlide(heroIdx + (dx < 0 ? 1 : -1));
+      });
+    })();
+
+    /* ── CAROUSEL SETAS ─────────────────────────────────────── */
+    function carouselScroll(btn, dir) {
+      var track = btn.closest('.carousel-wrap').querySelector('.lista-produtos');
+      var card = track ? track.querySelector('li.list-product') : null;
+      var step = card ? (card.offsetWidth + 40) * 2 : 660;
+      if (track) track.scrollBy({ left: dir * step, behavior: 'smooth' });
+    }
+
+    /* ── HEADER SHADOW ON SCROLL ────────────────────────────── */
+    window.addEventListener('scroll', function() {
+      var hdr = document.getElementById('siteHeader');
+      if (hdr) hdr.style.boxShadow = window.scrollY > 10 ? '0 2px 8px rgba(0,0,0,.08)' : 'none';
+    });
+
+    /* ── MOBILE MENU ────────────────────────────────────────── */
+    function toggleMenu() {
+      var nav = document.getElementById('hdrNav');
+      if (!nav) return;
+      if (nav.style.display === 'flex') {
+        nav.style.cssText = '';
+      } else {
+        nav.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:105px;left:0;right:0;background:#fff;padding:24px 20px;gap:20px;border-top:1px solid #E6E2DE;z-index:9998;box-shadow:0 8px 24px rgba(0,0,0,.08);';
+      }
+    }
+
+    /* ── HERO DINÂMICO (reconstrói slides do config.json) ────── */
+    document.addEventListener('fnt:config', function(e) {
+      var slides = e.detail && e.detail.hero;
+      if (!slides || !slides.length) return;
+
+      var track = document.getElementById('heroTrack');
+      var dots  = document.getElementById('heroDots');
+      if (!track) return;
+
+      track.innerHTML = slides.map(function(sl) {
+        var bg = sl.img
+          ? "background-image:url('" + sl.img + "');background-size:cover;background-position:center top"
+          : "background:" + (sl.bg || '#8C2F39');
+        return [
+          '<div class="hero-slide" style="' + bg + '">',
+            '<div class="hero-slide__content">',
+              '<p class="hero-slide__eyebrow" style="color:rgba(255,255,255,.8);font-family:\'Montserrat\',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;">' + (sl.eyebrow || '') + '</p>',
+              '<h2 class="hero-slide__title">' + (sl.titulo || '') + '</h2>',
+              '<p class="hero-slide__sub">' + (sl.subtitulo || '') + '</p>',
+              '<a class="hero-slide__cta" href="' + (sl.ctaHref || '/produtos') + '">' + (sl.cta || 'Ver coleção') + ' →</a>',
+            '</div>',
+          '</div>'
+        ].join('');
+      }).join('');
+
+      if (dots) {
+        dots.innerHTML = slides.map(function(_, i) {
+          return '<button class="hdot' + (i === 0 ? ' on' : '') + '" onclick="goHeroSlide(' + i + ')" aria-label="Slide ' + (i + 1) + '"></button>';
+        }).join('');
+      }
+
+      heroTotal = slides.length;
+      heroIdx   = 0;
+      heroAutoReset();
+    });
+
+    /* ── NEWSLETTER ─────────────────────────────────────────── */
+    function newsletterSubmit(e) {
+      e.preventDefault();
+      var input = document.querySelector('#formCadastroNewsletter input');
+      if (!input || !input.value) return false;
+      fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: input.value })
+      }).catch(function() {});
+      input.value = '';
+      input.placeholder = 'Cadastro realizado! Obrigada.';
+      return false;
+    }
+  </script>
+
+  <script src="/feminnita-cart.js"></script>
+  <script src="/feminnita-config.js"></script>
+</body>
+</html>

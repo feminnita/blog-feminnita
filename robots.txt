@@ -1,0 +1,94 @@
+User-agent: *
+
+# Páginas privadas e transacionais — não indexar
+Disallow: /admin
+Disallow: /feminnita-admin.html
+Disallow: /checkout
+Disallow: /feminnita-checkout.html
+Disallow: /carrinho
+Disallow: /feminnita-carrinho.html
+Disallow: /login
+Disallow: /feminnita-login.html
+Disallow: /conta
+Disallow: /feminnita-minha-conta.html
+Disallow: /cadastro
+Disallow: /feminnita-cadastro.html
+Disallow: /confirmacao
+Disallow: /feminnita-confirmacao.html
+
+# Arquivos HTML brutos duplicados (URL canônica é sem .html)
+Disallow: /feminnita-home.html
+Disallow: /feminnita-plp.html
+Disallow: /feminnita-pdp.html
+Disallow: /feminnita-sobre.html
+Disallow: /painel.html
+Disallow: /artigo.html
+Disallow: /artigos.html
+Disallow: /index.html
+Disallow: /sobre.html
+Disallow: /comunidade.html
+Disallow: /treinamento.html
+
+# Artigos HTML legados na raiz (versões antigas — canônica é /blog/artigos/)
+Disallow: /artigo-amanda.html
+Disallow: /artigo-catalogo-canva.html
+Disallow: /artigo-cristiane.html
+Disallow: /artigo-dia-das-maes.html
+Disallow: /artigo-dia-das-maes-triplicar.html
+Disallow: /artigo-erros-vendas.html
+Disallow: /artigo-estampas-que-vendem.html
+Disallow: /artigo-fotos.html
+Disallow: /artigo-fotos-sem-luz-pro.html
+Disallow: /artigo-juliana.html
+Disallow: /artigo-kit-dia-das-maes.html
+Disallow: /artigo-kits-maes.html
+Disallow: /artigo-marcia.html
+Disallow: /artigo-patricia.html
+Disallow: /artigo-plush-suede-fleece.html
+Disallow: /artigo-quanto-cobrar.html
+Disallow: /artigo-renata.html
+Disallow: /artigo-rotina-noturna.html
+Disallow: /artigo-suede-viscolycra.html
+Disallow: /artigo-tecidos.html
+Disallow: /artigo-temperatura-sono.html
+Disallow: /artigo-whatsapp-business.html
+Disallow: /artigo-tecidos.html
+
+# Build artifacts do Eleventy (duplicatas de /blog/)
+Disallow: /_site/
+
+# API e dados internos
+Disallow: /api/
+Disallow: /data/
+
+# Arquivos de sistema e scripts internos
+Disallow: /admin/
+Disallow: /agentes/
+Disallow: /scripts/
+Disallow: /downloads/
+Disallow: /imagens/
+Disallow: /screenshots-ange/
+Disallow: /*.md$
+Disallow: /*.py$
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /server.js
+Disallow: /feminnita-cart.js
+Disallow: /feminnita-config.js
+Disallow: /package.json
+Disallow: /CNAME
+Disallow: /netlify.toml
+
+# Páginas de documentação interna
+Disallow: /PUBLICAR-NO-NETLIFY
+
+# Permite páginas públicas indexáveis
+Allow: /
+Allow: /produtos
+Allow: /sobre
+Allow: /blog/
+Allow: /blog/artigos/
+Allow: /style.css
+Allow: /script.js
+
+Sitemap: https://www.feminnita.com.br/sitemap.xml

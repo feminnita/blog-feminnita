@@ -1,0 +1,27 @@
+# ── Rotas do e-commerce (rewrite — URL limpa no browser) ──────────────────────
+/                        /feminnita-home.html          200
+/loja                    /feminnita-home.html          301
+/produtos                /feminnita-plp.html           200
+/sobre                   /feminnita-sobre.html         200
+
+# ── Páginas privadas — redireciona para login ─────────────────────────────────
+/checkout                /feminnita-checkout.html      200
+/carrinho                /feminnita-carrinho.html      200
+/login                   /feminnita-login.html         200
+/cadastro                /feminnita-cadastro.html      200
+/conta                   /feminnita-minha-conta.html   200
+/confirmacao             /feminnita-confirmacao.html   200
+
+# ── Blog (Eleventy → _site/) ──────────────────────────────────────────────────
+/blog                    /_site/index.html             200
+/blog/*                  /_site/:splat                 200
+
+# ── Bloqueia acesso direto ao admin ───────────────────────────────────────────
+/admin                   /feminnita-admin.html         200
+/admin/*                 /feminnita-admin.html         200
+
+# ── API via server.js (em produção com Node) ──────────────────────────────────
+# /api/*                 http://localhost:3456/api/:splat   200
+
+# ── Produto individual ────────────────────────────────────────────────────────
+/produto/:slug           /feminnita-pdp.html           200
