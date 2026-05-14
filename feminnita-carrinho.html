@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Carrinho — Feminnita</title>
+  <meta name="description" content="Seu carrinho de compras Feminnita — Pijamas femininos fabricados em Nova Friburgo, RJ." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1167582397593975');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1167582397593975&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+  <style>
+    :root {
+      --borgonha: #8C2F39;
+      --champagne: #C9965A;
+      --creme: #F7F4F1;
+      --borda: #E6E2DE;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; font-size: 15px; background: #fff; color: #1A1A1A; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: 'Montserrat', sans-serif; border: none; background: none; }
+
+    /* ── ANNOUNCE BAR ── */
+    .announce-bar {
+      height: 30px;
+      background: #F0F0F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #727272;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .announce-bar svg {
+      width: 16px; height: 16px; flex-shrink: 0;
+    }
+
+    /* ── HEADER ── */
+    .hdr {
+      height: 75px;
+      background: #fff;
+      border-bottom: 1px solid var(--borda);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow .25s;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+    }
+    .hdr.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    .hdr-inner {
+      width: 100%;
+      max-width: 1421px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .hdr-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex: 1;
+    }
+    .hdr-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .hdr-nav a {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color: #1A1A1A;
+      transition: color .2s;
+    }
+    .hdr-nav a:hover { color: var(--borgonha); }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 34px;
+      color: #1A1A1A;
+      white-space: nowrap;
+      line-height: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hdr-icons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .hdr-icons a, .hdr-icons button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: background .2s;
+      position: relative;
+    }
+    .hdr-icons a:hover, .hdr-icons button:hover { background: var(--creme); }
+    .hdr-icons svg { width: 22px; height: 22px; stroke: #1A1A1A; fill: none; stroke-width: 1.6; }
+    .search-oval {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--borda);
+      border-radius: 50px;
+      padding: 0 16px;
+      height: 36px;
+      font-size: 12px;
+      color: #999;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .search-oval:hover { border-color: #999; }
+    .search-oval svg { width: 14px; height: 14px; stroke: #999; fill: none; stroke-width: 2; }
+    .cart-badge {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background: var(--borgonha);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── CART TOPBAR ── */
+    .cart-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 50px;
+      max-width: 1421px;
+      margin: 0 auto;
+    }
+    .cart-title {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+      letter-spacing: .05em;
+    }
+    .cart-code {
+      font-weight: 400;
+      color: #777;
+      font-size: 14px;
+    }
+    .cart-secure {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── CART CONTAINER ── */
+    .cart-container {
+      max-width: 1421px;
+      margin: 0 auto;
+      padding: 0 50px;
+      overflow-x: auto;
+    }
+
+    /* ── TABLE ── */
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .cart-table thead tr {
+      background: #F5F5F5;
+    }
+    .cart-table th {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #555;
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--borda);
+    }
+    .cart-table th:first-child { text-align: left; }
+    .cart-table td {
+      padding: 20px 16px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+    }
+    .cart-table td:first-child { text-align: left; }
+
+    /* produto cell */
+    .produto-cell {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .produto-thumb {
+      width: 80px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .produto-info {}
+    .produto-nome {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #1A1A1A;
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+    .produto-ref {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* size badge */
+    .size-badge {
+      background: #000;
+      color: #fff;
+      width: 31px;
+      height: 39px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+    }
+
+    /* stepper */
+    .stepper {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .stepper-btn {
+      width: 35px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #333;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .stepper-btn:hover { background: #f5f5f5; }
+    .stepper-val {
+      width: 35px;
+      height: 30px;
+      text-align: center;
+      border: none;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      background: #fff;
+      color: #1A1A1A;
+      -moz-appearance: textfield;
+    }
+    .stepper-val::-webkit-inner-spin-button,
+    .stepper-val::-webkit-outer-spin-button { -webkit-appearance: none; }
+    .stepper-val:focus { outline: none; }
+
+    /* price cell */
+    .preco-cell {
+      font-size: 18px;
+      font-weight: 700;
+      color: #676767;
+    }
+    .preco-pix {
+      font-size: 12px;
+      color: #B1AEA6;
+      margin-top: 2px;
+    }
+
+    /* remove btn */
+    .btn-remover {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #777;
+      padding: 4px;
+      transition: color .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-remover:hover { color: var(--borgonha); }
+    .btn-remover svg { width: 20px; height: 20px; }
+
+    /* ── BOTTOM SECTION ── */
+    .cart-bottom {
+      max-width: 1421px;
+      margin: 0 auto;
+      padding: 32px 50px 20px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .cart-bottom-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* frete box */
+    .frete-box {}
+    .frete-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .frete-input-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .cep-input {
+      height: 42px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 12px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      width: 200px;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .cep-input:focus { border-color: #555; }
+    .btn-calcular {
+      height: 42px;
+      background: #555;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: 0 16px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'Montserrat', sans-serif;
+      transition: background .2s;
+    }
+    .btn-calcular:hover { background: #333; }
+    .nao-sei-cep {
+      display: inline-block;
+      font-size: 12px;
+      color: #555;
+      margin-top: 8px;
+      text-decoration: underline;
+    }
+    .frete-progress {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .frete-bar {
+      flex: 1;
+      height: 6px;
+      background: #E6E2DE;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .frete-bar-fill {
+      height: 100%;
+      background: #8C2F39;
+      border-radius: 3px;
+      transition: width .4s;
+    }
+    .frete-msg {
+      font-size: 12px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    /* cupom box */
+    .cupom-box {}
+    .cupom-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .cupom-input-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .cupom-input {
+      height: 42px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 12px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      width: 200px;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .cupom-input:focus { border-color: #555; }
+    .btn-validar {
+      height: 42px;
+      background: #555;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: 0 16px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'Montserrat', sans-serif;
+      transition: background .2s;
+    }
+    .btn-validar:hover { background: #333; }
+    .cupom-feedback {
+      font-size: 12px;
+      margin-top: 6px;
+      display: none;
+    }
+    .cupom-feedback.ok { color: #3a7d44; display: block; }
+    .cupom-feedback.err { color: #c0392b; display: block; }
+
+    /* total box */
+    .total-box {
+      background: #fff;
+      border: 1.5px solid var(--borda);
+      border-radius: 8px;
+      padding: 28px 28px;
+      min-width: 340px;
+      flex-shrink: 0;
+    }
+    .total-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #333;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--borda);
+    }
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+      color: #555;
+    }
+    .total-row:last-child { border-bottom: none; }
+    .total-row strong { color: #1A1A1A; }
+    .total-row span:last-child { font-weight: 600; color: #1A1A1A; }
+    .total-highlight {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--borgonha);
+    }
+
+    /* ── BOTÕES DE AÇÃO ── */
+    .cart-actions {
+      max-width: 1421px;
+      margin: 0 auto;
+      padding: 20px 50px 32px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+    }
+    .btn-continuar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      padding: 0 40px;
+      background: #555555;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      transition: background .2s;
+    }
+    .btn-continuar:hover { background: #333; }
+    .btn-finalizar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      padding: 0 40px;
+      background: #8C2F39;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      transition: background .2s;
+    }
+    .btn-finalizar:hover { background: #6d2028; }
+
+    /* ── NEWSLETTER ── */
+    .newsletter-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #F5F5F5;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .newsletter-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      color: #1A1A1A;
+      margin-bottom: 6px;
+    }
+    .newsletter-sub {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input {
+      height: 44px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 16px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      width: 200px;
+      outline: none;
+    }
+    .newsletter-form button {
+      height: 44px;
+      background: var(--borgonha);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0 24px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      transition: background .2s;
+    }
+    .newsletter-form button:hover { background: #6d2028; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #F0F0F0;
+      padding: 48px 50px 0;
+    }
+    .footer-cols {
+      max-width: 1421px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+    }
+    .footer-col-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0; margin: 0;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      font-size: 13px;
+      color: #414141;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-col ul li a:hover { color: var(--borgonha); }
+    .footer-bottom {
+      max-width: 1421px;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: #777;
+    }
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-badge {
+      font-size: 11px;
+      color: #777;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 3px 8px;
+      background: #fff;
+    }
+
+    /* ── ESTADO VAZIO ── */
+    .cart-empty {
+      display: none;
+      max-width: 480px;
+      margin: 80px auto 120px;
+      text-align: center;
+      padding: 0 24px;
+    }
+    .cart-empty.active { display: block; }
+    .empty-icon {
+      width: 80px; height: 80px;
+      margin: 0 auto 28px;
+      border: 2px solid var(--borda);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .empty-icon svg { width: 36px; height: 36px; stroke: #999; fill: none; stroke-width: 1.5; }
+    .empty-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #1A1A1A;
+      margin-bottom: 12px;
+    }
+    .empty-sub {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .btn-voltar {
+      display: inline-block;
+      background: var(--borgonha);
+      color: #fff;
+      border-radius: 4px;
+      padding: 14px 36px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: background .2s;
+    }
+    .btn-voltar:hover { background: #6d2028; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .cart-bottom { flex-direction: column; }
+      .total-box { min-width: unset; width: 100%; }
+    }
+    @media (max-width: 768px) {
+      .hdr { padding: 0 16px; }
+      .hdr-nav { display: none; }
+      .logo { font-size: 26px; }
+      .cart-topbar, .cart-container, .cart-bottom, .cart-actions { padding-left: 16px; padding-right: 16px; }
+      .footer { padding: 32px 16px 0; }
+      .footer-cols { grid-template-columns: 1fr; gap: 24px; }
+      .newsletter-section { margin: 24px 16px; padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCE BAR -->
+  <div class="announce-bar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="1.5"/><circle cx="18.5" cy="18.5" r="1.5"/>
+    </svg>
+    FRETE GRÁTIS acima de R$199
+  </div>
+
+  <!-- HEADER -->
+  <header class="hdr" id="hdr">
+    <div class="hdr-inner">
+      <div class="hdr-left">
+        <nav class="hdr-nav">
+          <a href="#">NOVIDADES</a>
+          <a href="#">PIJAMAS</a>
+          <a href="#">CONJUNTOS</a>
+          <a href="#">SALE</a>
+        </nav>
+      </div>
+
+      <a href="/" class="logo">Feminnita</a>
+
+      <div class="hdr-icons">
+        <button class="search-oval" aria-label="Buscar">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Buscar
+        </button>
+        <a href="/conta" aria-label="Minha conta">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="/favoritos" aria-label="Favoritos">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </a>
+        <a href="/feminnita-carrinho.html" aria-label="Carrinho" style="position:relative">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cart-badge">3</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CART TOPBAR -->
+  <div class="cart-topbar" id="cart-topbar">
+    <h1 class="cart-title">MEU CARRINHO <span class="cart-code">(FNT-2024-001)</span></h1>
+    <span class="cart-secure">&#x1F6E1; COMPRA 100% SEGURA</span>
+  </div>
+
+  <!-- ESTADO VAZIO -->
+  <div class="cart-empty" id="cart-empty">
+    <div class="empty-icon">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </div>
+    <h2 class="empty-title">Seu carrinho está vazio</h2>
+    <p class="empty-sub">Que tal descobrir nossos pijamas fresquinhos e conjuntos incríveis?</p>
+    <a href="/" class="btn-voltar">Explorar produtos</a>
+  </div>
+
+  <!-- TABELA DE ITENS -->
+  <div class="cart-container" id="cart-container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>PRODUTO</th>
+          <th>TAMANHO</th>
+          <th>QUANTIDADE</th>
+          <th>PREÇO</th>
+          <th>TOTAL</th>
+          <th>REMOVER</th>
+        </tr>
+      </thead>
+      <tbody id="cartBody">
+        <!-- gerado por JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BOTTOM: frete + cupom + total -->
+  <div class="cart-bottom" id="cart-bottom">
+    <div class="cart-bottom-left">
+      <!-- FRETE -->
+      <div class="frete-box">
+        <div class="frete-label">FRETE</div>
+        <div class="frete-input-row">
+          <input type="text" placeholder="00000-000" class="cep-input" id="cep-input" maxlength="9" oninput="mascaraCep(this)" />
+          <button class="btn-calcular" onclick="calcularFrete()">CALCULAR</button>
+        </div>
+        <a href="https://buscacepinter.correios.com.br" target="_blank" class="nao-sei-cep">Não sei meu CEP &#9658;</a>
+        <div class="frete-progress">
+          <div class="frete-bar"><div class="frete-bar-fill" id="frete-bar-fill" style="width:60%"></div></div>
+          &#x1F69A;
+        </div>
+        <p class="frete-msg" id="frete-msg">Faltam <strong id="frete-falta">R$ 64,20</strong> para ganhar frete grátis!</p>
+      </div>
+
+      <!-- CUPOM -->
+      <div class="cupom-box">
+        <div class="cupom-label">CUPOM DE DESCONTO</div>
+        <div class="cupom-input-row">
+          <input type="text" placeholder="Código do cupom" class="cupom-input" id="cupom-input" />
+          <button class="btn-validar" onclick="validarCupom()">VALIDAR</button>
+        </div>
+        <div class="cupom-feedback" id="cupom-feedback"></div>
+      </div>
+    </div>
+
+    <!-- TOTAL DO PEDIDO -->
+    <div class="total-box">
+      <h3 class="total-title">TOTAL DO PEDIDO</h3>
+      <div class="total-row">
+        <span>VIA PIX OU BOLETO COM 10% DE DESCONTO</span>
+        <strong class="total-highlight" id="total-pix">R$ 0,00</strong>
+      </div>
+      <div class="total-row">
+        <span>À VISTA NO CARTÃO</span>
+        <span id="total-cartao">R$ 0,00</span>
+      </div>
+      <div class="total-row">
+        <span>OPÇÕES DE PARCELAMENTO</span>
+        <span><span id="total-parcela">3X de R$ 0,00</span> <strong>SEM JUROS</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÕES DE AÇÃO -->
+  <div class="cart-actions" id="cart-actions">
+    <a href="/" class="btn-continuar">CONTINUAR COMPRANDO</a>
+    <a href="/checkout" class="btn-finalizar">FINALIZAR COMPRA</a>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-section">
+    <div class="newsletter-title">CADASTRE-SE PARA RECEBER TODAS AS NOVIDADES</div>
+    <div class="newsletter-sub">Receba lançamentos, promoções exclusivas e dicas de moda íntima direto no seu e-mail.</div>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="text" placeholder="Seu nome" />
+      <input type="email" placeholder="Seu e-mail" />
+      <button type="submit">&#8594;</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">INSTITUCIONAL</div>
+        <ul>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Nossa história</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">ATENDIMENTO</div>
+        <ul>
+          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="#">Rastrear pedido</a></li>
+          <li><a href="#">Fale conosco</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Como comprar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">REDES SOCIAIS</div>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Feminnita. Fabricado com amor em Nova Friburgo, RJ.</span>
+      <div class="footer-badges">
+        <span class="footer-badge">&#x1F4B3; Visa</span>
+        <span class="footer-badge">&#x1F4B3; Mastercard</span>
+        <span class="footer-badge">Pix</span>
+        <span class="footer-badge">Boleto</span>
+        <span class="footer-badge">&#x1F512; SSL Seguro</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/feminnita-cart.js"></script>
+  <script src="/feminnita-config.js"></script>
+  <script>
+    // ── DADOS DO CARRINHO — lê do FntCart (localStorage) ──
+    var cartItems = (typeof FntCart !== 'undefined') ? FntCart.get().map(function(i) {
+      return { id: i.id, ref: i.ref || i.id, nome: i.nome, tamanho: i.tamanho || '', cor: i.cor || '',
+               qty: i.qty || 1, preco: i.preco || 0, img: i.imagem || '' };
+    }) : [];
+
+    var cupomDesconto = 0;
+    var CUPONS = { 'FEMINNITA10': 0.10, 'INVERNO20': 0.20, 'BEMVINDA': 0.15 };
+    var FRETE_GRATIS = 199;
+
+    function fmt(v) {
+      return 'R$ ' + v.toFixed(2).replace('.', ',');
+    }
+
+    function calcSubtotal() {
+      return cartItems.reduce(function(s, it) { return s + it.preco * it.qty; }, 0);
+    }
+
+    function renderCart() {
+      var tbody = document.getElementById('cartBody');
+      tbody.innerHTML = '';
+      cartItems.forEach(function(item) {
+        var tr = document.createElement('tr');
+        tr.setAttribute('data-id', item.id);
+        tr.innerHTML =
+          '<td>' +
+            '<div class="produto-cell">' +
+              '<img class="produto-thumb" src="' + item.img + '" alt="' + item.nome + '" />' +
+              '<div class="produto-info">' +
+                '<div class="produto-nome">' + item.nome + '</div>' +
+                '<div class="produto-ref">' + item.ref + '</div>' +
+              '</div>' +
+            '</div>' +
+          '</td>' +
+          '<td><small class="size-badge">' + item.tamanho + '</small></td>' +
+          '<td>' +
+            '<div class="stepper">' +
+              '<button class="stepper-btn" onclick="changeQty(\'' + item.id + '\', -1)">&#8722;</button>' +
+              '<input class="stepper-val" type="number" value="' + item.qty + '" min="1" max="99" id="qty-' + item.id + '" onchange="setQty(\'' + item.id + '\', this.value)" />' +
+              '<button class="stepper-btn" onclick="changeQty(\'' + item.id + '\', 1)">+</button>' +
+            '</div>' +
+          '</td>' +
+          '<td>' +
+            '<div class="preco-cell" id="preco-' + item.id + '">' + fmt(item.preco) + '</div>' +
+            '<div class="preco-pix">via PIX ou Boleto</div>' +
+          '</td>' +
+          '<td>' +
+            '<div class="preco-cell" id="total-' + item.id + '">' + fmt(item.preco * item.qty) + '</div>' +
+            '<div class="preco-pix">via PIX ou Boleto</div>' +
+          '</td>' +
+          '<td>' +
+            '<button class="btn-remover" onclick="removerItem(\'' + item.id + '\')" aria-label="Remover">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>' +
+            '</button>' +
+          '</td>';
+        tbody.appendChild(tr);
+      });
+
+      atualizarTotais();
+      atualizarUI();
+    }
+
+    function atualizarTotais() {
+      var sub = calcSubtotal();
+      var cartao = sub;
+      var pix = sub * 0.90;
+      var parcela = cartao / 3;
+
+      document.getElementById('total-pix').textContent = fmt(pix);
+      document.getElementById('total-cartao').textContent = fmt(cartao);
+      document.getElementById('total-parcela').textContent = '3X de ' + fmt(parcela);
+
+      // badge
+      var totalQty = cartItems.reduce(function(s, it) { return s + it.qty; }, 0);
+      document.getElementById('cart-badge').textContent = totalQty;
+
+      // barra de frete
+      var pct = Math.min(sub / FRETE_GRATIS * 100, 100);
+      document.getElementById('frete-bar-fill').style.width = pct + '%';
+      var falta = FRETE_GRATIS - sub;
+      if (falta > 0) {
+        document.getElementById('frete-msg').innerHTML = 'Faltam <strong>' + fmt(falta) + '</strong> para ganhar frete grátis!';
+      } else {
+        document.getElementById('frete-msg').innerHTML = '<strong>Parabéns! Você ganhou frete grátis!</strong>';
+      }
+    }
+
+    function atualizarUI() {
+      var vazio = cartItems.length === 0;
+      document.getElementById('cart-topbar').style.display = vazio ? 'none' : '';
+      document.getElementById('cart-container').style.display = vazio ? 'none' : '';
+      document.getElementById('cart-bottom').style.display = vazio ? 'none' : '';
+      document.getElementById('cart-actions').style.display = vazio ? 'none' : '';
+      if (vazio) {
+        document.getElementById('cart-empty').classList.add('active');
+        document.getElementById('cart-badge').style.display = 'none';
+      } else {
+        document.getElementById('cart-empty').classList.remove('active');
+        document.getElementById('cart-badge').style.display = '';
+      }
+    }
+
+    function _syncCart() {
+      if (typeof FntCart !== 'undefined') {
+        // Salva estado atual de volta no FntCart
+        var saved = FntCart.get();
+        cartItems.forEach(function(ci) {
+          var idx = saved.findIndex(function(s) {
+            return s.id === ci.id && (s.tamanho||'') === (ci.tamanho||'') && (s.cor||'') === (ci.cor||'');
+          });
+          if (idx >= 0) saved[idx].qty = ci.qty;
+        });
+        try { localStorage.setItem('fnt_cart', JSON.stringify(saved)); } catch(e) {}
+      }
+    }
+
+    function changeQty(id, delta) {
+      var item = cartItems.find(function(i) { return i.id === id; });
+      if (!item) return;
+      item.qty = Math.max(1, Math.min(99, item.qty + delta));
+      var qel = document.getElementById('qty-' + id);
+      if (qel) qel.value = item.qty;
+      var tel = document.getElementById('total-' + id);
+      if (tel) tel.textContent = fmt(item.preco * item.qty);
+      _syncCart();
+      atualizarTotais();
+    }
+
+    function setQty(id, val) {
+      var item = cartItems.find(function(i) { return i.id === id; });
+      if (!item) return;
+      item.qty = Math.max(1, Math.min(99, parseInt(val) || 1));
+      var qel = document.getElementById('qty-' + id);
+      if (qel) qel.value = item.qty;
+      var tel = document.getElementById('total-' + id);
+      if (tel) tel.textContent = fmt(item.preco * item.qty);
+      _syncCart();
+      atualizarTotais();
+    }
+
+    function removerItem(id) {
+      var tr = document.querySelector('tr[data-id="' + id + '"]');
+      if (tr) {
+        tr.style.transition = 'opacity .3s, transform .3s';
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(20px)';
+        setTimeout(function() {
+          tr.remove();
+          cartItems = cartItems.filter(function(i) { return i.id !== id; });
+          if (typeof FntCart !== 'undefined') FntCart.removeByKey(id);
+          atualizarTotais();
+          atualizarUI();
+        }, 300);
+      }
+    }
+
+    function mascaraCep(el) {
+      var v = el.value.replace(/\D/g, '').slice(0, 8);
+      if (v.length > 5) v = v.slice(0, 5) + '-' + v.slice(5);
+      el.value = v;
+    }
+
+    function calcularFrete() {
+      var cep = document.getElementById('cep-input').value.replace(/\D/g, '');
+      if (cep.length !== 8) { alert('Digite um CEP válido com 8 dígitos.'); return; }
+      alert('Frete calculado! Para ' + cep + ': Grátis acima de R$199 / PAC R$18,90 / SEDEX R$32,50');
+    }
+
+    function validarCupom() {
+      var code = document.getElementById('cupom-input').value.trim().toUpperCase();
+      var fb = document.getElementById('cupom-feedback');
+      fb.className = 'cupom-feedback';
+      if (!code) { fb.className = 'cupom-feedback err'; fb.textContent = 'Digite um código de cupom.'; return; }
+      if (CUPONS[code]) {
+        cupomDesconto = CUPONS[code];
+        var pct = Math.round(cupomDesconto * 100);
+        fb.className = 'cupom-feedback ok';
+        fb.textContent = 'Cupom aplicado! ' + pct + '% de desconto.';
+        document.getElementById('cupom-input').disabled = true;
+        atualizarTotais();
+      } else {
+        fb.className = 'cupom-feedback err';
+        fb.textContent = 'Cupom inválido ou expirado.';
+      }
+    }
+
+    // Sticky header shadow
+    window.addEventListener('scroll', function() {
+      document.getElementById('hdr').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Init
+    renderCart();
+  </script>
+</body>
+</html>

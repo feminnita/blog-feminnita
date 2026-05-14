@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós — Feminnita | Pijamas em Nova Friburgo</title>
+  <!-- SEO -->
+  <meta name="description" content="Conheça a história da Feminnita — marca de pijamas e moda íntima feminina fabricada em Nova Friburgo, RJ desde 2007. Qualidade, conforto e elegância para cada noite." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.feminnita.com.br/sobre" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sobre Nós — Feminnita" />
+  <meta property="og:description" content="Nossa história, nossos valores e o amor por cada ponto de costura desde 2007." />
+  <meta property="og:url" content="https://www.feminnita.com.br/sobre/" />
+  <meta property="og:site_name" content="Feminnita" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Feminnita","url":"https://www.feminnita.com.br","description":"Marca de pijamas e moda íntima feminina fabricada em Nova Friburgo, RJ","foundingDate":"2007","address":{"@type":"PostalAddress","addressLocality":"Nova Friburgo","addressRegion":"RJ","addressCountry":"BR"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1167582397593975');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1167582397593975&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+  <style>
+    :root {
+      --borgonha:  #8C2F39;
+      --champagne: #C9965A;
+      --creme:     #F7F4F1;
+      --preto:     #1A1A1A;
+      --cinza:     #6B6B6B;
+      --cinza-lt:  #A8A8A8;
+      --borda:     #E6E2DE;
+      --branco:    #FFFFFF;
+      --font-t: 'Montserrat', sans-serif;
+      --font-e: 'Cormorant Garamond', serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-t); font-size: 16px; background: var(--branco); color: var(--preto); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; width: 100%; object-fit: cover; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: var(--font-t); }
+
+    /* ── ANNOUNCE ── */
+    .announce {
+      background: var(--creme); border-bottom: 1px solid var(--borda);
+      padding: 10px 24px; display: flex; align-items: center; justify-content: center;
+      gap: 6px; font-size: 12px; color: var(--preto); letter-spacing: .02em;
+    }
+    .announce strong { font-weight: 700; color: var(--borgonha); }
+    .announce-sep { color: var(--borda); margin: 0 10px; }
+
+    /* ── HEADER ── */
+    .hdr { background: var(--branco); border-bottom: 1px solid var(--borda); position: sticky; top: 0; z-index: 300; transition: transform .3s ease, box-shadow .3s ease; }
+    .hdr.hidden { transform: translateY(-100%); }
+    .hdr.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); }
+    .hdr-wrap {
+      max-width: 1440px; margin: 0 auto; padding: 0 32px; height: 96px;
+      display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;
+    }
+    .hdr-nav { display: flex; gap: 26px; }
+    .hdr-nav a { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--preto); transition: color .2s; }
+    .hdr-nav a:hover, .hdr-nav a.active { color: var(--borgonha); }
+    .logo { font-family: var(--font-e); font-size: 72px; font-weight: 500; font-style: italic; letter-spacing: .03em; color: var(--borgonha); text-align: center; white-space: nowrap; line-height: 1; }
+    .hdr-right { display: flex; gap: 6px; justify-content: flex-end; align-items: center; }
+    .hdr-search { display: flex; align-items: center; gap: 8px; border: 1.5px solid var(--borda); border-radius: 40px; padding: 7px 14px; transition: border-color .2s; }
+    .hdr-search:focus-within { border-color: var(--preto); }
+    .hdr-search input { border: none; outline: none; background: none; font-family: var(--font-t); font-size: 13px; color: var(--preto); width: 170px; }
+    .hdr-search input::placeholder { color: var(--cinza-lt); }
+    .hdr-btn { position: relative; width: 36px; height: 36px; border: none; background: none; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .2s; color: var(--preto); }
+    .hdr-btn:hover { background: var(--creme); }
+    .hdr-btn svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .hdr-btn .bdg { position: absolute; top: 2px; right: 2px; width: 15px; height: 15px; background: var(--borgonha); color: white; font-size: 9px; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 18px 32px; display: flex; gap: 6px; align-items: center; font-size: 12px; color: var(--cinza-lt); }
+    .breadcrumb a { color: var(--cinza); transition: color .2s; }
+    .breadcrumb a:hover { color: var(--borgonha); }
+
+    /* ── HERO ── */
+    .sobre-hero {
+      position: relative; height: 55vh; min-height: 380px; overflow: hidden;
+      background: var(--preto);
+    }
+    .sobre-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: .65; }
+    .sobre-hero-content {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center; padding: 0 24px;
+    }
+    .sobre-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--champagne); margin-bottom: 16px; }
+    .sobre-hero-h1 { font-family: var(--font-e); font-size: clamp(44px, 6vw, 80px); font-weight: 500; color: white; line-height: 1.05; }
+    .sobre-hero-h1 em { font-style: italic; color: var(--champagne); }
+
+    /* ── SECTION WRAPPER ── */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+    /* ── INTRO ── */
+    .intro { padding: 88px 0 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .intro-text {}
+    .intro-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--borgonha); margin-bottom: 20px; }
+    .intro-h2 { font-family: var(--font-e); font-size: clamp(34px, 3.5vw, 52px); font-weight: 500; line-height: 1.1; margin-bottom: 28px; }
+    .intro-h2 em { font-style: italic; color: var(--borgonha); }
+    .intro-p { font-size: 15px; color: var(--cinza); line-height: 1.85; margin-bottom: 18px; }
+    .intro-img { aspect-ratio: 4/5; border-radius: 2px; overflow: hidden; background: var(--creme); }
+
+    /* ── NUMBERS ── */
+    .numbers { background: var(--borgonha); padding: 72px 32px; }
+    .numbers-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+    .num-val { font-family: var(--font-e); font-size: clamp(48px, 5vw, 72px); font-weight: 600; color: white; line-height: 1; margin-bottom: 10px; }
+    .num-val em { font-style: italic; color: var(--champagne); }
+    .num-label { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+
+    /* ── VALORES ── */
+    .valores { padding: 88px 0; }
+    .valores-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--borgonha); text-align: center; margin-bottom: 16px; }
+    .valores-h2 { font-family: var(--font-e); font-size: clamp(32px, 3.5vw, 48px); font-weight: 500; text-align: center; margin-bottom: 60px; line-height: 1.15; }
+    .valores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .valor-card { background: var(--creme); padding: 44px 36px; }
+    .valor-icon { font-size: 32px; margin-bottom: 20px; }
+    .valor-title { font-family: var(--font-e); font-size: 24px; font-weight: 600; margin-bottom: 14px; color: var(--preto); }
+    .valor-desc { font-size: 14px; color: var(--cinza); line-height: 1.8; }
+
+    /* ── TIMELINE ── */
+    .timeline-sec { padding: 88px 0; background: var(--branco); }
+    .timeline-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--borgonha); text-align: center; margin-bottom: 16px; }
+    .timeline-h2 { font-family: var(--font-e); font-size: clamp(32px, 3.5vw, 48px); font-weight: 500; text-align: center; margin-bottom: 60px; }
+    .timeline { position: relative; max-width: 780px; margin: 0 auto; }
+    .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 0; bottom: 0; width: 1px; background: var(--borda); }
+    .tl-item { display: grid; grid-template-columns: 1fr 56px 1fr; gap: 0; align-items: start; margin-bottom: 52px; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-left { text-align: right; padding-right: 32px; padding-top: 4px; }
+    .tl-right { padding-left: 32px; padding-top: 4px; }
+    .tl-center { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--borgonha); border: 3px solid white; box-shadow: 0 0 0 2px var(--borgonha); flex-shrink: 0; }
+    .tl-year { font-family: var(--font-e); font-size: 28px; font-weight: 700; color: var(--borgonha); line-height: 1; }
+    .tl-title { font-size: 15px; font-weight: 700; color: var(--preto); margin-bottom: 8px; }
+    .tl-desc { font-size: 13px; color: var(--cinza); line-height: 1.7; }
+    .tl-item:nth-child(even) .tl-left { order: 3; text-align: left; padding-right: 0; padding-left: 32px; }
+    .tl-item:nth-child(even) .tl-right { order: 1; text-align: right; padding-left: 0; padding-right: 32px; }
+    .tl-item:nth-child(even) .tl-center { order: 2; }
+
+    /* ── FABRICAÇÃO ── */
+    .fabrica { padding: 88px 0; background: var(--creme); }
+    .fabrica-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .fabrica-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .fabrica-img { aspect-ratio: 1; overflow: hidden; background: #E8E2DC; }
+    .fabrica-img img { transition: transform .6s ease; }
+    .fabrica-img:hover img { transform: scale(1.05); }
+    .fabrica-img.tall { grid-row: span 2; aspect-ratio: auto; }
+    .fabrica-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--borgonha); margin-bottom: 20px; }
+    .fabrica-h2 { font-family: var(--font-e); font-size: clamp(30px, 3vw, 44px); font-weight: 500; margin-bottom: 24px; line-height: 1.15; }
+    .fabrica-p { font-size: 15px; color: var(--cinza); line-height: 1.85; margin-bottom: 18px; }
+
+    /* ── TIME ── */
+    .team { padding: 88px 0; }
+    .team-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--borgonha); text-align: center; margin-bottom: 16px; }
+    .team-h2 { font-family: var(--font-e); font-size: clamp(32px, 3.5vw, 48px); font-weight: 500; text-align: center; margin-bottom: 52px; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .team-card {}
+    .team-photo { aspect-ratio: 3/4; background: var(--creme); overflow: hidden; }
+    .team-photo img { transition: transform .55s ease; }
+    .team-card:hover .team-photo img { transform: scale(1.05); }
+    .team-info { padding: 18px 0 12px; }
+    .team-name { font-family: var(--font-e); font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+    .team-role { font-size: 12px; color: var(--cinza-lt); letter-spacing: .08em; text-transform: uppercase; }
+
+    /* ── CTA ── */
+    .sobre-cta {
+      background: var(--borgonha); padding: 88px 32px; text-align: center;
+    }
+    .sobre-cta h2 { font-family: var(--font-e); font-size: clamp(36px, 4vw, 60px); font-weight: 500; font-style: italic; color: white; margin-bottom: 20px; line-height: 1.1; }
+    .sobre-cta p { font-size: 15px; color: rgba(255,255,255,.7); max-width: 500px; margin: 0 auto 36px; line-height: 1.7; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white { display: inline-flex; align-items: center; gap: 10px; padding: 14px 36px; background: white; color: var(--borgonha); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all .2s; }
+    .btn-white:hover { background: var(--creme); }
+    .btn-outline-white { display: inline-flex; align-items: center; gap: 10px; padding: 14px 36px; background: transparent; color: white; border: 1.5px solid rgba(255,255,255,.5); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all .2s; }
+    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,.08); }
+
+    /* ── SOCIAL PROVA ── */
+    .social-strip { background: var(--creme); border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); padding: 28px 32px; }
+    .social-strip-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .social-strip-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cinza); }
+    .social-icons { display: flex; gap: 12px; }
+    .soc-btn { display: flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1.5px solid var(--borda); border-radius: 24px; font-size: 12px; font-weight: 600; color: var(--preto); transition: all .2s; }
+    .soc-btn:hover { border-color: var(--borgonha); color: var(--borgonha); }
+    .soc-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .intro { grid-template-columns: 1fr; gap: 40px; }
+      .intro-img { order: -1; max-height: 380px; }
+      .numbers-inner { grid-template-columns: repeat(2, 1fr); }
+      .valores-grid { grid-template-columns: 1fr; }
+      .fabrica-inner { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline::before { display: none; }
+      .tl-item { grid-template-columns: 56px 1fr; }
+      .tl-left { display: none; }
+      .tl-item:nth-child(even) .tl-left { display: none; }
+      .tl-item:nth-child(even) .tl-right { order: 2; text-align: left; padding-left: 24px; padding-right: 0; }
+      .tl-item:nth-child(even) .tl-center { order: 1; }
+    }
+    @media (max-width: 600px) {
+      .hdr-wrap { height: 64px; padding: 0 16px; grid-template-columns: auto 1fr auto; }
+      .hdr-nav, .hdr-search { display: none; }
+      .logo { font-size: 44px; }
+      .wrap { padding: 0 16px; }
+      .numbers-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="page-loader" style="position:fixed;inset:0;background:#F7F4F1;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s ease">
+  <div style="text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:500;font-style:italic;color:#8C2F39;letter-spacing:.03em;animation:pulse 1.5s ease-in-out infinite">Feminnita</div>
+    <div style="width:40px;height:2px;background:#8C2F39;margin:16px auto 0;animation:loading-bar 1.2s ease-in-out infinite"></div>
+  </div>
+</div>
+<style>
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+@keyframes loading-bar { 0%{width:0;margin-left:50%} 50%{width:80px;margin-left:calc(50% - 40px)} 100%{width:0;margin-left:50%} }
+</style>
+
+<!-- ANNOUNCE -->
+<div class="announce">
+  <strong>FRETE GRÁTIS</strong> acima de R$199
+  <span class="announce-sep">|</span>
+  Parcele em até <strong>6x sem juros</strong>
+  <span class="announce-sep">|</span>
+  Fabricado em <strong>Nova Friburgo, RJ</strong>
+</div>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-wrap">
+    <nav class="hdr-nav">
+      <a href="feminnita-plp.html">Pijamas</a>
+      <a href="#">Sleepwear</a>
+      <a href="#">Coleções</a>
+      <a href="#">Novidades</a>
+      <a href="feminnita-sobre.html" class="active">Sobre Nós</a>
+    </nav>
+    <a href="feminnita-home.html" class="logo">Feminnita</a>
+    <div class="hdr-right">
+      <div class="hdr-search">
+        <svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#A8A8A8;stroke-width:2;fill:none;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Buscar..." />
+      </div>
+      <button class="hdr-btn">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="hdr-btn">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="hdr-btn">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="bdg">3</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb wrap">
+  <a href="feminnita-home.html">Início</a>
+  <span>›</span>
+  <span style="color:var(--preto)">Sobre Nós</span>
+</div>
+
+<!-- HERO -->
+<section class="sobre-hero">
+  <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&h=900&fit=crop" alt="Feminnita — Nossa História" />
+  <div class="sobre-hero-content">
+    <p class="sobre-hero-eyebrow">Desde 2007</p>
+    <h1 class="sobre-hero-h1">Feito com amor,<br><em>costurado com propósito.</em></h1>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="wrap">
+  <div class="intro">
+    <div class="intro-text">
+      <p class="intro-label">Nossa história</p>
+      <h2 class="intro-h2">Uma marca nascida<br>do <em>carinho</em> por cada detalhe</h2>
+      <p class="intro-p">A Feminnita surgiu em 2007 em Nova Friburgo — RJ, cidade conhecida pela excelência em confecção têxtil. O que começou como um pequeno ateliê familiar se tornou uma das marcas mais queridas de pijamas femininos do Brasil.</p>
+      <p class="intro-p">Cada peça é pensada para proporcionar conforto real: tecidos selecionados, costuras impecáveis e modelagens desenvolvidas especialmente para o corpo feminino, do P ao XGG.</p>
+      <p class="intro-p">Hoje, com mais de 15 anos de história, atendemos milhares de mulheres em todo o Brasil — seja pela loja online, pelos marketplaces ou pelas revendedoras espalhadas pelo país.</p>
+    </div>
+    <div class="intro-img">
+      <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=700&h=880&fit=crop" alt="Nossa fábrica" />
+    </div>
+  </div>
+</div>
+
+<!-- NUMBERS -->
+<section class="numbers">
+  <div class="numbers-inner">
+    <div>
+      <div class="num-val"><em>+17</em></div>
+      <div class="num-label">Anos de história</div>
+    </div>
+    <div>
+      <div class="num-val"><em>50K</em></div>
+      <div class="num-label">Clientes satisfeitas</div>
+    </div>
+    <div>
+      <div class="num-val"><em>+120</em></div>
+      <div class="num-label">Modelos por coleção</div>
+    </div>
+    <div>
+      <div class="num-val"><em>5★</em></div>
+      <div class="num-label">Avaliação média</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="valores">
+  <div class="wrap">
+    <p class="valores-label">Nossos valores</p>
+    <h2 class="valores-h2">O que nos move a cada <br>ponto de costura</h2>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <div class="valor-icon">🌿</div>
+        <h3 class="valor-title">Qualidade sem concessões</h3>
+        <p class="valor-desc">Selecionamos cada fio. Testamos cada tecido. Revisamos cada costura. Nossa obsessão com qualidade começa antes mesmo de o pijama chegar às suas mãos.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">❤️</div>
+        <h3 class="valor-title">Feito para o corpo feminino</h3>
+        <p class="valor-desc">Nossas modelagens são desenvolvidas com mulheres reais — do P ao XGG. Porque conforto de verdade não tem tamanho único.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🏭</div>
+        <h3 class="valor-title">Produção 100% nacional</h3>
+        <p class="valor-desc">Fabricamos tudo em Nova Friburgo, RJ. Geramos empregos locais, valorizamos a cadeia têxtil brasileira e controlamos cada etapa da produção.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">♻️</div>
+        <h3 class="valor-title">Responsabilidade ambiental</h3>
+        <p class="valor-desc">Reduzimos desperdícios no corte, usamos embalagens recicláveis e buscamos tecidos com menor impacto ambiental a cada coleção.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🤝</div>
+        <h3 class="valor-title">Comunidade de revendedoras</h3>
+        <p class="valor-desc">Acreditamos no poder das conexões. Nossa rede de revendedoras gera renda para mulheres em todo o Brasil enquanto levam conforto a mais pessoas.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">✨</div>
+        <h3 class="valor-title">Elegância no dia a dia</h3>
+        <p class="valor-desc">Acreditamos que merece se sentir bonita mesmo em casa — de pijama. Nossos designs equilibram estética e conforto sem escolher um dos dois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-sec">
+  <div class="wrap">
+    <p class="timeline-label">Nossa trajetória</p>
+    <h2 class="timeline-h2">Uma história construída<br>ponto a ponto</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-year">2007</div>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-right">
+          <p class="tl-title">O começo</p>
+          <p class="tl-desc">Fundada em Nova Friburgo como um pequeno ateliê familiar com foco em pijamas femininos artesanais e venda direta.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <p class="tl-title">Primeira coleção</p>
+          <p class="tl-desc">Lançamos nossa primeira coleção oficial de inverno com 12 modelos em viscose e fleece — esgotou em 3 semanas.</p>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-right">
+          <div class="tl-year">2011</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-year">2015</div>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-right">
+          <p class="tl-title">E-commerce</p>
+          <p class="tl-desc">Inauguramos nossa loja online e chegamos a todas as regiões do Brasil. Primeiros 1.000 pedidos entregues em menos de 60 dias.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <p class="tl-title">Marketplaces</p>
+          <p class="tl-desc">Entrada em Mercado Livre, Shopee e Amazon. Expandimos a grade para Plus Size e iniciamos o programa de revendedoras.</p>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-right">
+          <div class="tl-year">2019</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-year">2024</div>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-right">
+          <p class="tl-title">Automação com IA</p>
+          <p class="tl-desc">Implementamos o sistema C4X — gestão da produção, estoque multicanal e marketing com IA. Hoje operamos com 20 agentes autônomos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FABRICAÇÃO -->
+<section class="fabrica">
+  <div class="wrap">
+    <div class="fabrica-inner">
+      <div class="fabrica-imgs">
+        <div class="fabrica-img tall">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=800&fit=crop" alt="Costura" />
+        </div>
+        <div class="fabrica-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Tecidos" />
+        </div>
+        <div class="fabrica-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=400&fit=crop" alt="Produção" />
+        </div>
+      </div>
+      <div>
+        <p class="fabrica-label">Nossa fábrica</p>
+        <h2 class="fabrica-h2">Feito em Nova Friburgo,<br>com orgulho</h2>
+        <p class="fabrica-p">Nova Friburgo é o polo têxtil do estado do Rio de Janeiro — e foi aqui que escolhemos criar a Feminnita. A cidade tem décadas de tradição em moda íntima e confecção de qualidade.</p>
+        <p class="fabrica-p">Nossa equipe de costureiras trabalha em um ambiente seguro, com remuneração justa e benefícios. Acreditamos que um produto de qualidade começa com pessoas tratadas com dignidade.</p>
+        <p class="fabrica-p">Da seleção do tecido ao acabamento final, todas as etapas acontecem sob nosso teto — o que nos permite garantir padrão, rastrear processos e agir rápido quando necessário.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL STRIP -->
+<div class="social-strip">
+  <div class="social-strip-inner">
+    <p class="social-strip-label">Siga a Feminnita</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/feminnita" class="soc-btn" target="_blank">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @feminnita
+      </a>
+      <a href="#" class="soc-btn" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>
+        TikTok
+      </a>
+      <a href="https://blog.feminnita.com.br" class="soc-btn" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Blog
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<section class="sobre-cta">
+  <h2>Pronta para a noite<br>mais confortável da sua vida?</h2>
+  <p>Descubra nossa coleção completa de pijamas e moda íntima — com entrega para todo o Brasil.</p>
+  <div class="cta-btns">
+    <a href="feminnita-plp.html" class="btn-white">Ver coleção →</a>
+    <a href="#" class="btn-outline-white">Seja revendedora</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+
+<script>
+/* ── LOADER ── */
+window.addEventListener('load', () => {
+  const l = document.getElementById('page-loader');
+  if (l) { l.style.opacity = '0'; setTimeout(() => l.remove(), 450); }
+});
+
+/* ── FLOATING NAV ── */
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const hdr = document.querySelector('.hdr');
+  hdr.classList.toggle('scrolled', y > 10);
+  hdr.classList.toggle('hidden', y > lastY && y > 120);
+  lastY = y;
+}, { passive: true });
+
+/* ── FOOTER ── */
+(function renderFooter() {
+  const FTR_KEY = 'feminnita_footer';
+  const D = {
+    institucional:[
+      {label:'Central de Ajuda',url:'#'},{label:'Trocas e Devoluções',url:'#'},
+      {label:'Envio e Entrega',url:'#'},{label:'Como Comprar',url:'#'},
+      {label:'Política de Privacidade',url:'#'},{label:'Procon RJ',url:'#'}
+    ],
+    whatsapp:'22 99616.4303', telefone:'22 2523.4791', email:'contato@feminnita.com.br',
+    h1_dias:'Seg a Qui', h1_horas:'8h às 18h', h2_dias:'Sex', h2_horas:'8h às 17h',
+    instagram:'https://instagram.com/feminnita', facebook:'#', tiktok:'#',
+    pinterest:'#', youtube:'#', blog:'https://blog.feminnita.com.br',
+    vip_titulo:'Acesse nosso Canal VIP', vip_label:'feminnita vip', vip_url:'#',
+    copyright:'© 2026 Feminnita — Todos os direitos reservados'
+  };
+  const d = Object.assign({}, D, JSON.parse(localStorage.getItem(FTR_KEY) || '{}'));
+  const SVG = {
+    instagram:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+    facebook:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>',
+    tiktok:'<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>',
+    pinterest:'<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.548 2.142-.831 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.566 0-2.387-1.717-4.057-4.168-4.057-2.837 0-4.502 2.128-4.502 4.328 0 .857.33 1.775.742 2.278a.3.3 0 01.069.284c-.076.31-.243.995-.276 1.134-.044.183-.146.222-.336.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.445 2.962.445 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>',
+    youtube:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>',
+    blog:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>'
+  };
+  const socKeys = ['instagram','facebook','tiktok','pinterest','youtube','blog'];
+  const socIcons = socKeys.map(k=>`<a href="${d[k]||'#'}" style="color:#8C2F39;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1.5px solid #E6D8D9;border-radius:50%;text-decoration:none">${SVG[k]}</a>`).join('');
+  const instLinks = (d.institucional||[]).map(lk=>`<a href="${lk.url}" style="display:block;font-size:16px;color:#6B6B6B;margin-bottom:12px;text-decoration:none">${lk.label}</a>`).join('');
+  document.getElementById('site-footer').innerHTML = `
+  <div style="background:#F7F4F1;padding:52px 48px 0;font-family:'Montserrat',sans-serif;border-top:1px solid #E6E2DE">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;max-width:1200px;margin:0 auto">
+      <div><p style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8C2F39;margin-bottom:20px">Institucional</p>${instLinks}</div>
+      <div>
+        <p style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8C2F39;margin-bottom:20px">Atendimento</p>
+        ${d.whatsapp?`<p style="display:flex;align-items:center;gap:10px;font-size:16px;color:#6B6B6B;margin-bottom:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C2F39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>${d.whatsapp} <span style="font-size:12px;color:#A8A8A8">(Whatsapp)</span></p>`:''}
+        ${d.telefone?`<p style="display:flex;align-items:center;gap:10px;font-size:16px;color:#6B6B6B;margin-bottom:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C2F39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .11h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>${d.telefone}</p>`:''}
+        ${d.email?`<p style="display:flex;align-items:center;gap:10px;font-size:16px;color:#6B6B6B;margin-bottom:20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C2F39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>${d.email}</p>`:''}
+        <p style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8C2F39;margin-bottom:14px">Horários</p>
+        <div style="display:grid;grid-template-columns:auto auto;gap:4px 24px;font-size:16px;color:#6B6B6B">
+          <span style="font-weight:600;color:#1A1A1A">${d.h1_dias}</span><span style="font-weight:600;color:#1A1A1A">${d.h2_dias}</span>
+          <span>${d.h1_horas}</span><span>${d.h2_horas}</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8C2F39;margin-bottom:20px">Siga nossas redes sociais</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px">${socIcons}</div>
+        <p style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8C2F39;margin-bottom:16px">${d.vip_titulo}</p>
+        <a href="${d.vip_url}" style="display:inline-block;padding:9px 26px;border:1.5px solid #8C2F39;border-radius:24px;font-size:15px;font-weight:500;letter-spacing:.06em;color:#8C2F39;text-decoration:none;font-family:'Cormorant Garamond',serif">${d.vip_label}</a>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:44px auto 0;border-top:1px solid #E6E2DE;padding:20px 0 0">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-bottom:20px;border-bottom:1px solid #E6E2DE">
+        <p style="font-size:13px;color:#A8A8A8">Compra 100% segura e protegida</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 10px;display:flex;align-items:center;gap:5px"><span style="font-size:12px;font-weight:700;color:#32BCAD">PIX</span></div>
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 14px;font-size:12px;font-weight:700;color:#1A69FF;letter-spacing:-.5px">VISA</div>
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 10px;font-size:18px;font-weight:700;display:flex;gap:0;line-height:1"><span style="color:#EB001B">●</span><span style="color:#F79E1B;margin-left:-8px">●</span></div>
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:700;color:#FF6B00">ELO</div>
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;color:#555">AMEX</div>
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;color:#555">BOLETO</div>
+          <div style="background:#fff;border:1px solid #E6E2DE;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;color:#B5006E">HIPERCARD</div>
+        </div>
+      </div>
+      <div style="padding:16px 0;font-size:14px;color:#A8A8A8">${d.copyright}</div>
+    </div>
+  </div>`;
+})();
+</script>
+<script src="/feminnita-cart.js"></script>
+<script src="/feminnita-config.js"></script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar — Feminnita</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --borgonha:  #8C2F39;
+      --creme:     #F7F4F1;
+      --preto:     #1A1A1A;
+      --cinza:     #6B6B6B;
+      --cinza-lt:  #A8A8A8;
+      --borda:     #E6E2DE;
+      --branco:    #FFFFFF;
+      --font-t: 'Montserrat', sans-serif;
+      --font-e: 'Cormorant Garamond', serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { height: 100%; }
+    body {
+      font-family: var(--font-t);
+      background: var(--creme);
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: var(--font-t); }
+
+    /* ── LEFT PANEL (image) ── */
+    .login-panel-img {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .login-panel-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    .login-panel-img .img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(140,47,57,.55) 0%, rgba(0,0,0,.2) 100%);
+    }
+    .login-panel-img .img-content {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: flex-end; padding: 52px 48px;
+    }
+    .img-logo {
+      font-family: var(--font-e);
+      font-size: 80px; font-weight: 500; font-style: italic;
+      color: white; letter-spacing: .03em; line-height: 1;
+      margin-bottom: 20px;
+    }
+    .img-tagline {
+      font-size: 16px; color: rgba(255,255,255,.8);
+      line-height: 1.7; max-width: 340px;
+      font-weight: 300; letter-spacing: .02em;
+    }
+    .img-tagline strong { color: white; font-weight: 600; }
+    .img-badges {
+      display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap;
+    }
+    .img-badge {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; color: rgba(255,255,255,.75);
+      font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .img-badge svg { width: 16px; height: 16px; stroke: rgba(255,255,255,.7); stroke-width: 1.8; fill: none; }
+
+    /* ── RIGHT PANEL (form) ── */
+    .login-panel-form {
+      background: var(--branco);
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 60px 48px;
+      min-height: 100vh;
+    }
+    .form-wrap {
+      width: 100%; max-width: 400px;
+    }
+
+    /* mobile logo (hidden on desktop) */
+    .mobile-logo {
+      display: none;
+      font-family: var(--font-e);
+      font-size: 56px; font-weight: 500; font-style: italic;
+      color: var(--borgonha); text-align: center;
+      margin-bottom: 32px; letter-spacing: .03em;
+    }
+
+    .form-title {
+      font-family: var(--font-e);
+      font-size: 36px; font-weight: 500;
+      color: var(--preto); margin-bottom: 6px;
+    }
+    .form-sub {
+      font-size: 14px; color: var(--cinza); margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    /* social buttons */
+    .social-btns { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .social-btn {
+      width: 100%; height: 48px; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      font-size: 14px; font-weight: 600; letter-spacing: .03em;
+      border: 1.5px solid var(--borda); background: white;
+      color: var(--preto); transition: border-color .2s, background .15s;
+    }
+    .social-btn:hover { border-color: var(--borgonha); background: #FDF4F5; }
+    .social-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .social-btn.google svg { /* Google G */ }
+    .social-btn.whatsapp { border-color: #25D366; color: #128C7E; }
+    .social-btn.whatsapp:hover { background: #F0FFF4; border-color: #128C7E; }
+
+    /* divider */
+    .divider {
+      display: flex; align-items: center; gap: 14px;
+      margin: 20px 0; color: var(--cinza-lt);
+      font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--borda);
+    }
+
+    /* fields */
+    .field { margin-bottom: 16px; }
+    .field label {
+      display: block; font-size: 12px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: var(--preto); margin-bottom: 7px;
+    }
+    .field input {
+      width: 100%; height: 48px; padding: 0 16px;
+      border: 1.5px solid var(--borda); border-radius: 4px;
+      font-family: var(--font-t); font-size: 15px; color: var(--preto);
+      background: white; outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .field input:focus {
+      border-color: var(--borgonha);
+      box-shadow: 0 0 0 3px rgba(140,47,57,.08);
+    }
+    .field input::placeholder { color: var(--cinza-lt); }
+    .field-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 8px;
+    }
+    .show-pw {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; color: var(--cinza); cursor: pointer;
+    }
+    .show-pw input { width: 15px; height: 15px; accent-color: var(--borgonha); margin: 0; }
+    .forgot { font-size: 13px; color: var(--borgonha); border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .forgot:hover { border-color: var(--borgonha); }
+
+    /* CTA button */
+    .btn-login {
+      width: 100%; height: 52px; margin-top: 24px;
+      background: var(--borgonha); color: white; border: none; border-radius: 4px;
+      font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      transition: background .2s, transform .1s;
+    }
+    .btn-login:hover { background: #7A2832; }
+    .btn-login:active { transform: scale(.99); }
+
+    /* register link */
+    .register-row {
+      text-align: center; margin-top: 28px;
+      font-size: 14px; color: var(--cinza);
+    }
+    .register-row a {
+      color: var(--borgonha); font-weight: 600;
+      border-bottom: 1px solid transparent; transition: border-color .2s;
+    }
+    .register-row a:hover { border-color: var(--borgonha); }
+
+    /* info box */
+    .info-box {
+      margin-top: 32px; padding: 20px;
+      background: var(--creme); border-radius: 6px;
+      border: 1px solid var(--borda);
+    }
+    .info-box p {
+      font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      color: var(--borgonha); margin-bottom: 12px;
+    }
+    .info-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .info-box li {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 13px; color: var(--cinza); line-height: 1.4;
+    }
+    .info-box li svg { width: 14px; height: 14px; stroke: var(--borgonha); stroke-width: 2; fill: none; flex-shrink: 0; }
+
+    /* back link */
+    .back-link {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--cinza-lt); margin-bottom: 36px;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--borgonha); }
+    .back-link svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+    /* register tab toggle */
+    .tab-switch {
+      display: flex; border: 1.5px solid var(--borda); border-radius: 4px;
+      overflow: hidden; margin-bottom: 28px;
+    }
+    .tab-opt {
+      flex: 1; height: 42px; border: none; background: none;
+      font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+      color: var(--cinza); transition: all .2s;
+    }
+    .tab-opt.active { background: var(--borgonha); color: white; }
+    .tab-opt:not(.active):hover { background: var(--creme); }
+
+    /* register fields (hidden by default) */
+    .reg-fields { display: none; }
+    .reg-fields.show { display: block; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      body { grid-template-columns: 1fr; }
+      .login-panel-img { display: none; }
+      .login-panel-form { padding: 40px 24px; }
+      .mobile-logo { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LEFT: IMAGE PANEL ─────────────────────────────── -->
+<div class="login-panel-img">
+  <img src="https://images.unsplash.com/photo-1617922001439-4a2e6562f328?auto=format&fit=crop&w=900&q=85" alt="Feminnita pijamas" />
+  <div class="img-overlay"></div>
+  <div class="img-content">
+    <div class="img-logo">Feminnita</div>
+    <p class="img-tagline">
+      Mais de <strong>17 anos</strong> vestindo mulheres com conforto e elegância.<br>
+      Fabricado com amor em Nova Friburgo, RJ.
+    </p>
+    <div class="img-badges">
+      <div class="img-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Compra Segura
+      </div>
+      <div class="img-badge">
+        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        Troca Grátis
+      </div>
+      <div class="img-badge">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Entrega Rápida
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── RIGHT: FORM PANEL ─────────────────────────────── -->
+<div class="login-panel-form">
+  <div class="form-wrap">
+
+    <a href="feminnita-home.html" class="back-link">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Voltar à loja
+    </a>
+
+    <div class="mobile-logo">Feminnita</div>
+
+    <!-- TAB SWITCH -->
+    <div class="tab-switch">
+      <button class="tab-opt active" id="tab-login" onclick="switchTab('login')">Entrar</button>
+      <button class="tab-opt" id="tab-register" onclick="switchTab('register')">Criar Conta</button>
+    </div>
+
+    <h1 class="form-title" id="formTitle">Bem-vinda de volta</h1>
+    <p class="form-sub" id="formSub">Entre para acompanhar seus pedidos e acessar ofertas exclusivas.</p>
+
+    <!-- SOCIAL LOGIN -->
+    <div class="social-btns">
+      <button class="social-btn google" onclick="socialLogin('Google')">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Continuar com Google
+      </button>
+      <button class="social-btn whatsapp" onclick="socialLogin('WhatsApp')">
+        <svg viewBox="0 0 24 24" fill="#25D366">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12.004 2.003C6.477 2.003 2 6.48 2 12.007c0 1.749.453 3.4 1.246 4.843L2.002 22l5.31-1.225A9.968 9.968 0 0012.004 22c5.527 0 10.004-4.477 10.004-10.004 0-5.526-4.477-10.003-10.004-9.993zm0 18.214a8.21 8.21 0 01-4.184-1.146l-.3-.177-3.152.727.746-3.069-.196-.314a8.2 8.2 0 01-1.258-4.357c0-4.534 3.685-8.219 8.22-8.219 4.534 0 8.218 3.685 8.218 8.219 0 4.534-3.685 8.336-8.094 8.336z"/>
+        </svg>
+        Continuar com WhatsApp
+      </button>
+    </div>
+
+    <div class="divider">ou com e-mail</div>
+
+    <!-- REGISTER EXTRA FIELD -->
+    <div class="reg-fields" id="regFields">
+      <div class="field">
+        <label for="fname">Nome completo</label>
+        <input type="text" id="fname" placeholder="Seu nome" autocomplete="name" />
+      </div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="field">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="field">
+      <label for="password">Senha</label>
+      <input type="password" id="password" placeholder="Mínimo 8 caracteres" autocomplete="current-password" />
+      <div class="field-footer">
+        <label class="show-pw">
+          <input type="checkbox" onchange="togglePw(this)" />
+          Mostrar senha
+        </label>
+        <a href="#" class="forgot" id="forgotLink">Esqueci minha senha</a>
+      </div>
+    </div>
+
+    <!-- REGISTER EXTRA: confirm pw -->
+    <div class="reg-fields" id="regFields2">
+      <div class="field">
+        <label for="pwconfirm">Confirmar senha</label>
+        <input type="password" id="pwconfirm" placeholder="Repita a senha" />
+      </div>
+    </div>
+
+    <button class="btn-login" id="btnSubmit" onclick="handleSubmit()">Entrar na Minha Conta</button>
+
+    <div class="register-row" id="registerRow">
+      Não tem uma conta?
+      <a href="#" onclick="switchTab('register'); return false;">Cadastre-se gratuitamente</a>
+    </div>
+
+    <!-- INFO BOX -->
+    <div class="info-box">
+      <p>Sua conta Feminnita</p>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Acompanhe seus pedidos em tempo real
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Salve seus endereços e forme de pagamento
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Acesse ofertas exclusivas para clientes
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Lista de favoritos sincronizada em todos os dispositivos
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ── tab switch ── */
+let mode = 'login';
+function switchTab(tab) {
+  mode = tab;
+  const isReg = tab === 'register';
+  document.getElementById('tab-login').classList.toggle('active', !isReg);
+  document.getElementById('tab-register').classList.toggle('active', isReg);
+  document.getElementById('formTitle').textContent = isReg ? 'Criar sua conta' : 'Bem-vinda de volta';
+  document.getElementById('formSub').textContent = isReg
+    ? 'Cadastre-se e aproveite benefícios exclusivos Feminnita.'
+    : 'Entre para acompanhar seus pedidos e acessar ofertas exclusivas.';
+  document.getElementById('btnSubmit').textContent = isReg ? 'Criar Conta Grátis' : 'Entrar na Minha Conta';
+  document.getElementById('registerRow').style.display = isReg ? 'none' : '';
+  document.getElementById('forgotLink').style.display = isReg ? 'none' : '';
+  document.querySelectorAll('.reg-fields').forEach(el => el.classList.toggle('show', isReg));
+}
+
+/* ── show/hide password ── */
+function togglePw(cb) {
+  document.getElementById('password').type = cb.checked ? 'text' : 'password';
+  const confirm = document.getElementById('pwconfirm');
+  if (confirm) confirm.type = cb.checked ? 'text' : 'password';
+}
+
+/* ── social login ── */
+function socialLogin(provider) {
+  const btn = event.currentTarget;
+  const orig = btn.innerHTML;
+  btn.style.opacity = '.6';
+  btn.style.pointerEvents = 'none';
+  setTimeout(() => {
+    btn.style.opacity = '';
+    btn.style.pointerEvents = '';
+    // In production: redirect to OAuth flow
+    alert('Integração ' + provider + ' — disponível na versão final.');
+  }, 800);
+}
+
+/* ── form submit ── */
+function handleSubmit() {
+  const email = document.getElementById('email').value.trim();
+  const pw = document.getElementById('password').value;
+  if (!email || !pw) {
+    shake(document.getElementById('btnSubmit'));
+    return;
+  }
+  const btn = document.getElementById('btnSubmit');
+  btn.textContent = mode === 'login' ? 'Entrando...' : 'Criando conta...';
+  btn.style.background = '#5A5A5A';
+  setTimeout(() => {
+    // In production: API call
+    window.location.href = 'feminnita-home.html';
+  }, 1200);
+}
+
+function shake(el) {
+  el.style.animation = 'shake .4s ease';
+  el.addEventListener('animationend', () => el.style.animation = '', { once: true });
+}
+</script>
+
+<style>
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+</style>
+<script src="/feminnita-cart.js"></script>
+<script src="/feminnita-config.js"></script>
+</body>
+</html>
