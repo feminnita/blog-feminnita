@@ -27,7 +27,20 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1200&q=80" />
   <meta property="og:site_name" content="Feminnita" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Pijama Longo Regata Floral Rosê","sku":"FNT2301","image":"https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1200&q=80","description":"Pijama longo regata com estampa floral exclusiva Feminnita.","brand":{"@type":"Brand","name":"Feminnita"},"offers":{"@type":"Offer","url":"https://www.feminnita.com.br/pijama-longo-regata-floral-rose","priceCurrency":"BRL","price":"89.90","availability":"https://schema.org/InStock"}}</script>
+  <script type="application/ld+json" id="fnt-product-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Pijamas Femininos — Feminnita",
+    "brand": { "@type": "Brand", "name": "Feminnita" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "Organization", "name": "Feminnita" }
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -1017,7 +1030,7 @@
   /* ── Carrega produto dinamicamente via ?id=fnt2301 ── */
   (function() {
     var params = new URLSearchParams(window.location.search);
-    var prodId = params.get('id');
+    var prodId = params.get('id') || (window.location.pathname.split('/produto/')[1] || '').split('/')[0] || null;
     if (!prodId) return; // sem param: usa conteúdo estático
     fetch('/api/produtos/' + prodId)
       .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
@@ -1055,6 +1068,36 @@
         // Referência
         var ref = document.querySelector('.pdp-ref, .prod-ref, .ref-code');
         if (ref) ref.textContent = 'Ref: ' + (p.ref || p.id);
+
+        // Canonical dinâmico
+        var canonical = document.getElementById('fnt-canonical');
+        if (canonical) canonical.href = 'https://www.feminnita.com.br/produto/' + p.id;
+
+        // JSON-LD Product Schema dinâmico (Google Rich Results)
+        var schemaEl = document.getElementById('fnt-product-schema');
+        if (schemaEl) {
+          var schema = {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            'name': p.nome,
+            'description': p.descricao || (p.nome + ' — Pijamas femininos de qualidade. Loja Feminnita.'),
+            'sku': p.ref || String(p.id),
+            'brand': { '@type': 'Brand', 'name': 'Feminnita' },
+            'image': p.imagens || [],
+            'url': 'https://www.feminnita.com.br/produto/' + p.id,
+            'offers': {
+              '@type': 'Offer',
+              'priceCurrency': 'BRL',
+              'price': p.preco,
+              'priceValidUntil': '2026-12-31',
+              'availability': 'https://schema.org/InStock',
+              'itemCondition': 'https://schema.org/NewCondition',
+              'url': 'https://www.feminnita.com.br/produto/' + p.id,
+              'seller': { '@type': 'Organization', 'name': 'Feminnita' }
+            }
+          };
+          schemaEl.textContent = JSON.stringify(schema);
+        }
 
         // Meta Pixel: ViewContent com dados reais do produto dinâmico
         if (typeof fbq !== 'undefined') {

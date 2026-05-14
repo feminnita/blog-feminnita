@@ -7,6 +7,48 @@
   <meta name="robots" content="index, follow" />
   <meta name="description" content="Pijamas femininos em suede, plush e viscolycra. Conforto e elegância para o seu sono. Loja online com entrega para todo o Brasil." />
   <title>Feminnita — Pijamas e Moda Íntima | Nova Friburgo</title>
+  <!-- Schema.org — Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.feminnita.com.br/#organization",
+        "name": "Feminnita",
+        "url": "https://www.feminnita.com.br/",
+        "logo": "https://www.feminnita.com.br/imagens/modelo-rosa.png",
+        "description": "Pijamas femininos e moda íntima fabricados em Nova Friburgo, RJ.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nova Friburgo",
+          "addressRegion": "RJ",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.feminnita.com.br/#website",
+        "url": "https://www.feminnita.com.br/",
+        "name": "Feminnita",
+        "publisher": { "@id": "https://www.feminnita.com.br/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.feminnita.com.br/produtos?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -1227,6 +1269,43 @@
         if (elDest) elDest.innerHTML = destaques.map(renderCard).join('');
         if (elLanc) elLanc.innerHTML = ativos.map(renderCard).join('');
         if (elMV)   elMV.innerHTML   = maisVendidos.map(renderCard).join('');
+
+        /* ── JSON-LD Product Schema para SEO ─────────────────── */
+        var schemaProducts = destaques.slice(0, 10).map(function(p) {
+          return {
+            '@type': 'Product',
+            'name': p.nome,
+            'description': p.descricao || ('Pijama feminino Feminnita. Ref: ' + (p.ref || p.id)),
+            'sku': p.ref || p.id,
+            'brand': { '@type': 'Brand', 'name': 'Feminnita' },
+            'image': p.imagens || [],
+            'url': 'https://www.feminnita.com.br/produto/' + p.id,
+            'offers': {
+              '@type': 'Offer',
+              'priceCurrency': 'BRL',
+              'price': p.preco,
+              'priceValidUntil': '2026-12-31',
+              'availability': 'https://schema.org/InStock',
+              'url': 'https://www.feminnita.com.br/produto/' + p.id,
+              'seller': { '@type': 'Organization', 'name': 'Feminnita' }
+            }
+          };
+        });
+        if (schemaProducts.length) {
+          var schemaTag = document.createElement('script');
+          schemaTag.type = 'application/ld+json';
+          schemaTag.text = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            'name': 'Pijamas Femininos — Feminnita',
+            'url': 'https://www.feminnita.com.br/produtos',
+            'numberOfItems': schemaProducts.length,
+            'itemListElement': schemaProducts.map(function(p, i) {
+              return { '@type': 'ListItem', 'position': i + 1, 'item': p };
+            })
+          });
+          document.head.appendChild(schemaTag);
+        }
       })
       .catch(function() { console.warn('[Feminnita] API offline — produtos não carregados.'); });
 
