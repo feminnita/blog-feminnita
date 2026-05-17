@@ -1,0 +1,92 @@
+{
+  "loja": {
+    "nome": "Feminnita",
+    "slogan": "Pijamas e Moda Íntima | Nova Friburgo",
+    "descricao": "Pijamas e moda íntima feminina fabricados em Nova Friburgo, RJ.",
+    "email": "feminnita@gmail.com",
+    "whatsapp": "5522996164303",
+    "instagram": "https://www.instagram.com/feminnita",
+    "freteGratis": 199,
+    "corPrimaria": "#8C2F39",
+    "corSecundaria": "#C9965A"
+  },
+  "announce": {
+    "ativo": true,
+    "itens": [
+      "FRETE GRÁTIS acima de R$199"
+    ]
+  },
+  "nav": [
+    {
+      "label": "Novidades",
+      "href": "/produtos"
+    },
+    {
+      "label": "Pijamas",
+      "href": "/produtos"
+    },
+    {
+      "label": "Conjuntos",
+      "href": "/produtos"
+    },
+    {
+      "label": "Sale",
+      "href": "/produtos"
+    }
+  ],
+  "hero": [
+    {
+      "eyebrow": "Nova Coleção · Inverno 2026",
+      "titulo": "coleção inverno",
+      "subtitulo": "Pijamas em cetim e suede com acabamento artesanal",
+      "cta": "Descobrir coleção",
+      "ctaHref": "/produtos",
+      "img": "https://images.unsplash.com/photo-1770294758967-6ed2b93ce42c?auto=format&fit=crop&w=1521&q=80"
+    },
+    {
+      "eyebrow": "Best Sellers",
+      "titulo": "noites especiais",
+      "subtitulo": "As peças mais amadas da estação, agora com novos tons",
+      "cta": "Ver mais vendidos",
+      "ctaHref": "/produtos",
+      "img": "https://images.unsplash.com/photo-1766056278967-c0646b1bfd67?auto=format&fit=crop&w=1521&q=80"
+    },
+    {
+      "eyebrow": "Coleção Inverno",
+      "titulo": "sofisticada",
+      "subtitulo": "Peças em viscolycra acetinada com acabamento premium",
+      "cta": "Compre agora",
+      "ctaHref": "/produtos",
+      "img": "https://images.unsplash.com/photo-1766056278798-39cabf7ca628?auto=format&fit=crop&w=1521&q=80"
+    },
+    {
+      "eyebrow": "Bem Estar",
+      "titulo": "bem estar",
+      "subtitulo": "Moda íntima que cuida de você todos os dias",
+      "cta": "Ver coleção",
+      "ctaHref": "/produtos",
+      "img": "https://images.unsplash.com/photo-1766056278986-af4b8a4fdae7?auto=format&fit=crop&w=1521&q=80"
+    },
+    {
+      "eyebrow": "Para Você",
+      "titulo": "para você",
+      "subtitulo": "Peças exclusivas pensadas para a mulher moderna",
+      "cta": "Explorar",
+      "ctaHref": "/produtos",
+      "img": "https://images.unsplash.com/photo-1770294758942-7ce9ca052986?auto=format&fit=crop&w=1521&q=80"
+    },
+    {
+      "eyebrow": "Momentos Únicos",
+      "titulo": "momentos únicos",
+      "subtitulo": "Cada detalhe feito com carinho em Nova Friburgo",
+      "cta": "Conhecer a marca",
+      "ctaHref": "/sobre",
+      "img": "https://images.unsplash.com/photo-1770294760762-1cd821ecc567?auto=format&fit=crop&w=1521&q=80"
+    }
+  ],
+  "rodape": {
+    "endereco": "Nova Friburgo, RJ — Brasil",
+    "cnpj": "Em breve",
+    "copyright": "© 2026 Feminnita. Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ped2024038",
+    "numero": "#2024-038",
+    "status": "enviado",
+    "criadoEm": "2026-05-09T14:32:00.000Z",
+    "cliente": { "nome": "Ana Carolina Silva", "email": "ana@email.com", "whatsapp": "5522999001001" },
+    "endereco": { "rua": "Rua das Flores, 123", "bairro": "Centro", "cidade": "Nova Friburgo", "uf": "RJ", "cep": "28600-000" },
+    "itens": [{ "id": "fnt2301", "nome": "Pijama Longo Regata Floral Rosê", "tamanho": "M", "cor": "Rosa", "qty": 1, "preco": 89.90 }, { "id": "fnt2087", "nome": "Camisola Renda Premium Nude", "tamanho": "M", "cor": "Nude", "qty": 1, "preco": 119.90 }],
+    "frete": { "tipo": "PAC", "valor": 18.50, "prazo": "5-8 dias úteis", "rastreio": "BR123456789BR" },
+    "pagamento": { "metodo": "pix", "status": "confirmado" },
+    "subtotal": 209.80, "total": 228.30
+  },
+  {
+    "id": "ped2024037",
+    "numero": "#2024-037",
+    "status": "aguard-env",
+    "criadoEm": "2026-05-08T10:15:00.000Z",
+    "cliente": { "nome": "Juliana Ferreira", "email": "juliana@email.com", "whatsapp": "5522988002002" },
+    "endereco": { "rua": "Av. Brasil, 450", "bairro": "Olaria", "cidade": "Rio de Janeiro", "uf": "RJ", "cep": "21040-360" },
+    "itens": [{ "id": "fnt2244", "nome": "Conjunto Lounge Viscolycra Sage", "tamanho": "P", "cor": "Sage", "qty": 1, "preco": 134.90 }],
+    "frete": { "tipo": "SEDEX", "valor": 28.90, "prazo": "1-2 dias úteis", "rastreio": "" },
+    "pagamento": { "metodo": "cartao", "status": "confirmado" },
+    "subtotal": 134.90, "total": 163.80
+  },
+  {
+    "id": "ped2024036",
+    "numero": "#2024-036",
+    "status": "entregue",
+    "criadoEm": "2026-05-05T09:00:00.000Z",
+    "cliente": { "nome": "Mariana Oliveira", "email": "mari@email.com", "whatsapp": "5521977003003" },
+    "endereco": { "rua": "Rua Ipanema, 88", "bairro": "Ipanema", "cidade": "Rio de Janeiro", "uf": "RJ", "cep": "22420-000" },
+    "itens": [{ "id": "fnt2501", "nome": "Pijama Cetim Premium Creme", "tamanho": "G", "cor": "Creme", "qty": 1, "preco": 149.90 }, { "id": "fnt2099", "nome": "Pijama Longo Viscolycra Vinho", "tamanho": "G", "cor": "Vinho", "qty": 1, "preco": 99.90 }],
+    "frete": { "tipo": "PAC", "valor": 0, "prazo": "Grátis", "rastreio": "BR987654321BR" },
+    "pagamento": { "metodo": "pix", "status": "confirmado" },
+    "subtotal": 249.80, "total": 249.80
+  },
+  {
+    "id": "ped2024035",
+    "numero": "#2024-035",
+    "status": "aguard-pag",
+    "criadoEm": "2026-05-09T08:44:00.000Z",
+    "cliente": { "nome": "Fernanda Costa", "email": "fernanda@email.com", "whatsapp": "5522966004004" },
+    "endereco": { "rua": "Rua São João, 321", "bairro": "Jardim Araruama", "cidade": "Araruama", "uf": "RJ", "cep": "28970-000" },
+    "itens": [{ "id": "fnt2506", "nome": "Baby Doll Cetim com Robe", "tamanho": "M", "cor": "Rosa", "qty": 1, "preco": 169.90 }],
+    "frete": { "tipo": "PAC", "valor": 22.00, "prazo": "5-8 dias úteis", "rastreio": "" },
+    "pagamento": { "metodo": "boleto", "status": "pendente" },
+    "subtotal": 169.90, "total": 191.90
+  },
+  {
+    "id": "ped2024034",
+    "numero": "#2024-034",
+    "status": "enviado",
+    "criadoEm": "2026-05-07T16:20:00.000Z",
+    "cliente": { "nome": "Camila Rodrigues", "email": "camila@email.com", "whatsapp": "5524955005005" },
+    "endereco": { "rua": "Rua das Palmeiras, 77", "bairro": "Cascatinha", "cidade": "Petrópolis", "uf": "RJ", "cep": "25730-000" },
+    "itens": [{ "id": "fnt2503", "nome": "Pijama Short-Doll Floral Suede", "tamanho": "GG", "cor": "Rosê Floral", "qty": 1, "preco": 129.90 }],
+    "frete": { "tipo": "SEDEX", "valor": 31.50, "prazo": "1-2 dias úteis", "rastreio": "BR456789123BR" },
+    "pagamento": { "metodo": "cartao", "status": "confirmado" },
+    "subtotal": 129.90, "total": 161.40
+  },
+  {
+    "id": "ped2024033",
+    "numero": "#2024-033",
+    "status": "cancelado",
+    "criadoEm": "2026-05-03T11:00:00.000Z",
+    "cliente": { "nome": "Letícia Mendes", "email": "leti@email.com", "whatsapp": "5521944006006" },
+    "endereco": { "rua": "Av. das Américas, 500", "bairro": "Barra da Tijuca", "cidade": "Rio de Janeiro", "uf": "RJ", "cep": "22640-102" },
+    "itens": [{ "id": "fnt2405", "nome": "Kit Presente Pijama + Nécessaire", "tamanho": "M", "cor": "Rosa", "qty": 1, "preco": 189.90 }],
+    "frete": { "tipo": "PAC", "valor": 0, "prazo": "Grátis", "rastreio": "" },
+    "pagamento": { "metodo": "pix", "status": "estornado" },
+    "subtotal": 189.90, "total": 189.90
+  }
+]

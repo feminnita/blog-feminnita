@@ -1,0 +1,785 @@
+[
+  {
+    "id": "fnt2301",
+    "ref": "FNT2301/ROSA",
+    "nome": "Pijama Longo Regata Floral Rosê",
+    "descricao": "Pijama longo em viscolycra estampada floral. Alças finas, calça de cintura elástica com laço. Toque suave e leveza para noites quentes.",
+    "categoria": "pijamas",
+    "preco": 89.9,
+    "precoAntigo": 109.9,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#F2C4CE",
+        "nome": "Rosa",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      },
+      {
+        "hex": "#D4A0B0",
+        "nome": "Nude"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1755456785148-e567dbb6a034?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1760289282310-241c94ba5fe7?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt1892",
+    "ref": "FNT1892/AZUL",
+    "nome": "Short Pijama Americano Listrado",
+    "descricao": "Conjunto short-doll em malha listrada fresquinha. Camiseta manga curta com decote V e short com elástico na cintura.",
+    "categoria": "pijamas",
+    "preco": 69.9,
+    "precoAntigo": 87.9,
+    "parcelas": 3,
+    "badge": "",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#4A6B8A",
+        "nome": "Azul",
+        "ativo": true
+      },
+      {
+        "hex": "#2C2C2C",
+        "nome": "Preto"
+      },
+      {
+        "hex": "#C8B8A2",
+        "nome": "Bege"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1766056278842-b754f1e093c0?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1763673715053-94822c530809?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2087",
+    "ref": "FNT2087/NUDE",
+    "nome": "Camisola Renda Premium Nude",
+    "descricao": "Camisola midi em renda delicada com forro em cetim. Alças ajustáveis e abertura nas costas.",
+    "categoria": "camisolas",
+    "preco": 119.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#D4B8A0",
+        "nome": "Nude",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#1A1A1A",
+        "nome": "Preto"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1760289282310-241c94ba5fe7?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1752652011749-460200501401?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2244",
+    "ref": "FNT2244/SAGE",
+    "nome": "Conjunto Lounge Viscolycra Sage",
+    "descricao": "Conjunto lounge de calça wide leg e blusa cropped em viscolycra premium. Caimento fluido.",
+    "categoria": "conjuntos",
+    "preco": 134.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#7A9E87",
+        "nome": "Sage",
+        "ativo": true
+      },
+      {
+        "hex": "#C4A882",
+        "nome": "Caramelo"
+      },
+      {
+        "hex": "#8C8C8C",
+        "nome": "Cinza"
+      },
+      {
+        "hex": "#2C2C2C",
+        "nome": "Preto"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1763673715053-94822c530809?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1752652011717-f06f7ed3927a?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2099",
+    "ref": "FNT2099/VINHO",
+    "nome": "Pijama Longo Viscolycra Vinho",
+    "descricao": "Pijama clássico de calça e camisa em viscolycra acetinada. Botões perolados, colarinho com detalhes em viés.",
+    "categoria": "pijamas",
+    "preco": 99.9,
+    "precoAntigo": 117.9,
+    "parcelas": 3,
+    "badge": "",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho",
+        "ativo": true
+      },
+      {
+        "hex": "#1A1A1A",
+        "nome": "Preto"
+      },
+      {
+        "hex": "#4A3728",
+        "nome": "Café"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1752652011749-460200501401?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1686828751767-8af9d6cde0a0?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2156",
+    "ref": "FNT2156/BORDO",
+    "nome": "Camisola Curta Renda Bordô",
+    "descricao": "Camisola curta em renda bordada com decote romântico. Detalhe de laço no centro e barra com babado sutil.",
+    "categoria": "camisolas",
+    "preco": 109.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#6B1A22",
+        "nome": "Bordô",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#D4A0B0",
+        "nome": "Rosa"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1752652011717-f06f7ed3927a?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1670000037516-62045745b67d?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2501",
+    "ref": "FNT2501/CREME",
+    "nome": "Pijama Cetim Premium Creme",
+    "descricao": "Pijama em cetim premium com calça de pernas largas e camisa de abotoamento frontal. Toque sedoso incomparável.",
+    "categoria": "pijamas",
+    "preco": 149.9,
+    "precoAntigo": null,
+    "parcelas": 4,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#F7F4F1",
+        "nome": "Creme",
+        "ativo": true
+      },
+      {
+        "hex": "#E8C4BE",
+        "nome": "Rosê"
+      },
+      {
+        "hex": "#2C2C2C",
+        "nome": "Preto"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1686828751767-8af9d6cde0a0?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2502",
+    "ref": "FNT2502/MALVA",
+    "nome": "Conjunto Ribana Malva Pastel",
+    "descricao": "Conjunto de calça skinny e top canelado em malva pastel. Macio, confortável e super atual.",
+    "categoria": "conjuntos",
+    "preco": 114.9,
+    "precoAntigo": 139.9,
+    "parcelas": 3,
+    "badge": "SALE",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#C4A0B8",
+        "nome": "Malva",
+        "ativo": true
+      },
+      {
+        "hex": "#F7F4F1",
+        "nome": "Creme"
+      },
+      {
+        "hex": "#7A9E87",
+        "nome": "Sage"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1670000037516-62045745b67d?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1771286148916-a5389beaf8b3?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2503",
+    "ref": "FNT2503/FLORAL",
+    "nome": "Pijama Short-Doll Floral Suede",
+    "descricao": "Short-doll em suede com estampa floral delicada. Alças reguláveis, short franzido na cintura. Ideal para as noites de inverno.",
+    "categoria": "pijamas",
+    "preco": 129.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#E8C4BE",
+        "nome": "Rosê Floral",
+        "ativo": true
+      },
+      {
+        "hex": "#7A9E87",
+        "nome": "Verde Floral"
+      },
+      {
+        "hex": "#4A6B8A",
+        "nome": "Azul Floral"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1755456785148-e567dbb6a034?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2504",
+    "ref": "FNT2504/MODAL",
+    "nome": "Camisola Modal Midi com Renda",
+    "descricao": "Camisola midi em modal ultra macio com detalhe de renda nas alças. Leveza e elegância para todas as estações.",
+    "categoria": "camisolas",
+    "preco": 134.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco",
+        "ativo": true
+      },
+      {
+        "hex": "#D4B8A0",
+        "nome": "Nude"
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1771286148916-a5389beaf8b3?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1766056278842-b754f1e093c0?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2505",
+    "ref": "FNT2505/WIDE",
+    "nome": "Conjunto Wide Leg Viscose Premium",
+    "descricao": "Conjunto de calça wide leg de cós alto e blusa de manga ampla em viscose premium. Fluido, elegante e confortável.",
+    "categoria": "conjuntos",
+    "preco": 159.9,
+    "precoAntigo": null,
+    "parcelas": 4,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#C8B090",
+        "nome": "Areia",
+        "ativo": true
+      },
+      {
+        "hex": "#1A1A1A",
+        "nome": "Preto"
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1755456785148-e567dbb6a034?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1760289282310-241c94ba5fe7?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2506",
+    "ref": "FNT2506/CETIM",
+    "nome": "Baby Doll Cetim com Robe",
+    "descricao": "Conjunto baby doll em cetim com robe de amarração. Detalhe de renda nas bordas. O presente perfeito para se mimar.",
+    "categoria": "camisolas",
+    "preco": 169.9,
+    "precoAntigo": 199.9,
+    "parcelas": 4,
+    "badge": "SALE",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#E8A0B0",
+        "nome": "Rosa",
+        "ativo": true
+      },
+      {
+        "hex": "#1A1A1A",
+        "nome": "Preto"
+      },
+      {
+        "hex": "#C4A882",
+        "nome": "Champagne"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1766056278842-b754f1e093c0?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1763673715053-94822c530809?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": true,
+    "ativo": true
+  },
+  {
+    "id": "fnt2380",
+    "ref": "FNT2380/ROSA",
+    "nome": "Body Renda Floral Premium",
+    "descricao": "Body em renda floral com alças ajustáveis e fechamento por botões na virilha. Forro em microfibra.",
+    "categoria": "bodies",
+    "preco": 79.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#E8A0B0",
+        "nome": "Rosa",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#1A1A1A",
+        "nome": "Preto"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1760289282310-241c94ba5fe7?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1752652011749-460200501401?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2391",
+    "ref": "FNT2391/VERDE",
+    "nome": "Pijama Manga Longa Xadrez Inverno",
+    "descricao": "Pijama de inverno em flanela escovada com estampa xadrez clássica. Manga longa com punho canelado, calça com bolsos laterais.",
+    "categoria": "pijamas",
+    "preco": 144.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#4A6B5A",
+        "nome": "Verde",
+        "ativo": true
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      },
+      {
+        "hex": "#4A5568",
+        "nome": "Azul"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1763673715053-94822c530809?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1752652011717-f06f7ed3927a?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2405",
+    "ref": "FNT2405/KIT",
+    "nome": "Kit Presente Pijama + Nécessaire",
+    "descricao": "Kit presente especial: pijama curto em viscolycra acetinada + nécessaire de couro sintético Feminnita. Embalado em caixa presente.",
+    "categoria": "kits",
+    "preco": 189.9,
+    "precoAntigo": null,
+    "parcelas": 4,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#F2C4CE",
+        "nome": "Rosa",
+        "ativo": true
+      },
+      {
+        "hex": "#D4A0B0",
+        "nome": "Nude"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1752652011749-460200501401?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1686828751767-8af9d6cde0a0?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2367",
+    "ref": "FNT2367/BEGE",
+    "nome": "Conjunto Curto Ribana Bege",
+    "descricao": "Conjunto curto em malha ribana canelada: shorts de cintura alta com elástico e top cropped com alças largas.",
+    "categoria": "conjuntos",
+    "preco": 124.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#C8B090",
+        "nome": "Bege",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      },
+      {
+        "hex": "#2C2C2C",
+        "nome": "Preto"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1752652011717-f06f7ed3927a?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1670000037516-62045745b67d?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2412",
+    "ref": "FNT2412/CREME",
+    "nome": "Camisola Modal Longa Creme",
+    "descricao": "Camisola longa em modal premium, ultra macio ao toque. Decote V delicado, caimento reto.",
+    "categoria": "camisolas",
+    "preco": 139.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#F7F4F1",
+        "nome": "Creme",
+        "ativo": true
+      },
+      {
+        "hex": "#D4B8A0",
+        "nome": "Nude"
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1686828751767-8af9d6cde0a0?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2398",
+    "ref": "FNT2398/PRETO",
+    "nome": "Regata Viscolycra com Bojo",
+    "descricao": "Regata com bojo embutido em viscolycra premium. Alças largas, suporte firme sem aros.",
+    "categoria": "bodies",
+    "preco": 59.9,
+    "precoAntigo": 74.9,
+    "parcelas": 3,
+    "badge": "",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "cores": [
+      {
+        "hex": "#1A1A1A",
+        "nome": "Preto",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#F2C4CE",
+        "nome": "Rosa"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1670000037516-62045745b67d?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1771286148916-a5389beaf8b3?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2420",
+    "ref": "FNT2420/CINZA",
+    "nome": "Pijama Fleece Premium Cinza",
+    "descricao": "Pijama de inverno em fleece macio anti-pilling. Calça com punho + casaco com zíper e capuz removível.",
+    "categoria": "pijamas",
+    "preco": 164.9,
+    "precoAntigo": null,
+    "parcelas": 4,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#8C8C8C",
+        "nome": "Cinza",
+        "ativo": true
+      },
+      {
+        "hex": "#4A3728",
+        "nome": "Café"
+      },
+      {
+        "hex": "#8C2F39",
+        "nome": "Vinho"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1755456785148-e567dbb6a034?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  },
+  {
+    "id": "fnt2433",
+    "ref": "FNT2433/ROSE",
+    "nome": "Conjunto Malha Canelada Rosê",
+    "descricao": "Conjunto em malha canelada stretch: calça skinny de cintura alta com elástico e top de alças com franzido frontal.",
+    "categoria": "conjuntos",
+    "preco": 149.9,
+    "precoAntigo": null,
+    "parcelas": 3,
+    "badge": "NOVO",
+    "tamanhos": [
+      "P",
+      "M",
+      "G",
+      "GG",
+      "GGG"
+    ],
+    "cores": [
+      {
+        "hex": "#E8C4BE",
+        "nome": "Rosê",
+        "ativo": true
+      },
+      {
+        "hex": "#FFFFFF",
+        "nome": "Branco"
+      },
+      {
+        "hex": "#7A9E87",
+        "nome": "Sage"
+      },
+      {
+        "hex": "#2C2C2C",
+        "nome": "Preto"
+      }
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1771286148916-a5389beaf8b3?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1766056278842-b754f1e093c0?auto=format&fit=crop&w=500&q=80"
+    ],
+    "destaque": false,
+    "ativo": true
+  }
+]

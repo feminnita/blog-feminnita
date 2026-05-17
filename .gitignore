@@ -5,3 +5,10 @@ _site/
 
 # Local Netlify folder
 .netlify
+
+# Claude Code
+.claude/
+
+# Arquivos lixo gerados automaticamente
+C*UserschrisDownloads*
+nul
